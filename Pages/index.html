@@ -15,7 +15,42 @@
 <script src="https://kit.fontawesome.com/bd921df3a8.js" crossorigin="anonymous"></script>
 <script src="//unpkg.com/alpinejs" defer></script>
 <script src="https://cdn.tailwindcss.com"></script>
-
+<script>
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  theme: {
+    screens: {
+      sm: '480px',
+      md: '768px',
+      lg: '976px',
+      xl: '1440px',
+    },
+    colors: {
+      'blue': '#1fb6ff',
+      'purple': '#7e5bef',
+      'pink': '#ff49db',
+      'orange': '#ff7849',
+      'green': '#13ce66',
+      'yellow': '#ffc82c',
+      'gray-dark': '#273444',
+      'gray': '#8492a6',
+      'gray-light': '#d3dce6',
+    },
+    fontFamily: {
+      sans: ['Graphik', 'sans-serif'],
+      serif: ['Merriweather', 'serif'],
+    },
+    extend: {
+      spacing: {
+        '128': '32rem',
+        '144': '36rem',
+      },
+      borderRadius: {
+        '4xl': '2rem',
+      }
+    }
+  }
+}</script>
 </head>
 
 <body class="w-full">
@@ -30,8 +65,8 @@
           <ul class="hidden lg:flex list_view space-x-4 ">
             <li><a href="/Pages/srilanka-wildlife-intro.html"
                 class="text-base hover:bg-[#1a1919] rounded-[10px] ">Introduction</a></li>
-            <li><a href="/Pages/Dep-of-wildlife.html"
-                class="text-base hover:bg-[#1a1919] rounded-[10px]">Department of Wildlife</a></li>
+            <li><a href="/Pages/Dep-of-wildlife.html" class="text-base hover:bg-[#1a1919] rounded-[10px]">Department of
+                Wildlife</a></li>
             <li><a href="/Pages/animals.html" class="text-base hover:bg-[#1a1919] rounded-[10px]">Animals in Sri
                 Lanka</a></li>
             <li><a href="/Pages/leopards.html" class="text-base hover:bg-[#1a1919] rounded-[10px]">Leopards</a></li>
@@ -41,37 +76,37 @@
                   class="fa-solid fa-phone"></i></a></li>
           </ul>
         </nav>
-        
-     
+
+
       </div>
       <div class="md:hidden">
         <div class="bg-gray-800 p-4 text-white">
 
-        <div class="flex justify-between items-center">
-       <a href="/Pages/index.html" class="text-lg font-bold  block py-2"><i
+          <div class="flex justify-between items-center">
+            <a href="/Pages/index.html" class="text-lg font-bold  block py-2"><i
                 class="fa-solid fa-feather"></i>Wildlife</a>
-          <button id="mobile-menu-button" class="text-white focus:outline-none">
-            <i class="fa-solid fa-bars"></i>
-          </button>
+            <button id="mobile-menu-button" class="text-white focus:outline-none">
+              <i class="fa-solid fa-bars"></i>
+            </button>
+          </div>
+          <div id="mobile-menu" class="hidden mt-4">
+            <a href="/Pages/srilanka-wildlife-intro.html"
+              class="text-base hover:bg-[#1a1919] rounded-[10px]  block py-2">Introduction</a>
+            <a href="/Pages/Dep-of-wildlife.html"
+              class="text-base hover:bg-[#1a1919] rounded-[10px]  block py-2">Department of Wildlife</a>
+            <a href="/Pages/animals.html" class="text-base hover:bg-[#1a1919] rounded-[10px]  block py-2">Animals in Sri
+              Lanka</a>
+            <a href="/Pages/leopards.html" class="text-base hover:bg-[#1a1919] rounded-[10px]  block py-2">Leopards</a>
+            <a href="/Pages/yala.html" class="text-base hover:bg-[#1a1919] rounded-[10px]  block py-2">Yala</a>
+            <a href="/Pages/wilpattu.html" class="text-base hover:bg-[#1a1919] rounded-[10px]  block py-2">Wilpattu</a>
+            <a href="/Pages/contect.html" class="text-base hover:bg-[#1a1919]rounded-[10px]  block py-2"><i
+                class="fa-solid fa-phone"></i></a>
+          </div>
         </div>
-        <div id="mobile-menu" class="hidden mt-4">
-          <a href="/Pages/srilanka-wildlife-intro.html"
-            class="text-base hover:bg-[#1a1919] rounded-[10px]  block py-2">Introduction</a>
-        <a href="/Pages/srilanka-wildlife-intro.html"
-            class="text-base hover:bg-[#1a1919] rounded-[10px]  block py-2">Department of Wildlife</a>
-        <a href="/Pages/animals.html" class="text-base hover:bg-[#1a1919] rounded-[10px]  block py-2">Animals in Sri
-            Lanka</a>
-        <a href="/Pages/leopards.html" class="text-base hover:bg-[#1a1919] rounded-[10px]  block py-2">Leopards</a>
-        <a href="/Pages/yala.html" class="text-base hover:bg-[#1a1919] rounded-[10px]  block py-2">Yala</a>
-        <a href="/Pages/wilpattu.html" class="text-base hover:bg-[#1a1919] rounded-[10px]  block py-2">Wilpattu</a>
-        <a href="/Pages/contect.html" class="text-base hover:bg-[#1a1919]rounded-[10px]  block py-2"><i
-              class="fa-solid fa-phone"></i></a>
-        </div>
-      </div>
       </div>
 
-      
-    
+
+
     </header>
 
 
@@ -91,9 +126,10 @@
         </h1>
         <p
           class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-lg font-Roboto font-[24px] text-center text-slate-400 hover:text-[#1e1b4b] tracking-widest">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, magnam veritatis ex dolores officiis hic, ipsa,
-          numquam fugiat tenetur culpa dolor rem error. Exercitationem magnam, enim perspiciatis porro architecto
-          placeat!
+          Sri Lanka, a gem in the Indian Ocean, captivates visitors with its rich culture,
+          stunning beaches, and diverse wildlife. Land attractions include elephants, monkeys, leopards, and sloth
+          bears, while offshore, whales and dolphins offer a mesmerizing spectacle. The country stands out even among
+          the pearl-studded treasures of the Indian Ocean.
         </p>
 
 
@@ -120,17 +156,20 @@
                 Welcome to Sri Lanka's Wildlife
               </h2>
               <p class="block mb-8 mt-10 font-sans text-base antialiased font-normal leading-relaxed text-gray-700">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error, itaque fugiat! Repudiandae tempora
-                reprehenderit officia et alias totam doloribus ex, nesciunt, doloremque modi unde optio excepturi
-                corrupti
-                atque, soluta corporis.</p>
+
+                Discover the enchanting world of Sri Lanka's wildlife, where lush landscapes house diverse ecosystems.
+                National parks and reserves serve as unique sanctuaries for a variety of fauna, from majestic elephants
+                in verdant plains to elusive leopards in dense jungles. With dawn, a symphony of birds and rustling
+                leaves heralds a new day in this biological haven. Thrilling safaris provide encounters with iconic
+                giants, colorful birds, exotic reptiles, and unique species found nowhere else on Earth. Conservation
+                efforts are key to preserving this ecological treasure for future generations to marvel.</p>
 
             </div>
 
           </div>
 
           <div
-            class="flex fl` text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-2/5 h-5/6 ml-[800px] mt-[-200px] ">
+            class="flex text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-2/5 h-5/6 ml-[800px] mt-[-200px] ">
             <div class="min-w-[320px]">
               <div class="relative mx-4 mt-4 overflow-hidden text-gray-700 bg-white bg-clip-border rounded-xl ">
 
@@ -138,10 +177,10 @@
                   Discover the Priceless Treasure of Nature
                 </h2>
                 <p class="block mb-8 mt-10 font-sans text-base antialiased font-normal leading-relaxed text-gray-700 ">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error, itaque fugiat! Repudiandae tempora
-                  reprehenderit officia et alias totam doloribus ex, nesciunt, doloremque modi unde optio excepturi
-                  corrupti
-                  atque, soluta corporis.</p>
+                  Nature's priceless treasure unfolds in the delicate dance of sun-kissed leaves, the symphony of
+                  birdsong, and the tranquil embrace of untouched landscapes, revealing a wealth of beauty that
+                  transcends any material measure. In its boundless wonders, one finds a treasure trove of serenity and
+                  inspiration beyond compare.</p>
 
               </div>
             </div>
@@ -152,7 +191,42 @@
 
     </section>
 
+<section>
+  <swiper-container class="mySwiper mt-20 mb-10 " pagination="true" effect="coverflow" grab-cursor="true" centered-slides="true"
+  slides-per-view="auto" coverflow-effect-rotate="50" coverflow-effect-stretch="0" coverflow-effect-depth="100"
+  coverflow-effect-modifier="1" coverflow-effect-slide-shadows="true" >
+  <swiper-slide class="w-[300px] h-[300px]">
+    <img class="w-[300px] h-[300px]"  src="/Images/Slide img 1.jpg" />
+  </swiper-slide>
+  <swiper-slide class="w-[300px] h-[300px]">
+    <img class="w-[300px] h-[300px]" src="/Images/slide img2.jpg" />
+  </swiper-slide>
+  <swiper-slide class="w-[300px] h-[300px]">
+    <img class="w-[300px] h-[300px]" src="/Images/slide img 3.jpg" />
+  </swiper-slide>
+  <swiper-slide class="w-[300px] h-[300px]">
+    <img class="w-[300px] h-[300px]" src="/Images/slide img 4.jpg" />
+  </swiper-slide >
+  <swiper-slide class="w-[300px] h-[300px]">
+    <img class="w-[300px] h-[300px]" src="/Images/slide img 5.jpg" />
+  </swiper-slide>
+  <swiper-slide class="w-[300px] h-[300px]">
+    <img class="w-[300px] h-[300px]" src="/Images/slide img 6.jpg" />
+  </swiper-slide>
+  <swiper-slide class="w-[300px] h-[300px]">
+    <img class="w-[300px] h-[300px]" src="/Images/slide img7.jpg" />
+  </swiper-slide>
+  <swiper-slide class="w-[300px] h-[300px]">
+    <img class="w-[300px] h-[300px]" src="/Images/slide img8.jpg">
+  </swiper-slide>
+  <swiper-slide class="w-[300px] h-[300px]">
+    <img  class="w-[300px] h-[300px]" src="/Images/slide img 9.jpg" />
+  </swiper-slide>
+</swiper-container>
 
+
+
+</section>
 
 
 
@@ -167,8 +241,8 @@
               <div class="px-6 py-4">
                 <div class="font-bold text-xl mb-2">The Bigg Boss On the Wild</div>
                 <p class="text-gray-700 text-base">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et
-                  perferendis eaque, exercitationem praesentium nihil.
+                  Elephants are considered one of the most intelligent animals, as they are capable of using tools and
+                  showing grief and compassion.60,000 muscles in their trunks.
                 </p>
               </div>
               <div class="px-6 pt-4 pb-2">
@@ -187,8 +261,8 @@
               <div class="px-6 py-4">
                 <div class="font-bold text-xl mb-2">The Flying Cheeta</div>
                 <p class="text-black-500">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et
-                  perferendis eaque, exercitationem praesentium nihil.
+                  “king of all birds,” eagles are large and powerful birds of prey that appear to soar majestically in
+                  the air, searching for their next meal.
                 </p>
               </div>
               <div class="px-6 pt-4 pb-2">
@@ -207,8 +281,8 @@
               <div class="px-6 py-4">
                 <div class="font-bold text-xl mb-2">Mr Cool on Wild</div>
                 <p class="text-gray-700 text-base">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et
-                  perferendis eaque, exercitationem praesentium nihil.
+                  Males and females have horns, unlike many mammals in the antelope family. This particular type of
+                  animal covers 17 different species, which include (but are not limited to) the
                 </p>
               </div>
               <div class="px-6 pt-4 pb-2">
@@ -231,9 +305,15 @@
         <h3 class="mt-10 text-3xl md:text-6xl font-extrabold font-mono text-yellow-900">Our Goal</h3>
         <h4 class="text-2xl mt-4 md:text-3xl font-sans">Save the Animals of the Planet</h4>
         <p class=" text-black-500 text-opacity-75 md:text-opacity-50 leading-5 mt-6">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum asperiores culpa provident esse est, neque
-          eligendi facere aperiam vitae architecto? Minima incidunt ad ratione optio eaque facilis, in dignissimos
-          architecto?
+          In Sri Lanka, the conservation of the diverse and unique wildlife is a paramount concern as the nation boasts
+          a rich tapestry of flora and fauna. Efforts to save the animals of the planet in Sri Lanka focus on preserving
+          the natural habitats and ecosystems that house a multitude of species, many of which are endemic to the
+          island. Conservation initiatives collaborate with local communities to promote sustainable practices and raise
+          awareness about the importance of protecting these invaluable creatures. From the majestic Asian elephant to
+          the elusive leopard and the vibrant array of bird species, safeguarding the biodiversity of Sri Lanka is
+          crucial for the well-being of the planet and the continuation of the country's ecological legacy. Through a
+          combination of conservation policies, community engagement, and education, Sri Lanka is striving to ensure a
+          harmonious coexistence between humans and the remarkable animals that call the island home.
         </p>
 
 
@@ -244,22 +324,23 @@
               alt="">
             <ul class="m-auto list-disc text-left md:ml-40 mt-6">
               <li>
-                <h5 class="text-l font-bold font-mono">Lorem ipsum</h5>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum laudantium laboriosam fugit! Quis
-                  excepturi odit unde magnam quidem, facere totam magni nisi! Veritatis molestiae aperiam cumque! Dolor
-                  totam minima soluta?</p>
+                <h5 class="text-l font-bold font-mono">Protected Areas</h5>
+                <p>Sri Lanka has established numerous national parks and wildlife sanctuaries to serve as protected
+                  areas for its diverse wildlife. These include Yala National Park, Wilpattu National Park, and
+                  Sinharaja Forest Reserve, among others.</p>
               </li>
               <li>
-                <h5 class="text-l font-bold font-mono">Lorem ipsum</h5>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam, commodi magni! Reiciendis
-                  laudantium tenetur adipisci minus nulla ullam ab commodi, corporis, quam iusto dolorem distinctio eum
-                  necessitatibus illo, obcaecati corrupti.</p>
+                <h5 class="text-l font-bold font-mono">Human-Wildlife Conflict Mitigation</h5>
+                <p>Sri Lanka faces challenges related to human-wildlife conflict, especially between elephants and local
+                  communities. Conservation efforts include the development of strategies to mitigate conflicts, such as
+                  the implementation of elephant corridors and the use of innovative methods to deter elephants from
+                  entering populated areas.</p>
               </li>
               <li>
-                <h5 class="text-l font-bold font-mono">Lorem ipsum</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus aspernatur, ut maiores
-                  adipisci, repellendus totam, earum impedit accusantium consequuntur ducimus sapiente! Consequatur
-                  dolores vero aspernatur laboriosam natus in minima quis!</p>
+                <h5 class="text-l font-bold font-mono">Endangered Species Conservation</h5>
+                <p>Conservation programs in Sri Lanka specifically target endangered species such as the Sri Lankan
+                  elephant, sloth bear, and several species of turtles. These initiatives involve monitoring
+                  populations, implementing anti-poaching measures, and promoting breeding programs where necessary.</p>
               </li>
             </ul>
           </div>
@@ -284,9 +365,9 @@
             <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">WILDLIFE</span>
           </a>
           <h3 class="text-white text-lg font-bold mb-4">About The Wildlife</h3>
-          <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus et dolor
-            blanditiis
-            consequuntur ex voluptates perspiciatis omnis unde minima expedita.</p>
+          <p class="text-justify">Sri Lanka, a gem in the Indian Ocean, captivates visitors with its rich culture,
+            stunning beaches, and diverse wildlife. Land attractions include elephants, monkeys, leopards, and sloth
+            bears, while offshore, whales and dolphins offer a mesmerizing spectacle.</p>
           <ul class="flex space-x-2 mt-16 ">
             <li><a href="#" class="p-2 text-yellow-500 hover:bg-fuchsia-600 rounded-xl"><span
                   class="fab fa-twitter"></span></a>
@@ -359,7 +440,7 @@
             Lanka</a>, All Right
           Reserved.</p>
 
-          <p>Abdul Hakeem</p>
+        <p>Abdul Hakeem</p>
       </div>
     </div>
   </footer>
@@ -403,7 +484,7 @@
   </script>
 
 
-
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script type="text/javascript" src="/js/app.js"></script>
 </body>
