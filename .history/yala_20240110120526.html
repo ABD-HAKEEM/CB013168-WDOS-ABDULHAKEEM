@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wildlife</title>
+</head>
+<link rel="stylesheet" href="/Css/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  integrity="sha512-xzLbZ8PQA5ZRHzPhDz+Z5qcDr2rZ9w6cMWpVsF+Zi1l5O5fRtRq3L0TW7J0EabYV6qv04xKJ2vPE/J9fR7gX/w=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<script src="https://kit.fontawesome.com/bd921df3a8.js" crossorigin="anonymous"></script>
+<script src="//unpkg.com/alpinejs" defer></script>
+<script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="w-full">
+  <div id="w_app" x-data="{}">
+    <header class="bg-gray-800 text-white  ">
+      <div class="container mx-auto py-4 h-16 p-4 hidden md:block">
+        <nav class="main-nav flex justify-between items-center  mt-[-8px] ">
+          <div class="flex items-center">
+            <a href="/index.html" class="text-lg font-bold ml-[0px]"><i class="fa-solid fa-feather"></i>Wildlife</a>
+          </div>
+          <ul class="hidden lg:flex list_view space-x-4 ">
+            <li><a href="/srilanka-wildlife-intro.html"
+                class="hover:text-orange-600 ">Introduction</a></li>
+            <li><a href="/Dep-of-wildlife.html" class="hover:text-orange-600">Department of
+                Wildlife</a></li>
+            <li><a href="/animals.html" class="hover:text-orange-600">Animals in Sri
+                Lanka</a></li>
+            <li><a href="/leopards.html" class="hover:text-orange-600">Leopards</a></li>
+            <li><a href="/yala.html" class="hover:text-orange-600">Yala</a></li>
+            <li><a href="/wilpattu.html" class="hover:text-orange-600">Wilpattu</a></li>
+            <li><a href="/Horton Plains.html" class="hover:text-orange-600">Horton plains</a></li>
+            <li><a href="/contect.html" class="text-base hover:bg-[#1a1919]rounded-[10px]"><i
+                  class="fa-solid fa-phone"></i></a></li>
+          </ul>
+        </nav>
+
+
+      </div>
+      <div class="md:hidden">
+        <div class="bg-gray-800 p-4 text-white">
+
+          <div class="flex justify-between items-center">
+            <a href="/index.html" class="text-lg font-bold  block py-2"><i
+                class="fa-solid fa-feather"></i>Wildlife</a>
+            <button id="mobile-menu-button" class="text-white focus:outline-none">
+              <i class="fa-solid fa-bars"></i>
+            </button>
+          </div>
+          <div id="mobile-menu" class="hidden mt-4">
+            <a href="/srilanka-wildlife-intro.html"
+              class="hover:text-orange-600  block py-2">Introduction</a>
+            <a href="/Dep-of-wildlife.html" class="hover:text-orange-600  block py-2">Department
+              of Wildlife</a>
+            <a href="/animals.html" class="hover:text-orange-600  block py-2">Animals in Sri
+              Lanka</a>
+            <a href="/leopards.html" class="hover:text-orange-600  block py-2">Leopards</a>
+            <a href="/yala.html" class="hover:text-orange-600  block py-2">Yala</a>
+            <a href="/wilpattu.html" class="hover:text-orange-600  block py-2">Wilpattu</a>
+            <a href="/Horton Plains.html" class="hover:text-orange-600  block py-2">Horton
+              plains</a>
+            <a href="/contect.html" class="text-base hover:bg-[#1a1919]rounded-[10px]  block py-2"><i
+                class="fa-solid fa-phone"></i></a>
+          </div>
+        </div>
+      </div>
+
+
+
+    </header>
+
+    <main>
+      <section class="mx-auto flex flex-col items-center md:flex-row bg-gray-100 relative ">
+        <div class=" w-full  overflow-hidden relative">
+          <img src="/Images/yala 2.jpg" alt="" class="w-full h-[480px] object-cover">
+
+          <div class="absolute top-0 left-0 w-full h-full flex flex-col justify-center">
+            <div class="auto-container md:w-1/2  ">
+              <div class="content-box p-8 md:p-12  text-white ">
+                <ul>
+                  <li class="container flex">
+                    <a href="/index.html"
+                      class="text-blue-50 hover:text-yellow-500 text-xl font-mono mr-[-20px]">Home</a>
+                    <a href="" class="fa-solid fa-arrow-right mt-[8px] mr-[-20px]"></a>
+
+                    <a href="/wilpattu.html"
+                      class="text-blue-900 hover:text-sky-50 text-xl font-mono ">Wilpattu</a>
+
+                  </li>
+                </ul>
+                <div class="title mt-4 md:mt-8 ">
+                  <h1 class="text-4xl md:text-8xl font-bold font-serif ">Yala National Park</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="container mx-auto flex flex-col items-center md:flex-row">
+        <div class="text-center m-auto mb-6 md:mb-0 md:mr-6">
+          <h4 class="text-xl mt-10   font-mono text-yellow-900">Discover <b class="font-extrabold">Yala</b></h4>
+          <h3 class="text-3xl md:text-6xl mt-4 md:text-3xl font-serif">Yala (යාල) National Park</h3>
+
+          <p
+            class=" justify-items-center md:ml-[251px] ml-[72px]   w-4/6 text-gray-600 text-justify text-wrap text-opacity-75 md:text-opacity-50  mt-6 font-sans hover:font-serif">
+            Yala National Park, situated in the southeastern part of Sri Lanka, is renowned for its diverse wildlife and
+            stunning natural landscapes. Spanning over 979 square kilometers, the park is home to a variety of
+            ecosystems, including scrub jungles, grasslands, and coastal lagoons.
+          </p>
+
+        </div>
+
+      </section>
+
+      <section class=" flex mt-20  py-5">
+        <div class="container mx-auto">
+          <div class="grid gap-x-8 gap-y-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+            <div class=" max-w-sm rounded overflow-hidden  ml-6 mt-6 mr-6  w-[1000px] w-full">
+              <div class="rounded-l overflow-hidden shadow-lg">
+                <img class="w-full h-60" src="/Images/Yala page Card 1.jpg" alt="">
+                <div class="px-6 py-4">
+                  <div class="font-bold text-xl mb-2">Mammals</div>
+                  <p class="text-gray-700 text-base">
+                    Yala National Park in Sri Lanka is a top wildlife destination with a diverse range of mammals,
+                    including leopards, Asian elephants, sloth bears, deer species like sambar and spotted deer, wild
+                    boars, water buffalo, and Indian grey mongooses. Visitors can witness these predators in their
+                    natural habitats and enjoy safari adventures.
+                  </p>
+                </div>
+
+              </div>
+            </div>
+            <div class=" max-w-sm rounded overflow-hidden   ml-6 mt-6 mr-6  w-[1000px] w-full">
+              <div class="rounded overflow-hidden shadow-lg">
+                <img class="w-full h-60" src="/Images/Sri_Lanka_Yala_National_Park_16.jpg" alt="">
+                <div class="px-6 py-4">
+                  <div class="font-bold text-xl mb-2">Reptiles</div>
+                  <p class="text-black-500">
+                    Yala National Park in Sri Lanka boasts a diverse reptile population, including crocodiles, lizards,
+                    and snakes. The park's water bodies provide habitat for mugger crocodiles, while lizards and snakes
+                    range from non-venomous to venomous. This rich ecosystem offers an intriguing experience for nature
+                    enthusiasts.
+                  </p>
+                </div>
+
+              </div>
+            </div>
+            <div class=" max-w-sm rounded overflow-hidden  ml-6 mt-6 mr-6  w-[1000px] w-full">
+              <div class="rounded overflow-hidden shadow-lg">
+                <img class="w-full h-60" src="/Images/eagle-in-yala-national-park.jpg" alt="">
+                <div class="px-6 py-4">
+                  <div class="font-bold text-xl mb-2">Birds</div>
+                  <p class="text-gray-700 text-base">
+                    Yala National Park is a birdwatcher's paradise with over 200 bird species, including the painted
+                    stork, crested serpent eagle, and white-bellied sea eagle. Its diverse ecosystems, including forests
+                    and grasslands, attract water birds like the spot-billed pelican and lesser flamingo. Visitors can
+                    see peafowl, hornbills, and black-necked stork.
+                  </p>
+                </div>
+
+              </div>
+            </div>
+            <div class=" max-w-sm rounded overflow-hidden  ml-6 mt-6 mr-6  w-[1000px] w-full">
+              <div class="rounded overflow-hidden shadow-lg">
+                <img class="w-full h-60" src="/Images/Amphibians 2.jpg" alt="">
+                <div class="px-6 py-4">
+                  <div class="font-bold text-xl mb-2">Amphibians</div>
+                  <p class="text-gray-700 text-base">
+                    Yala National Park in Sri Lanka is a diverse ecosystem with a rich array of amphibians, including
+                    frogs, toads, and tree frogs. The park's wetland areas and lush vegetation provide suitable habitats
+                    for these species, adding a unique auditory dimension to the natural ambiance.
+                  </p>
+                </div>
+
+              </div>
+            </div>
+            <div class=" max-w-sm rounded overflow-hidden  ml-6 mt-6 mr-6  w-[1000px] w-full">
+              <div class="rounded overflow-hidden shadow-lg">
+                <img class="w-full h-60" src="/Images/fish in yala national park.jpg" alt="">
+                <div class="px-6 py-4">
+                  <div class="font-bold text-xl mb-2">Fish</div>
+                  <p class="text-gray-700 text-base">
+                    Yala National Park, known for its terrestrial biodiversity, also boasts diverse aquatic environments
+                    that support various fish species. The park's water bodies, including lakes, reservoirs, and coastal
+                    lagoons, provide habitats for tilapia, catfish, snakehead fish, and marine species like mullet and
+                    snapper. The interconnected ecosystems contribute to the park's ecological balance and complexity.
+                  </p>
+                </div>
+
+              </div>
+            </div>
+            <div class=" max-w-sm rounded overflow-hidden  ml-6 mt-6 mr-6  w-[1000px] w-full">
+              <div class="rounded overflow-hidden shadow-lg ">
+                <img class="w-full h-60" src="/Images/Invertebrates.jpg" alt="">
+                <div class="px-6 py-4">
+                  <div class="font-bold text-xl mb-2">Invertebrates</div>
+                  <p class="text-gray-700 text-base">
+                    Yala National Park in Sri Lanka is home to a diverse ecosystem with numerous invertebrate species,
+                    including insects, spiders, and crustaceans. Visitors can observe colorful butterflies, ants, and
+                    spider webs. Aquatic invertebrates, like dragonflies and water beetles, contribute to nutrient
+                    cycling and food sources for bird species. Despite their lesser-known status, invertebrates are
+                    crucial to the park's ecosystem.
+                  </p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-section-2">
+        <div class="relative flex max-w-fit ml-auto mr-auto mt-10 mb-10">
+  
+          <div class="grid gap-x-4 gap-y-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
+            <div class="relative group w-80 h-80 overflow-hidden ">
+              <img src="/Images/yala/Yala card 1 (1).jpg" alt="lizard"
+                class="rounded-3xl w-80 h-80 transition-transform duration-300 transform hover:scale-110 ">
+              
+            </div>
+            <div class="absolute bottom-0 left-0 bg-white rounded-tr-3xl rounded-bl-3xl py-2 pb-6 pl-12 pr-4">
+            <div class="absolute font-roboto ml-[-20px] mt-5 text-red-400">Reptiles</div>
+              <span class="ml-[-40px] text-orange-400">Varied lizard species.</span>
+          </div>
+
+          <div class="relative group w-80 h-80 overflow-hidden ">
+            <img src="/Images/yala/Yala card 1 (3).jpg" alt="Asian-elephant"
+              class="rounded-3xl w-80 h-80 transition-transform duration-300 transform hover:scale-110 ">
+            
+         
+          <div class="absolute bottom-0 left-0 bg-white rounded-tr-3xl rounded-bl-3xl py-2 pb-6 pl-12 pr-4">
+          <div class="absolute font-roboto ml-[-20px] mt-5 text-red-400">Reptiles</div>
+            <span class="ml-[-40px] text-orange-400">Varied lizard species.</span>
+        </div>
+      </div>
+          <div class="relative group w-80 h-80 overflow-hidden ">
+              <img src="/Images/yala/Yala card 1 (4).jpg" alt="Asian-elephant"
+                class="rounded-3xl w-80 h-80 transition-transform duration-300 transform hover:scale-110 ">
+              
+          
+            <div class="absolute w-30 h-10 bottom-0 left-0 bg-white rounded-tr-3xl rounded-bl-3xl py-2 pb-6 pl-12 pr-4">
+            <div class="absolute font-roboto ml-[-20px] mt-5 text-red-400">Nature</div>
+              <span class="ml-[-40px] text-orange-400">SunSet in Yala.</span>
+          </div>
+        </div>
+        </div>
+        </div>
+      </section>
+      <section class="w-full overflow-hidden relative mb-0 py-0 ">
+        <div class="relative">
+          <img src="/Images/yala page bot.jpg" alt="" class="md:h-[700px] md:w-full ">
+
+          <div class="md:absolute md:top-[10%] md:left-2/4 w-full h-full">
+            <h5 class="ml-20 text-2xl text-stone-800 font-serif">Here is where Yala National Park is located</h5>
+            <iframe class="animate-bounce  mt-10 mb-10 rounded-2xl h-10 hover:h-[450px]"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47518.42090792556!2d81.40352991455957!3d6.4782091793012215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae683b969aec5c7%3A0x7e3aa2da875d927e!2sYala%20National%20Park%20Sri%20Lanka!5e0!3m2!1sen!2slk!4v1704450664884!5m2!1sen!2slk"
+              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade ">
+
+            </iframe>
+          </div>
+        </div>
+      </section>
+
+      
+
+
+
+    </main>
+
+
+
+    <footer class="site-footer  bg-gray-900 text-gray-500 py-5">
+      <div class="container mx-auto">
+        <div class="grid gap-x-8 gap-y-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          <div class="mb-5">
+            <a href="" class=" flex mt-1 mb-6">
+              <img src="/Images/the LOGO.png" class="h-8 me-3" alt="Logo" />
+              <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">WILDLIFE</span>
+            </a>
+            <h3 class="text-white text-lg font-bold mb-4">About The Wildlife</h3>
+            <p class="text-justify">Sri Lanka, a gem in the Indian Ocean, captivates visitors with its rich culture,
+              stunning beaches, and diverse wildlife. Land attractions include elephants, monkeys, leopards, and sloth
+              bears, while offshore, whales and dolphins offer a mesmerizing spectacle.</p>
+            <ul class="flex space-x-2 mt-16 ">
+              <li><a href="#" class="p-2 text-yellow-500 hover:bg-fuchsia-600 rounded-xl"><span
+                    class="fab fa-twitter"></span></a>
+              </li>
+              <li><a href="#" class="p-2 text-yellow-500 hover:bg-fuchsia-600 rounded-xl"><span
+                    class="fab fa-facebook"></span></a>
+              </li>
+              <li><a href="#" class="p-2 text-yellow-500 hover:bg-fuchsia-600 rounded-xl"><span
+                    class="fab fa-linkedin"></span></a>
+              </li>
+              <li><a href="#" class="p-2 text-yellow-500 hover:bg-fuchsia-600 rounded-xl"><span
+                    class="fab fa-instagram"></span></a>
+              </li>
+              <li><a href="https://github.com/ABD-HAKEEM@ABD-HAKEEM"
+                  class="p-2 text-yellow-500 hover:bg-fuchsia-600 rounded-xl"><span class="fab fa-github"></span></a>
+              </li>
+            </ul>
+          </div>
+
+
+          <div class="mb-5">
+            <h3 class="text-white text-lg font-bold mb-4">Contact Info</h3>
+            <ul class="list-none">
+              <li class="mb-2">
+                <span class="block text-white">Address:</span>
+                <span class="text-gray-400">Department of Wildlife Conservation,
+                  811A, Jayanthipura,
+                  Battaramulla, Sri Lanka.</span>
+              </li>
+              <li class="mb-2">
+                <span class="block text-white">Telephone:</span>
+                <span class="text-gray-400">+94 761122226</span>
+              </li>
+              <li>
+                <span class="block text-white">Email:</span>
+                <span class="text-gray-400">dg@dwc.gov.lk</span>
+              </li>
+            </ul>
+          </div>
+
+
+         
+          <div class="mb-5">
+            <h3 class="text-white text-lg font-bold mb-4">Quick Links</h3>
+            <ul class="flex m-auto">
+              <li><a href="/about.html" class="hover:text-red-100 ">About</a>
+              </li>
+              <li><a href="/f&q.html" class="hover:text-red-100">Terms</a></li>
+              <li><a href="/f&q.html" class="hover:text-red-100">Disclaimers</a>
+              </li>
+              <li><a href="/contect.html" class="hover:text-red-100">Contact</a>
+              </li>
+
+            </ul>
+            <div class="col-lg-3 mt-6">
+              <div class="subscribe-newsletters footer-item">
+                <h4>If you have any inquiries please Enter Your Email</h4>
+                <p> </p>
+                <form action="#" method="get" class="mt-3">
+                  <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email"
+                    required="" class="w-64 mr-10">
+                  <button type="submit"><i class="fa fa-paper-plane-o"></i></button>
+                </form>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="text-center mt-4 md:mt-6">
+          <p class="text-gray-500">&copy; <a href="/index.html" class="text-yellow-500">Department of Wildlife
+              Lanka</a>, All Right
+            Reserved.</p>
+          <p>Abdul Hakeem</p>
+        </div>
+      </div>
+    </footer>
+
+
+
+    <button id="to-top-button" onclick="goToTop()" title="top"
+      class="hidden fixed z-50 bottom-10 right-10 p-4 border-0 w-14 h-14 rounded-xl shadow-md bg-yellow-500 hover:bg-fuchsia-100 text-white text-lg font-semibold transition-colors duration-300">
+
+      <span><i class="fa-solid fa-arrow-up"></i></span>
+    </button>
+  </div>
+  <script>
+
+    var toTopButton = document.getElementById("to-top-button");
+
+    if (toTopButton) {
+
+
+      window.onscroll = function () {
+        if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+          toTopButton.classList.remove("hidden");
+        } else {
+          toTopButton.classList.add("hidden");
+        }
+      };
+
+      window.goToTop = function () {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      };
+    }
+  </script>
+  <script>
+    document.getElementById('mobile-menu-button').addEventListener('click', function () {
+      var mobileMenu = document.getElementById('mobile-menu');
+      mobileMenu.style.display = (mobileMenu.style.display === 'block') ? 'none' : 'block';
+    });
+  </script>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</body>
+
+</html>

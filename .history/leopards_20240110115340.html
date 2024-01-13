@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wildlife</title>
+</head>
+<link rel="stylesheet" href="/Css/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  integrity="sha512-xzLbZ8PQA5ZRHzPhDz+Z5qcDr2rZ9w6cMWpVsF+Zi1l5O5fRtRq3L0TW7J0EabYV6qv04xKJ2vPE/J9fR7gX/w=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<script src="https://kit.fontawesome.com/bd921df3a8.js" crossorigin="anonymous"></script>
+<script src="//unpkg.com/alpinejs" defer></script>
+<script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="w-full">
+  <div id="w_app" x-data="{}">
+    <header class="bg-gray-800 text-white  ">
+      <div class="container mx-auto py-4 h-16 p-4 hidden md:block">
+        <nav class="main-nav flex justify-between items-center  mt-[-8px] ">
+          <div class="flex items-center">
+            <a href="/index.html" class="text-lg font-bold ml-[0px]"><i
+                class="fa-solid fa-feather"></i>Wildlife</a>
+          </div>
+          <ul class="hidden lg:flex list_view space-x-4 ">
+            <li><a href="/srilanka-wildlife-intro.html"
+                class="hover:text-orange-600 ">Introduction</a></li>
+            <li><a href="/Dep-of-wildlife.html" class="hover:text-orange-600">Department of
+                Wildlife</a></li>
+            <li><a href="/animals.html" class="hover:text-orange-600">Animals in Sri
+                Lanka</a></li>
+            <li><a href="/leopards.html" class="hover:text-orange-600">Leopards</a></li>
+            <li><a href="/yala.html" class="hover:text-orange-600">Yala</a></li>
+            <li><a href="/wilpattu.html" class="hover:text-orange-600">Wilpattu</a></li>
+            <li><a href="/Horton Plains.html" class="hover:text-orange-600">Horton plains</a></li>
+            <li><a href="/contect.html" class="text-base hover:bg-[#1a1919]rounded-[10px]"><i
+                  class="fa-solid fa-phone"></i></a></li>
+          </ul>
+        </nav>
+
+
+      </div>
+      <div class="md:hidden">
+        <div class="bg-gray-800 p-4 text-white">
+
+          <div class="flex justify-between items-center">
+            <a href="/index.html" class="text-lg font-bold  block py-2"><i
+                class="fa-solid fa-feather"></i>Wildlife</a>
+            <button id="mobile-menu-button" class="text-white focus:outline-none">
+              <i class="fa-solid fa-bars"></i>
+            </button>
+          </div>
+          <div id="mobile-menu" class="hidden mt-4">
+            <a href="/srilanka-wildlife-intro.html"
+              class="hover:text-orange-600  block py-2">Introduction</a>
+            <a href="/Dep-of-wildlife.html"
+              class="hover:text-orange-600  block py-2">Department of Wildlife</a>
+            <a href="/animals.html" class="hover:text-orange-600  block py-2">Animals in Sri
+              Lanka</a>
+            <a href="/leopards.html" class="hover:text-orange-600  block py-2">Leopards</a>
+            <a href="/yala.html" class="hover:text-orange-600  block py-2">Yala</a>
+            <a href="/wilpattu.html" class="hover:text-orange-600  block py-2">Wilpattu</a>
+            <a href="/Horton Plains.html" class="hover:text-orange-600  block py-2">Horton plains</a>
+            <a href="/contect.html" class="text-base hover:bg-[#1a1919]rounded-[10px]  block py-2"><i
+                class="fa-solid fa-phone"></i></a>
+          </div>
+        </div>
+      </div>
+
+
+
+    </header>
+
+
+    <main>
+      <section class="mx-auto flex flex-col items-center md:flex-row bg-gray-100 relative ">
+        <div class=" w-full  overflow-hidden relative">
+          <img src="/Images/Leopard/Leopard cover.jpg" alt="elephants bathing" class="w-full h-[800px] object-cover">
+
+          <div class="absolute top-0 left-0 w-full h-full flex flex-col justify-center">
+            <div class="auto-container md:w-1/2  ">
+              <div class="content-box p-8 md:p-12  text-white ">
+                <ul>
+                  <li class="container flex">
+                    <a href="/index.html"
+                      class="text-blue-50 hover:text-yellow-500 text-xl font-mono mr-[-20px]">Home</a>
+                    <a href="" class="fa-solid fa-arrow-right mt-[8px] mr-[-20px]"></a>
+
+                    <a href="/leopards.html"
+                      class="text-blue-600 hover:text-sky-50 text-xl font-mono ">Leopards</a>
+
+                  </li>
+                </ul>
+                <div class="title mt-4 md:mt-8 ">
+                  <h1 class="text-4xl md:text-8xl font-bold font-serif line-clamp-3 opacity-100 brightness-100 ">
+                    Panthera pardus</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="mx-auto flex flex-col items-center md:flex-row mt-10">
+        <div class="container mx-auto">
+          <div class="flex flex-col md:flex-row ">
+            <img src="/Images/Leopard/Leopard2.jpg" class=" w-2/6 h-1/6 mt-10 md:ml-10 rounded-3xl" alt="Leopards">
+
+            <div class="m-auto list-disc text-left md:ml-20">
+              <h5 class="text-3xl font-bold font-mono">Leopards</h5>
+
+              <p class="font-serif tex-m tracking-normal">The leopard (Panthera pardus) is one of the five extant species in the genus
+                Panthera, a member of the cat family, Felidae. Distinguished by its well-camouflaged fur, opportunistic
+                hunting behavior, broad diet, strength, and adaptability to a variety of habitats ranging from
+                rainforest to steppe, including arid and montane areas, the leopard can reach speeds of up to 58 km/h
+                (36 mph). The earliest known leopard fossils excavated in Europe date back approximately 600,000 years,
+                to the late Early Pleistocene. Additionally, leopard fossils have been discovered in Japan and Sumatra.
+
+                Leopards, scientifically known as Panthera pardus, are majestic big cats renowned for their remarkable
+                agility, strength, and distinctive spotted coat. They inhabit a wide range of ecosystems, from dense
+                forests and savannas to mountainous regions. Solitary and elusive creatures, leopards expertly adapt to
+                various environments with remarkable climbing and swimming abilities. Their coat, adorned with rosettes
+                and spots, serves as effective camouflage, allowing them to blend seamlessly into their surroundings
+                while stalking prey. Known for their powerful and precise hunting techniques, leopards are opportunistic
+                carnivores, preying on a diverse array of animals, including antelopes, deer, and smaller mammals.
+                Despite their adaptability and widespread distribution across Africa and parts of Asia, leopards face
+                threats such as habitat loss, poaching, and human-wildlife conflict, making conservation efforts crucial
+                for their survival.
+              </p>
+            </div>
+
+
+          </div>
+        </div>
+
+  </div>
+  </section>
+
+
+  <section class="mx-auto flex flex-col items-center md:flex-row mt-10">
+    <div class="container mx-auto">
+      <div class="flex flex-col md:flex-row">
+
+        <div class="m-auto list-disc text-left md:ml-20">
+          <h5 class="text-3xl font-bold font-mono">Leopard Appearance</h5>
+
+          <p class="font-serif tex-m tracking-normal">This middle-sized wild cat has a slim and long body with short, sturdy legs and a
+            long tail, helping the
+            animal to keep balance when in the trees. The head is broad and the skull is large, having strong and
+            powerful jaw muscles. The ears are small and round. The eyebrows exhibit long hairs, protecting the eyes of
+            the animal as it moves through dense vegetation. There are also long whiskers, stretching from dark markings
+            on the upper lip of the animal. The overall coloration and markings of their coat greatly depend on the
+            environment. Thus, leopards, living on open grasslands, typically exhibit a light yellow background fur.
+            Meanwhile, the coat of those, found in forests, is usually darker and covered with more markings. The black
+            rosettes, covering their body, are square-like in populations of South Africa, being circular in those of
+            East Africa. The tail is ringed, and the animal has distinct black markings on its face, chest, and feet.
+          </p>
+        </div>
+
+        <img src="/Images/Leopard/Leopard.jpg" class="w-2/6 h-1/6 mt-10 md:ml-10 rounded-3xl" alt="leopard">
+      </div>
+    </div>
+
+    </div>
+  </section>
+  <hr class="border-6 ml-10 mr-10">
+
+
+
+  <section class="bg-cover bg-center h-screen flex items-center justify-center mt-[-30px]">
+    <div class="container mx-auto">
+
+      <img src="/Images/forest background.jpg" alt="forest background" class=" bag_image opacity-10 mb-10">
+
+
+      <div class="abslute flex flex-col md:flex-row  mt-[-380px] ">
+        <h5 class="text-3xl font-bold font-mono mt-10 ml-10">Habits and Lifestyle</h5>
+        <div class="absalute flex flex-col md:flex-row md:ml-10 ">
+          <p class="font-serif tex-m tracking-normal flex w-[642px] hidden md:block mb[-330px] ">Sri Lankan leopards lead a solitary
+            life, with the exception of females with
+            young. Male's ranges typically overlap the smaller ranges of several females, as well as portions of the
+            ranges of neighboring males. They are more active and prefer hunting at night, but are also somewhat active
+            during dawn, dusk, and daytime hours. They rarely haul their kills into trees, which is likely due to the
+            lack of intraguild competition and the relative abundance of prey. Sri Lankan leopards hunt by silently
+            stalking their prey, until they are within striking distance when they unleash a burst of speed to quickly
+            pursue and pounce on their victim. The prey is usually dispatched with a single bite to the throat. Leopards
+            produce a number of vocalizations, including growls, snarls, meows, and purrs. Cubs call their mother with
+            an 'urr-urr' sound. In order to warn intruders, leopards usually scratch trees, leaving claw marks. In
+            addition, due to having a highly developed sense of smell, they often use scent marks.</p>
+
+          <!-- <p class="hidden sm:inline font-serif tex-m flex w-[642px] ">Sri Lankan leopards lead a solitary life, with the exception of females with
+              young. Male's ranges typically overlap the smaller ranges of several females, as well as portions of the
+              ranges of neighboring males. They are more active and prefer hunting at night, but are also somewhat active
+              during dawn, dusk, and daytime hours. They rarely haul their kills into trees, which is likely due to the
+              lack of intraguild competition and the relative abundance of prey</p> -->
+          <img src="/Images/Leopard/Leopard 1.jpg" alt="" class="w-60 h-60 ml-10 ">
+        </div>
+      </div>
+
+
+
+    </div>
+
+
+  </section>
+
+  <section class="container mx-auto flex flex-col items-center md:flex-row">
+    <div class="text-center m-auto mb-6 md:mb-0 md:mr-6">
+      <h3 class="mt-10 text-3xl md:text-6xl font-extrabold font-mono text-yellow-900">Leopards (Panthera pardus kotiya)
+      </h3>
+      <h4 class="text-2xl mt-4 md:text-3xl font-sans">Locations of leopards in Sri Lanka</h4>
+      <p class=" text-black-500 text-opacity-75 md:text-opacity-50 leading-5 mt-6">
+        Leopards (Panthera pardus kotiya), also known as Sri Lankan leopards, are found in various habitats across Sri
+        Lanka. Here are descriptions of three venues where leopards can be commonly found in the country:
+      </p>
+
+
+      <div class="container mx-auto">
+        <div class="flex flex-col md:flex-row">
+          <!-- <img src="/Images/logo.jpg"
+            class="w-full h-auto md:w-5/6 md:h-5/6 mt-10 md:ml-10 rounded-3xl border-double border-4 border-sky-400"
+            alt=""> -->
+          <ul class="m-auto list-disc text-left md:ml-40 mt-6">
+            <li>
+              <h5 class="text-l font-bold font-mono ">Panthera pardus in Yala National Park<a
+                  href="https://youtu.be/nCiUxMtafAY" class="hover:text-sky-700 text-black animate-pulse " target="_blank"><i class="fa fa-play ml-2"
+                    aria-hidden="true"></i></a></h5>
+              <p class="mb-10">Located in the southeastern part of Sri Lanka, Yala National Park is renowned for its
+                diverse wildlife,
+                and it is one of the best places to spot leopards in the country.
+                The park features a mix of ecosystems, including dense forests, grasslands, and coastal areas, providing
+                an ideal habitat for leopards.
+                Yala is home to a significant leopard population, and visitors often have the opportunity to witness
+                these elusive big cats during safari tours.</p>
+            </li>
+            <li>
+              <h5 class="text-l font-bold font-mono ">Panthera pardus in Wilpattu National Park<a
+                  href="https://youtu.be/C6CP9Fikahg" class="hover:text-sky-700 text-black animate-pulse" target="_blank"><i class="fa fa-play ml-2"
+                    aria-hidden="true"></i></a></h5>
+              <p class="mb-10">Situated in the northwest of Sri Lanka, Wilpattu is the largest national park in the
+                country and is
+                known for its unique landscape comprising lakes, scrublands, and dense woodlands.
+                Wilpattu is considered a prime location for leopard sightings, and the park's diverse topography offers
+                leopards ample cover for hunting and resting.
+                The park's numerous villus (natural lakes) are important water sources, and leopards can often be
+                spotted near these areas.</p>
+            </li>
+            <li>
+              <h5 class="text-l font-bold font-mono ">Panthera pardus in Horton Plains National Park<a
+                  href="https://youtu.be/xbIoS-mXLIg" class="hover:text-sky-700 text-black animate-pulse" target="_blank"><i class="fa fa-play ml-2"
+                    aria-hidden="true"></i></a></h5>
+              <p class="mb-10">Located in the central highlands of Sri Lanka, Horton Plains National Park is known for
+                its picturesque landscapes, including grasslands and cloud forests.
+                Although not as well-known for leopards as Yala or Wilpattu, Horton Plains is home to a population of
+                leopards adapted to the high-altitude environment.
+                Visitors to Horton Plains may encounter leopards in the early morning or late evening as they move
+                through the park in search of prey.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="flex mt-10 mb-10 mr-10">
+    <div class="container ">
+      <div class="grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-4 ">
+        <div class="col-span-2 w-9/12">
+          <div class="rounded-l overflow-hidden ">
+            <img class="w-full " src="/Images/Leopard/leopards threat.avif" alt="leopard">
+            <div class="px-6 py-4">
+              <div class="font-bold text-xl mb-2"> Threat</div>
+              <h6 class="text-m text-black font-bold">Habitat Loss and Fragmentation</h6>
+              <p class="text-gray-700 text-base">
+                Habitat loss and fragmentation occur due to human activities such as agriculture, urbanization, and
+                infrastructure development. As human populations expand, natural habitats are often converted into
+                farmland, settlements, and roads, leading to the fragmentation of once continuous leopard habitats. This
+                limits the availability of suitable territories, disrupts migration routes, and reduces prey
+                availability.
+              </p>
+            </div>
+
+
+
+          </div>
+        </div>
+
+
+        <div class="w-3/4">
+          <div class="rounded-l overflow-hidden shadow-2xl ">
+            <img class="w-full" src="/Images/Leopard/Reduced Habitat for leopards.jpg" alt="2 leopards">
+            <div class="px-6 py-4">
+              <div class="font-bold text-xl mb-2">Consequences</div>
+              <p class="text-gray-700 text-base">
+              <h6 class="font-bold text-sm mb-3">Reduced Habitat</h6> The shrinking and fragmentation of habitats limit the
+              available living space for
+              leopards.
+              <h6 class="font-bold text-sm mb-3">Isolation of Populations</h6> Fragmentation can isolate leopard populations,
+              leading to reduced genetic
+              diversity and increased vulnerability to diseases.
+              <h6 class="font-bold text-sm mb-3">Human-Wildlife Conflict</h6> As leopards' natural habitats shrink, they may
+              come into closer contact with
+              human settlements, resulting in increased conflicts.
+              </p>
+            </div>
+
+
+
+          </div>
+        </div>
+        <div class="w-3/4">
+          <div class="rounded-l overflow-hidden shadow-2xl ">
+            <img class="w-full" src="/Images/Leopard/Research and Monitoring.jpg" alt="chaild leopards">
+            <div class="px-6 py-4">
+              <div class="font-bold text-xl mb-2">Mechanisms to Reduce the Threat</div>
+              <p class="text-gray-700 text-base">
+              <h6 class="font-bold text-sm "><a href="/Dep-of-wildlife.html" class="hover:text-sky-700 animate-pulse">Protected Areas , National Parks <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a></h6>Establishing and maintaining
+              protected areas and national parks with suitable leopard habitats help conserve these areas and limit
+              human interference.
+              <h6 class="font-bold text-sm">Research and Monitoring</h6>Continuous research on leopard ecology,
+              behavior, and population dynamics is crucial for informed conservation strategies. Monitoring populations
+              helps assess the effectiveness of conservation measures.
+            </div>
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section>
+
+    <swiper-container class="mySwiper h-1/4 w-full" space-between="50" history-key="slide" pagination="true"
+      navigation="true">
+      <swiper-slide data-history=" Slide 1"><img src="/Images/Leopard/Leopard 1.jpg" alt=""></swiper-slide>
+      <swiper-slide data-history="Slide 2"><img src="/Images//Leopard/Leopard 2.jpg" alt=""></swiper-slide>
+      <swiper-slide data-history="3"><img src="/Images/Leopard/Leopard 3.jpg" alt=""></swiper-slide>
+      <swiper-slide data-history="Slide 4"><img src="/Images/Leopard/Leopard 4.jpg" alt=""></swiper-slide>
+      <swiper-slide data-history="5"><img src="/Images/Leopard/Leopard 5.jpg" alt=""></swiper-slide>
+      <swiper-slide data-history="Slide 6"><img src="/Images/Leopard/Leopard 6.jpg" alt=""></swiper-slide>
+      <swiper-slide data-history="7"><img src="/Images//Leopard/Leopard 7.jpg" alt=""></swiper-slide>
+      <swiper-slide data-history="Slide 8"><img src="/Images/Leopard/Leopard 8.jpg" alt=""></swiper-slide>
+      <swiper-slide data-history="9"><img src="/Images/Leopard/Leopard 9.jpg" alt=""></swiper-slide>
+    </swiper-container>
+
+
+
+
+
+
+  </section>
+
+
+
+
+  </main>
+
+
+  <footer class="site-footer mt-6 bg-gray-900 text-gray-500 py-5">
+    <div class="container mx-auto">
+      <div class="grid gap-x-8 gap-y-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        <div class="mb-5">
+          <a href="" class=" flex mt-1 mb-6">
+            <img src="/Images/the LOGO.png" class="h-8 me-3" alt="Logo" />
+            <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">WILDLIFE</span>
+          </a>
+          <h3 class="text-white text-lg font-bold mb-4">About The Wildlife</h3>
+          <p class="text-justify">Sri Lanka, a gem in the Indian Ocean, captivates visitors with its rich culture,
+            stunning beaches, and diverse wildlife. Land attractions include elephants, monkeys, leopards, and sloth
+            bears, while offshore, whales and dolphins offer a mesmerizing spectacle.</p>
+          <ul class="flex space-x-2 mt-16 ">
+            <li><a href="#" class="p-2 text-yellow-500 hover:bg-fuchsia-600 rounded-xl"><span
+                  class="fab fa-twitter"></span></a>
+            </li>
+            <li><a href="#" class="p-2 text-yellow-500 hover:bg-fuchsia-600 rounded-xl"><span
+                  class="fab fa-facebook"></span></a>
+            </li>
+            <li><a href="#" class="p-2 text-yellow-500 hover:bg-fuchsia-600 rounded-xl"><span
+                  class="fab fa-linkedin"></span></a>
+            </li>
+            <li><a href="#" class="p-2 text-yellow-500 hover:bg-fuchsia-600 rounded-xl"><span
+                  class="fab fa-instagram"></span></a>
+            </li>
+            <li><a href="https://github.com/ABD-HAKEEM@ABD-HAKEEM"
+                class="p-2 text-yellow-500 hover:bg-fuchsia-600 rounded-xl"><span class="fab fa-github"></span></a></li>
+          </ul>
+        </div>
+
+
+        <div class="mb-5">
+          <h3 class="text-white text-lg font-bold mb-4">Contact Info</h3>
+          <ul class="list-none">
+            <li class="mb-2">
+              <span class="block text-white">Address:</span>
+              <span class="text-gray-400">Department of Wildlife Conservation,
+                811A, Jayanthipura,
+                Battaramulla, Sri Lanka.</span>
+            </li>
+            <li class="mb-2">
+              <span class="block text-white">Telephone:</span>
+              <span class="text-gray-400">+94 761122226</span>
+            </li>
+            <li>
+              <span class="block text-white">Email:</span>
+              <span class="text-gray-400">dg@dwc.gov.lk</span>
+            </li>
+          </ul>
+        </div>
+
+
+       
+        <div class="mb-5">
+          <h3 class="text-white text-lg font-bold mb-4">Quick Links</h3>
+          <ul class="flex m-auto">
+            <li><a href="/about.html" class="hover:text-red-100 ">About</a>
+            </li>
+            <li><a href="/f&q.html" class="hover:text-red-100">Terms</a></li>
+            <li><a href="/f&q.html" class="hover:text-red-100">Disclaimers</a>
+            </li>
+            <li><a href="/contect.html" class="hover:text-red-100">Contact</a>
+            </li>
+
+          </ul>
+          <div class="col-lg-3 mt-6">
+            <div class="subscribe-newsletters footer-item">
+              <h4>If you have any inquiries please Enter Your Email</h4>
+              <p> </p>
+              <form action="#" method="get" class="mt-3">
+                <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email"
+                  required="" class="w-64 mr-10">
+                <button type="submit"><i class="fa fa-paper-plane-o"></i></button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="text-center mt-4 md:mt-6">
+        <p class="text-gray-500">&copy; <a href="/index.html" class="text-yellow-500">Department of Wildlife
+            Lanka</a>, All Right
+          Reserved.</p>
+        <p>Abdul Hakeem</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <button id="to-top-button" onclick="goToTop()" title="top"
+    class="hidden fixed z-50 bottom-10 right-10 p-4 border-0 w-14 h-14 rounded-xl shadow-md bg-yellow-500 hover:bg-fuchsia-100 text-white text-lg font-semibold transition-colors duration-300">
+
+    <span><i class="fa-solid fa-arrow-up"></i></span>
+  </button>
+  </div>
+  <script>
+
+    var toTopButton = document.getElementById("to-top-button");
+
+    if (toTopButton) {
+
+
+      window.onscroll = function () {
+        if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+          toTopButton.classList.remove("hidden");
+        } else {
+          toTopButton.classList.add("hidden");
+        }
+      };
+
+      window.goToTop = function () {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      };
+    }
+  </script>
+  <script>
+    document.getElementById('mobile-menu-button').addEventListener('click', function () {
+      var mobileMenu = document.getElementById('mobile-menu');
+      mobileMenu.style.display = (mobileMenu.style.display === 'block') ? 'none' : 'block';
+    });
+  </script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
+  <script type="text/javascript" src="/js/app.js"></script>
+</body>
+
+</html>
