@@ -114,7 +114,7 @@
                   class="text-4xl font-extrabold font-serif mt-10 subpixel-antialiased text-amber-900 tracking-[8px] text-left">
                 
                 </h2> 
-                <p x-text="$store.home.home_section_two_card1.body" class="block mb-8 mt-10 font-sans text-base antialiased font-normal leading-relaxed text-gray-700">
+                <p x-text="" class="block mb-8 mt-10 font-sans text-base antialiased font-normal leading-relaxed text-gray-700">
 
                   </p>
 
@@ -127,12 +127,16 @@ $
               <div class="min-w-[320px]">
                 <div class="relative mx-4 mt-4 overflow-hidden text-gray-700 bg-white bg-clip-border rounded-xl ">
 
-                  <h2 x-text="$store.home.home_section_two_card2.title" class="text-4xl font-extrabold font-serif mt-10 subpixel-antialiased text-#0c0a09 ">
-                    
+                  <h2 class="text-4xl font-extrabold font-serif mt-10 subpixel-antialiased text-#0c0a09 ">
+                    Discover the Priceless Treasure of Nature
                   </h2>
-                  <p x-text="$store.home.home_section_two_card2.body"
+                  <p
                     class="block mb-8 mt-10 font-sans text-base antialiased font-normal leading-relaxed text-gray-700 ">
-                   </p>
+                    Nature's priceless treasure unfolds in the delicate dance of sun-kissed leaves, the symphony of
+                    birdsong, and the tranquil embrace of untouched landscapes, revealing a wealth of beauty that
+                    transcends any material measure. In its boundless wonders, one finds a treasure trove of serenity
+                    and
+                    inspiration beyond compare.</p>
 
                 </div>
               </div>
@@ -181,18 +185,7 @@ $
       </section>
 
 
-   <!-- <section>
-        <swiper-container class="mySwiper mt-20 mb-10 " pagination="true" effect="coverflow" grab-cursor="true"
-          centered-slides="true" slides-per-view="auto" coverflow-effect-rotate="50" coverflow-effect-stretch="0"
-          coverflow-effect-depth="100" coverflow-effect-modifier="1" coverflow-effect-slide-shadows="true">
-          <template x-for="slideshow in $store.home.slideshow.image" class="w-[300px] h-[300px]">
-            <img  x-bind:src="slideshow.image " alt="">
-          </template>
-        </swiper-container>
 
-
-
-      </section> -->
 
 
       <section class=" flex mt-20  py-5">
@@ -200,11 +193,12 @@ $
           <div class="grid gap-x-8 gap-y-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             <div class=" max-w-sm rounded overflow-hidden shadow-lg card_1 ml-6 mt-6 mr-6  w-[1000px] w-full">
               <div class="rounded-l overflow-hidden shadow-lg">
-                <img class="w-full" x-bind:src="$store.home.home_section_three_card1.image"  alt="elephant in the Wild">
+                <img class="w-full" src="/Images/Home card 1.jpg" alt="elephant in the Wild">
                 <div class="px-6 py-4">
-                  <div x-text="$store.home.home_section_three_card1.title" class="font-bold text-xl mb-2"></div>
-                  <p x-text="$store.home.home_section_three_card1.body" class="text-gray-700 text-base">
-                   
+                  <div class="font-bold text-xl mb-2">The Bigg Boss On the Wild</div>
+                  <p class="text-gray-700 text-base">
+                    Elephants are considered one of the most intelligent animals, as they are capable of using tools and
+                    showing grief and compassion.60,000 muscles in their trunks.
                   </p>
                 </div>
                 <div class="px-6 pt-4 pb-2">
@@ -219,11 +213,12 @@ $
             </div>
             <div class=" max-w-sm rounded overflow-hidden shadow-lg card_1 ml-6 mt-6 mr-6  w-[1000px] w-full">
               <div class="rounded overflow-hidden shadow-lg">
-                <img class="w-full" x-bind:src="$store.home.home_section_three_card2.image" alt="eagle flying">
+                <img class="w-full" src="/Images/home card 2.jpg" alt="eagle flying">
                 <div class="px-6 py-4">
-                  <div x-text="$store.home.home_section_three_card2.title" class="font-bold text-xl mb-2"></div>
-                  <p x-text="$store.home.home_section_three_card2.body" class="text-black-500">
-                   
+                  <div class="font-bold text-xl mb-2">The Flying Cheeta</div>
+                  <p class="text-black-500">
+                    “king of all birds,” eagles are large and powerful birds of prey that appear to soar majestically in
+                    the air, searching for their next meal.
                   </p>
                 </div>
                 <div class="px-6 pt-4 pb-2">
@@ -238,11 +233,12 @@ $
             </div>
             <div class=" max-w-sm rounded overflow-hidden shadow-lg card_1 ml-6 mt-6 mr-6  w-[1000px] w-full">
               <div class="rounded overflow-hidden shadow-lg">
-                <img class="w-full" x-bind:src="$store.home.home_section_three_card3.image" alt="Sunset in the mountains">
+                <img class="w-full" src="/Images/home card 3.jpg" alt="Sunset in the mountains">
                 <div class="px-6 py-4">
-                  <div x-text="$store.home.home_section_three_card3.title" class="font-bold text-xl mb-2"></div>
-                  <p x-text="$store.home.home_section_three_card3.body" class="text-gray-700 text-base">
-                    
+                  <div class="font-bold text-xl mb-2">Mr Cool on Wild</div>
+                  <p class="text-gray-700 text-base">
+                    Males and females have horns, unlike many mammals in the antelope family. This particular type of
+                    animal covers 17 different species, which include (but are not limited to) the
                   </p>
                 </div>
                 <div class="px-6 pt-4 pb-2">
@@ -262,30 +258,50 @@ $
 
       <section class="container mx-auto flex flex-col items-center md:flex-row">
         <div class="text-center m-auto mb-6 md:mb-0 md:mr-6">
-          <h3 x-text="$store.home.home_section_four.title" class="mt-10 text-3xl md:text-6xl font-extrabold font-mono text-yellow-900"></h3>
-          <h4 x-text="$store.home.home_section_four.sub_title" class="text-2xl mt-4 md:text-3xl font-sans"></h4>
-          <p x-text="$store.home.home_section_four.body" class=" text-black-500 text-opacity-75 md:text-opacity-50 leading-5 mt-6">
-           
+          <h3 class="mt-10 text-3xl md:text-6xl font-extrabold font-mono text-yellow-900">Our Goal</h3>
+          <h4 class="text-2xl mt-4 md:text-3xl font-sans">Save the Animals of the Planet</h4>
+          <p class=" text-black-500 text-opacity-75 md:text-opacity-50 leading-5 mt-6">
+            In Sri Lanka, the conservation of the diverse and unique wildlife is a paramount concern as the nation
+            boasts
+            a rich tapestry of flora and fauna. Efforts to save the animals of the planet in Sri Lanka focus on
+            preserving
+            the natural habitats and ecosystems that house a multitude of species, many of which are endemic to the
+            island. Conservation initiatives collaborate with local communities to promote sustainable practices and
+            raise
+            awareness about the importance of protecting these invaluable creatures. From the majestic Asian elephant to
+            the elusive leopard and the vibrant array of bird species, safeguarding the biodiversity of Sri Lanka is
+            crucial for the well-being of the planet and the continuation of the country's ecological legacy. Through a
+            combination of conservation policies, community engagement, and education, Sri Lanka is striving to ensure a
+            harmonious coexistence between humans and the remarkable animals that call the island home.
           </p>
 
 
           <div class="container mx-auto">
             <div class="flex flex-col md:flex-row">
-              <img x-bind:src="$store.home.home_section_four.image"
+              <img src="/Images/logo.jpg"
                 class="w-full h-auto md:w-5/6 md:h-5/6 mt-10 md:ml-10 rounded-3xl border-double border-4 border-sky-400"
                 alt="">
               <ul class="m-auto list-disc text-left md:ml-40 mt-6">
                 <li>
-                  <h5 x-text="$store.home.home_section_four.title_two" class="text-l font-bold font-mono"></h5>
-                  <p x-text="$store.home.home_section_four.body_two"></p>
+                  <h5 class="text-l font-bold font-mono">Protected Areas</h5>
+                  <p>Sri Lanka has established numerous national parks and wildlife sanctuaries to serve as protected
+                    areas for its diverse wildlife. These include Yala National Park, Wilpattu National Park, and
+                    Sinharaja Forest Reserve, among others.</p>
                 </li>
                 <li>
-                  <h5 x-text="$store.home.home_section_four.title_three" class="text-l font-bold font-mono"></h5>
-                  <p x-text="$store.home.home_section_four.body_three" ></p>
+                  <h5 class="text-l font-bold font-mono">Human-Wildlife Conflict Mitigation</h5>
+                  <p>Sri Lanka faces challenges related to human-wildlife conflict, especially between elephants and
+                    local
+                    communities. Conservation efforts include the development of strategies to mitigate conflicts, such
+                    as
+                    the implementation of elephant corridors and the use of innovative methods to deter elephants from
+                    entering populated areas.</p>
                 </li>
                 <li>
-                  <h5  x-text="$store.home.home_section_four.title_four" class="text-l font-bold font-mono"></h5>
-                  <p x-text="$store.home.home_section_four.body_four" >
+                  <h5 class="text-l font-bold font-mono">Endangered Species Conservation</h5>
+                  <p>Conservation programs in Sri Lanka specifically target endangered species such as the Sri Lankan
+                    elephant, sloth bear, and several species of turtles. These initiatives involve monitoring
+                    populations, implementing anti-poaching measures, and promoting breeding programs where necessary.
                   </p>
                 </li>
               </ul>
@@ -436,7 +452,7 @@ $
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script type="text/javascript" src="/https://github.com/ABD-HAKEEM/CB013168-WDOS-ABDULHAKEEM/Js/app.js"></script>
+  <script type="text/javascript" src="/Js/app.js"></script>
   <script type="text/javascript" src="/Js/store/home.js"></script>
 
   <script>
