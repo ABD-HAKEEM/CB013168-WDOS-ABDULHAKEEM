@@ -13,11 +13,47 @@
 <script src="https://kit.fontawesome.com/bd921df3a8.js" crossorigin="anonymous"></script>
 
 <script src="https://cdn.tailwindcss.com"></script>
-<script src="https://unpkg.com/alpinejs" defer></script>
+<script src="//unpkg.com/alpinejs" defer></script>
+<script>
+  module.exports = {
+    theme: {
+      screens: {
+        sm: '480px',
+        md: '768px',
+        lg: '976px',
+        xl: '1440px'
+      },
+      colors: {
+        'blue': '#1fb6ff',
+        'purple': '#7e5bef',
+        'pink': '#ff49db',
+        'orange': '#ff7849',
+        'green': '#13ce66',
+        'yellow': '#ffc82c',
+        'gray-dark': '#273444',
+        'gray': '#8492a6',
+        'gray-light': '#d3dce6'
+      },
+      fontFamily: {
+        sans: ['Graphik', 'sans-serif'],
+        serif: ['Merriweather', 'serif']
+      },
+      extend: {
+        spacing: {
+          '128': '32rem',
+          '144': '36rem',
+        },
+        borderRadius: {
+          '4xl': '2rem'
+        }
+      }
+    }
+  }
+</script>
 </head>
 
 <body class="w-full">
-  <div id="w_app" x-data="_home">
+  <div id="w_app" x-data="{}">
     <header class="bg-gray-800 text-white  ">
       <div class="container mx-auto py-4 h-16 p-4 hidden md:block">
         <nav class="main-nav flex justify-between items-center  mt-[-8px] ">
@@ -71,17 +107,13 @@
     <main>
 
 
-
       <section class="flex w-auto ">
         <div class="">
 
-          <template x-if="videoUrl">
-            <video autoplay controls>
-              <source x-bind:src="videoUrl" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          </template>
-          
+          <video autoplay loop muted>
+            <source x-bind:src="$store.common.imageSrc('/Images/home_video.mp4')" type="video/mp4"
+              class= w-[100px] h-[100px]">
+          </video>
           <h1
             class="absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-9xl font-mono text-green-500 font-extrabold tracking-widest">
             Wildlife
@@ -462,17 +494,6 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script type="text/javascript" src="/js/app.js"></script>
-
-  <script>
-    document.addEventListener('alpine:init', () => {
-        Alpine.data('_home', () => ({
-            videoUrl : '',
-            init() {
-                this.videoUrl = this.$store.common.imageSrc('/Images/home_video.mp4');
-            }
-        }))
-    })
-</script>
 </body>
 
 </html>

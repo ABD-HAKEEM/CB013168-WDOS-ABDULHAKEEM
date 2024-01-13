@@ -75,13 +75,10 @@
       <section class="flex w-auto ">
         <div class="">
 
-          <template x-if="videoUrl">
-            <video autoplay controls>
-              <source x-bind:src="videoUrl" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          </template>
-          
+          <video autoplay loop muted>
+            <source x-bind:src="$store.common.imageSrc('/Images/home_video.mp4')" type="video/mp4"
+              class="w-[100px] h-[100px]">
+          </video>
           <h1
             class="absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-9xl font-mono text-green-500 font-extrabold tracking-widest">
             Wildlife
@@ -466,9 +463,8 @@
   <script>
     document.addEventListener('alpine:init', () => {
         Alpine.data('_home', () => ({
-            videoUrl : '',
             init() {
-                this.videoUrl = this.$store.common.imageSrc('/Images/home_video.mp4');
+                
             }
         }))
     })

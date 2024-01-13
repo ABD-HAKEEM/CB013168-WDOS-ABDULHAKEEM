@@ -8,24 +8,64 @@
 </head>
 <link rel="stylesheet" href="/Css/style.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  integrity="sha512-xzLbZ8PQA5ZRHzPhDz+Z5qcDr2rZ9w6cMWpVsF+Zi1l5O5fRtRq3L0TW7J0EabYV6qv04xKJ2vPE/J9fR7gX/w=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <script src="https://kit.fontawesome.com/bd921df3a8.js" crossorigin="anonymous"></script>
-
+<script src="//unpkg.com/alpinejs" defer></script>
 <script src="https://cdn.tailwindcss.com"></script>
-<script src="https://unpkg.com/alpinejs" defer></script>
+<script>
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  theme: {
+    screens: {
+      sm: '480px',
+      md: '768px',
+      lg: '976px',
+      xl: '1440px',
+    },
+    colors: {
+      'blue': '#1fb6ff',
+      'purple': '#7e5bef',
+      'pink': '#ff49db',
+      'orange': '#ff7849',
+      'green': '#13ce66',
+      'yellow': '#ffc82c',
+      'gray-dark': '#273444',
+      'gray': '#8492a6',
+      'gray-light': '#d3dce6',
+    },
+    fontFamily: {
+      sans: ['Graphik', 'sans-serif'],
+      serif: ['Merriweather', 'serif'],
+    },
+    extend: {
+      spacing: {
+        '128': '32rem',
+        '144': '36rem',
+      },
+      borderRadius: {
+        '4xl': '2rem',
+      }
+    }
+  }
+}
+</script>
 </head>
 
 <body class="w-full">
-  <div id="w_app" x-data="_home">
+  <div id="w_app" x-data="{}">
     <header class="bg-gray-800 text-white  ">
       <div class="container mx-auto py-4 h-16 p-4 hidden md:block">
         <nav class="main-nav flex justify-between items-center  mt-[-8px] ">
           <div class="flex items-center">
-            <a href="/index.html" class="text-lg font-bold ml-[0px]"><i class="fa-solid fa-feather"></i>Wildlife</a>
+            <a href="/index.html" class="text-lg font-bold ml-[0px]"><i
+                class="fa-solid fa-feather"></i>Wildlife</a>
           </div>
           <ul class="hidden lg:flex list_view space-x-4 ">
-            <li><a href="/srilanka-wildlife-intro.html" class="hover:text-orange-600">Introduction</a></li>
+            <li><a href="/srilanka-wildlife-intro.html"
+                class="hover:text-orange-600">Introduction</a></li>
             <li><a href="/Dep-of-wildlife.html" class="hover:text-orange-600">Department of
                 Wildlife</a></li>
             <li><a href="/animals.html" class="hover:text-orange-600">Animals in Sri
@@ -45,14 +85,17 @@
         <div class="bg-gray-800 p-4 text-white">
 
           <div class="flex justify-between items-center">
-            <a href="/index.html" class="text-lg font-bold  block py-2"><i class="fa-solid fa-feather"></i>Wildlife</a>
+            <a href="/index.html" class="text-lg font-bold  block py-2"><i
+                class="fa-solid fa-feather"></i>Wildlife</a>
             <button id="mobile-menu-button" class="text-white focus:outline-none">
               <i class="fa-solid fa-bars"></i>
             </button>
           </div>
           <div id="mobile-menu" class="hidden mt-4">
-            <a href="/srilanka-wildlife-intro.html" class="hover:text-orange-600  block py-2">Introduction</a>
-            <a href="/Dep-of-wildlife.html" class="hover:text-orange-600  block py-2">Department of Wildlife</a>
+            <a href="/srilanka-wildlife-intro.html"
+              class="hover:text-orange-600  block py-2">Introduction</a>
+            <a href="/Dep-of-wildlife.html"
+              class="hover:text-orange-600  block py-2">Department of Wildlife</a>
             <a href="/animals.html" class="hover:text-orange-600  block py-2">Animals in Sri
               Lanka</a>
             <a href="/leopards.html" class="hover:text-orange-600  block py-2">Leopards</a>
@@ -71,17 +114,12 @@
     <main>
 
 
-
       <section class="flex w-auto ">
         <div class="">
-
-          <template x-if="videoUrl">
-            <video autoplay controls>
-              <source x-bind:src="videoUrl" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          </template>
-          
+  
+          <video autoplay loop muted>
+            <source x-bind: src="$store.common.imageSrc('/Images/production_id_4746616 (2160p).mp4')" type="video/mp4" class=" w-[100px] h-[100px] ">
+          </video>
           <h1
             class="absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-9xl font-mono text-green-500 font-extrabold tracking-widest">
             Wildlife
@@ -93,11 +131,11 @@
             bears, while offshore, whales and dolphins offer a mesmerizing spectacle. The country stands out even among
             the pearl-studded treasures of the Indian Ocean.
           </p>
-
-
+  
+  
         </div>
       </section>
-
+  
       <section class="about-section">
         <div class="flex-wrap">
           <div class=" flex flex-wrap ">
@@ -106,97 +144,94 @@
             </div>
             <img src="/Images/geranimo-AX9sJ-mPoL4-unsplash.jpg" alt="image"
               class=" justify-left w-6/12 sm:w-4/12 px-4 rounded-full mt-32 bg-sky-300 m-[-140px] min-w-[320px] ">
-
-
+  
+  
             <div
               class=" flex text-gray-700 bg-white shadow-md bg-clip-border rounded-xl ml-48 mt-[-50px] w-2/5 mr-4 h-[400px]">
               <div class="relative mx-4 mt-4 overflow-hidden text-gray-700 bg-white bg-clip-border rounded-xl ">
-
-
+  
+  
                 <h2
                   class="text-4xl font-extrabold font-serif mt-10 subpixel-antialiased text-amber-900 tracking-[8px] text-left">
                   Welcome to Sri Lanka's Wildlife
                 </h2>
                 <p class="block mb-8 mt-10 font-sans text-base antialiased font-normal leading-relaxed text-gray-700">
-
+  
                   Discover the enchanting world of Sri Lanka's wildlife, where lush landscapes house diverse ecosystems.
-                  National parks and reserves serve as unique sanctuaries for a variety of fauna, from majestic
-                  elephants
+                  National parks and reserves serve as unique sanctuaries for a variety of fauna, from majestic elephants
                   in verdant plains to elusive leopards in dense jungles. With dawn, a symphony of birds and rustling
                   leaves heralds a new day in this biological haven. Thrilling safaris provide encounters with iconic
                   giants, colorful birds, exotic reptiles, and unique species found nowhere else on Earth. Conservation
                   efforts are key to preserving this ecological treasure for future generations to marvel.</p>
-
+  
               </div>
-
+  
             </div>
-
+  
             <div
               class="flex text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-2/5 h-5/6 ml-[800px] mt-[-200px] ">
               <div class="min-w-[320px]">
                 <div class="relative mx-4 mt-4 overflow-hidden text-gray-700 bg-white bg-clip-border rounded-xl ">
-
+  
                   <h2 class="text-4xl font-extrabold font-serif mt-10 subpixel-antialiased text-#0c0a09 ">
                     Discover the Priceless Treasure of Nature
                   </h2>
-                  <p
-                    class="block mb-8 mt-10 font-sans text-base antialiased font-normal leading-relaxed text-gray-700 ">
+                  <p class="block mb-8 mt-10 font-sans text-base antialiased font-normal leading-relaxed text-gray-700 ">
                     Nature's priceless treasure unfolds in the delicate dance of sun-kissed leaves, the symphony of
                     birdsong, and the tranquil embrace of untouched landscapes, revealing a wealth of beauty that
-                    transcends any material measure. In its boundless wonders, one finds a treasure trove of serenity
-                    and
+                    transcends any material measure. In its boundless wonders, one finds a treasure trove of serenity and
                     inspiration beyond compare.</p>
-
+  
                 </div>
               </div>
             </div>
           </div>
         </div>
-
-
+  
+  
       </section>
-
-      <section>
-        <swiper-container class="mySwiper mt-20 mb-10 " pagination="true" effect="coverflow" grab-cursor="true"
-          centered-slides="true" slides-per-view="auto" coverflow-effect-rotate="50" coverflow-effect-stretch="0"
-          coverflow-effect-depth="100" coverflow-effect-modifier="1" coverflow-effect-slide-shadows="true">
-          <swiper-slide class="w-[300px] h-[300px]">
-            <img class="w-[300px] h-[300px]" src="/Images/Slide img 1.jpg" />
-          </swiper-slide>
-          <swiper-slide class="w-[300px] h-[300px]">
-            <img class="w-[300px] h-[300px]" src="/Images/slide img2.jpg" />
-          </swiper-slide>
-          <swiper-slide class="w-[300px] h-[300px]">
-            <img class="w-[300px] h-[300px]" src="/Images/slide img 3.jpg" />
-          </swiper-slide>
-          <swiper-slide class="w-[300px] h-[300px]">
-            <img class="w-[300px] h-[300px]" src="/Images/slide img 4.jpg" />
-          </swiper-slide>
-          <swiper-slide class="w-[300px] h-[300px]">
-            <img class="w-[300px] h-[300px]" src="/Images/slide img 5.jpg" />
-          </swiper-slide>
-          <swiper-slide class="w-[300px] h-[300px]">
-            <img class="w-[300px] h-[300px]" src="/Images/slide img 6.jpg" />
-          </swiper-slide>
-          <swiper-slide class="w-[300px] h-[300px]">
-            <img class="w-[300px] h-[300px]" src="/Images/slide img7.jpg" />
-          </swiper-slide>
-          <swiper-slide class="w-[300px] h-[300px]">
-            <img class="w-[300px] h-[300px]" src="/Images/slide img8.jpg">
-          </swiper-slide>
-          <swiper-slide class="w-[300px] h-[300px]">
-            <img class="w-[300px] h-[300px]" src="/Images/slide img 9.jpg" />
-          </swiper-slide>
-        </swiper-container>
-
-
-
-      </section>
-
-
-
-
-
+  
+  <section>
+    <swiper-container class="mySwiper mt-20 mb-10 " pagination="true" effect="coverflow" grab-cursor="true" centered-slides="true"
+    slides-per-view="auto" coverflow-effect-rotate="50" coverflow-effect-stretch="0" coverflow-effect-depth="100"
+    coverflow-effect-modifier="1" coverflow-effect-slide-shadows="true" >
+    <swiper-slide class="w-[300px] h-[300px]">
+      <img class="w-[300px] h-[300px]"  src="/Images/Slide img 1.jpg" />
+    </swiper-slide>
+    <swiper-slide class="w-[300px] h-[300px]">
+      <img class="w-[300px] h-[300px]" src="/Images/slide img2.jpg" />
+    </swiper-slide>
+    <swiper-slide class="w-[300px] h-[300px]">
+      <img class="w-[300px] h-[300px]" src="/Images/slide img 3.jpg" />
+    </swiper-slide>
+    <swiper-slide class="w-[300px] h-[300px]">
+      <img class="w-[300px] h-[300px]" src="/Images/slide img 4.jpg" />
+    </swiper-slide >
+    <swiper-slide class="w-[300px] h-[300px]">
+      <img class="w-[300px] h-[300px]" src="/Images/slide img 5.jpg" />
+    </swiper-slide>
+    <swiper-slide class="w-[300px] h-[300px]">
+      <img class="w-[300px] h-[300px]" src="/Images/slide img 6.jpg" />
+    </swiper-slide>
+    <swiper-slide class="w-[300px] h-[300px]">
+      <img class="w-[300px] h-[300px]" src="/Images/slide img7.jpg" />
+    </swiper-slide>
+    <swiper-slide class="w-[300px] h-[300px]">
+      <img class="w-[300px] h-[300px]" src="/Images/slide img8.jpg">
+    </swiper-slide>
+    <swiper-slide class="w-[300px] h-[300px]">
+      <img  class="w-[300px] h-[300px]" src="/Images/slide img 9.jpg" />
+    </swiper-slide>
+  </swiper-container>
+  
+  
+  
+  </section>
+  
+  
+  
+  
+  
       <section class=" flex mt-20  py-5">
         <div class="container mx-auto">
           <div class="grid gap-x-8 gap-y-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
@@ -263,28 +298,25 @@
           </div>
         </div>
       </section>
-
-
+  
+  
       <section class="container mx-auto flex flex-col items-center md:flex-row">
         <div class="text-center m-auto mb-6 md:mb-0 md:mr-6">
           <h3 class="mt-10 text-3xl md:text-6xl font-extrabold font-mono text-yellow-900">Our Goal</h3>
           <h4 class="text-2xl mt-4 md:text-3xl font-sans">Save the Animals of the Planet</h4>
           <p class=" text-black-500 text-opacity-75 md:text-opacity-50 leading-5 mt-6">
-            In Sri Lanka, the conservation of the diverse and unique wildlife is a paramount concern as the nation
-            boasts
-            a rich tapestry of flora and fauna. Efforts to save the animals of the planet in Sri Lanka focus on
-            preserving
+            In Sri Lanka, the conservation of the diverse and unique wildlife is a paramount concern as the nation boasts
+            a rich tapestry of flora and fauna. Efforts to save the animals of the planet in Sri Lanka focus on preserving
             the natural habitats and ecosystems that house a multitude of species, many of which are endemic to the
-            island. Conservation initiatives collaborate with local communities to promote sustainable practices and
-            raise
+            island. Conservation initiatives collaborate with local communities to promote sustainable practices and raise
             awareness about the importance of protecting these invaluable creatures. From the majestic Asian elephant to
             the elusive leopard and the vibrant array of bird species, safeguarding the biodiversity of Sri Lanka is
             crucial for the well-being of the planet and the continuation of the country's ecological legacy. Through a
             combination of conservation policies, community engagement, and education, Sri Lanka is striving to ensure a
             harmonious coexistence between humans and the remarkable animals that call the island home.
           </p>
-
-
+  
+  
           <div class="container mx-auto">
             <div class="flex flex-col md:flex-row">
               <img src="/Images/logo.jpg"
@@ -299,10 +331,8 @@
                 </li>
                 <li>
                   <h5 class="text-l font-bold font-mono">Human-Wildlife Conflict Mitigation</h5>
-                  <p>Sri Lanka faces challenges related to human-wildlife conflict, especially between elephants and
-                    local
-                    communities. Conservation efforts include the development of strategies to mitigate conflicts, such
-                    as
+                  <p>Sri Lanka faces challenges related to human-wildlife conflict, especially between elephants and local
+                    communities. Conservation efforts include the development of strategies to mitigate conflicts, such as
                     the implementation of elephant corridors and the use of innovative methods to deter elephants from
                     entering populated areas.</p>
                 </li>
@@ -310,23 +340,22 @@
                   <h5 class="text-l font-bold font-mono">Endangered Species Conservation</h5>
                   <p>Conservation programs in Sri Lanka specifically target endangered species such as the Sri Lankan
                     elephant, sloth bear, and several species of turtles. These initiatives involve monitoring
-                    populations, implementing anti-poaching measures, and promoting breeding programs where necessary.
-                  </p>
+                    populations, implementing anti-poaching measures, and promoting breeding programs where necessary.</p>
                 </li>
               </ul>
             </div>
           </div>
-
+  
         </div>
-
+  
       </section>
-
-
-
-
-
+  
+  
+  
+  
+  
     </main>
-
+  
     <footer class="site-footer mt-6 bg-gray-900 text-gray-500 py-5">
       <div class="container mx-auto">
         <div class="grid gap-x-8 gap-y-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
@@ -353,12 +382,11 @@
                     class="fab fa-instagram"></span></a>
               </li>
               <li><a href="https://github.com/ABD-HAKEEM@ABD-HAKEEM"
-                  class="p-2 text-yellow-500 hover:bg-fuchsia-600 rounded-xl"><span class="fab fa-github"></span></a>
-              </li>
+                  class="p-2 text-yellow-500 hover:bg-fuchsia-600 rounded-xl"><span class="fab fa-github"></span></a></li>
             </ul>
           </div>
-
-
+  
+  
           <div class="mb-5">
             <h3 class="text-white text-lg font-bold mb-4">Contact Info</h3>
             <ul class="list-none">
@@ -378,9 +406,9 @@
               </li>
             </ul>
           </div>
-
-
-
+  
+  
+         
           <div class="mb-5">
             <h3 class="text-white text-lg font-bold mb-4">Quick Links</h3>
             <ul class="flex m-auto">
@@ -391,7 +419,7 @@
               </li>
               <li><a href="/contect.html" class="hover:text-red-100">Contact</a>
               </li>
-
+  
             </ul>
             <div class="col-lg-3 mt-6">
               <div class="subscribe-newsletters footer-item">
@@ -405,10 +433,10 @@
               </div>
             </div>
           </div>
-
+  
         </div>
-
-
+  
+  
         <div class="text-center mt-4 md:mt-6">
           <p class="text-gray-500">&copy; <a href="/index.html" class="text-yellow-500">Department of Wildlife
               Lanka</a>, All Right
@@ -417,16 +445,16 @@
         </div>
       </div>
     </footer>
-
-
-
+  
+  
+  
     <button id="to-top-button" onclick="goToTop()" title="top"
       class="hidden fixed z-50 bottom-10 right-10 p-4 border-0 w-14 h-14 rounded-xl shadow-md bg-yellow-500 hover:bg-fuchsia-100 text-white text-lg font-semibold transition-colors duration-300">
-
+  
       <span><i class="fa-solid fa-arrow-up"></i></span>
     </button>
   </div>
-
+ 
 
   <script>
 
@@ -462,17 +490,6 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script type="text/javascript" src="/js/app.js"></script>
-
-  <script>
-    document.addEventListener('alpine:init', () => {
-        Alpine.data('_home', () => ({
-            videoUrl : '',
-            init() {
-                this.videoUrl = this.$store.common.imageSrc('/Images/home_video.mp4');
-            }
-        }))
-    })
-</script>
 </body>
 
 </html>
