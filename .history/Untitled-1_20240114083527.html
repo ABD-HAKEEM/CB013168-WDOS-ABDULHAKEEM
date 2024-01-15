@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wildlife Small Game</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-green-200 h-screen flex items-center justify-center">
+
+    <div class="bg-white p-8 rounded-md shadow-md text-center">
+        <h1 class="text-3xl font-bold mb-4">Wildlife Small Game</h1>
+        <p class="text-gray-600 mb-8">Click on the wildlife to score points!</p>
+        
+        <img src="/Images/card img 1.jpg" alt="Wildlife Image" class="cursor-pointer hover:opacity-75" onclick="scorePoint()">
+        
+        <p class="mt-8">Score: <span id="score">0</span></p>
+    </div>
+
+    <script>
+        let score = 0;
+
+        function scorePoint() {
+            score++;
+            document.getElementById('score').innerText = score;
+        }
+    </script>
+</body>
+</html>
