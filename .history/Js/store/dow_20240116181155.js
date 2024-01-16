@@ -33,7 +33,7 @@ document.addEventListener('alpine:init', () => {
             title_2:'MARINE NATIONAL PARK',
             list2_1:'Adam’s Bridge',
             list2_2:'Hikkaduwa National Park',
-            list2_3:'Pigeon Island National Park',
+            list2_3:'Hikkaduwa National Park',
             
 
             title_3:'NATURE RESERVES',

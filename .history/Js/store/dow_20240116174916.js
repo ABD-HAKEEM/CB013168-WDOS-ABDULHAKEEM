@@ -21,32 +21,9 @@ document.addEventListener('alpine:init', () => {
             title:'PROTECTED AREAS IN SRI LANKA',
             title1:'WILDLIFE ',
             sub_title:'NATIONAL PARKS',
-            // header:'Ruhuna (Yala) N.P.',
-            // link:'https://maps.app.goo.gl/eBdQbfRFZr2hvHc86' , 
+            Header:'',
+            link:'' , 
         },
-        dow_section_five:{
-            title:'STRICT NATURAL RESERVES',
-            list1_1:'Hakgala',
-            list1_2:'Ritigala',
-            list1_3:'Yala',
-
-            title_2:'MARINE NATIONAL PARK',
-            list2_1:'Adam’s Bridge',
-            list2_2:'Hikkaduwa National Park',
-            list2_3:'Pigeon Island National Park',
-            
-
-            title_3:'NATURE RESERVES',
-            list3_1:'Trikonamadu',
-            list3_2:'Vetahirakanda',
-            list3_3:'Riverine',
-            list3_4:'Peak Wilderness',
-            list3_5:'Vedithalativu',
-            list3_6:'Nargerkovil',
-            list3_7:'Nayaru',
-            list3_8:'Nandikadal'
-
-        }
 
         
        

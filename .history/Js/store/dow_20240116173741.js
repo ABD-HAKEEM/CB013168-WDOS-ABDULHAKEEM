@@ -12,41 +12,7 @@ document.addEventListener('alpine:init', () => {
             video:'/Images/d of wildlife vide.mp4',
             sub_title:"SRI LANKA'S WILDLIFE PROTECTED AREAS"
         },
-        dow_section_three:{
-            title:"The Department of Wildlife Conservation in Sri Lanka",
-            body:"The Department of Wildlife Conservation in Sri Lanka plays a pivotal role in the country's efforts to preserve its rich biodiversity and protect the diverse array of flora and fauna. Established to manage and regulate the nation's wildlife resources, the department operates under the purview of the Ministry of Environment. One of its primary responsibilities is the administration and maintenance of the extensive network of national parks, wildlife sanctuaries, and reserves that serve as critical habitats for various species.",
-            image:'/Images/the lion.png',
-        },
-        dow_section_four:{
-            title:'PROTECTED AREAS IN SRI LANKA',
-            title1:'WILDLIFE ',
-            sub_title:'NATIONAL PARKS',
-            // header:'Ruhuna (Yala) N.P.',
-            // link:'https://maps.app.goo.gl/eBdQbfRFZr2hvHc86' , 
-        },
-        dow_section_five:{
-            title:'STRICT NATURAL RESERVES',
-            list1_1:'Hakgala',
-            list1_2:'Ritigala',
-            list1_3:'Yala',
-
-            title_2:'MARINE NATIONAL PARK',
-            list2_1:'Adam’s Bridge',
-            list2_2:'Hikkaduwa National Park',
-            list2_3:'Pigeon Island National Park',
-            
-
-            title_3:'NATURE RESERVES',
-            list3_1:'Trikonamadu',
-            list3_2:'Vetahirakanda',
-            list3_3:'Riverine',
-            list3_4:'Peak Wilderness',
-            list3_5:'Vedithalativu',
-            list3_6:'Nargerkovil',
-            list3_7:'Nayaru',
-            list3_8:'Nandikadal'
-
-        }
+        dow_section_three
 
         
        
