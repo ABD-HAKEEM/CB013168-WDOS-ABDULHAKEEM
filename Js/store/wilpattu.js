@@ -64,12 +64,12 @@ document.addEventListener('alpine:init', () => {
         wilpattu_section_five_card2: {
             title: "Birds",
             body: "Sri Lanka Grey Hornbill",
-            image:'/CB013168-WDOS-ABDULHAKEEM/Images/wilpattu/Peacock_card3.jpg',
+            image:'/CB013168-WDOS-ABDULHAKEEM/Images/wilpattu/sri-lanka-grey-hornbill.webp',
         },
         wilpattu_section_five_card3: {
             title: "Birds",
             body: "Attractive Peacock.",
-            image:'/CB013168-WDOS-ABDULHAKEEM/Images/wilpattu/wilpattu card 1 (4).jpg',
+            image:'/CB013168-WDOS-ABDULHAKEEM/Images/wilpattu/Peacock_card3.jpg',
         },
         wilpattu_section_five_card4: {
             title: "Animals",
