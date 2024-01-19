@@ -9,7 +9,7 @@ document.addEventListener('alpine:init', () => {
         contact_section_two: {
             title: "The Department of Wildlife Conservation in Sri Lanka",
             body: "The Department of Wildlife Conservation in Sri Lanka plays a pivotal role in the country's efforts to preserve its rich biodiversity and protect the diverse array of flora and fauna. Established to manage and regulate the nation's wildlife resources, the department operates under the purview of the Ministry of Environment. One of its primary responsibilities is the administration and maintenance of the extensive network of national parks, wildlife sanctuaries, and reserves that serve as critical habitats for various species.",
-            image: '/Images/the lion.png',
+            image: '/CB013168-WDOS-ABDULHAKEEM/Images/the lion.png',
 
         },
         contact_section_three: {
@@ -22,7 +22,7 @@ document.addEventListener('alpine:init', () => {
 
         },
         contact_section_four:{
-            image:'/Images/yala_bot.jpg',
+            image:'/CB013168-WDOS-ABDULHAKEEM/Images/yala_bot.jpg',
            
             
         },
