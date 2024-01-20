@@ -64,7 +64,7 @@ document.addEventListener('alpine:init', () => {
         wilpattu_section_five_card2: {
             title: "Birds",
             body: "Sri Lanka Grey Hornbill",
-            image:'/CB013168-WDOS-ABDULHAKEEM/Images/wilpattu/sri-lanka-grey-hornbill.jpg',
+            image:'/CB013168-WDOS-ABDULHAKEEM/Images/wilpattu/sri-lanka-grey-hornbill..jpg',
         },
         wilpattu_section_five_card3: {
             title: "Birds",
