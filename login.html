@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wildlife</title>
+  <link rel="icon" href="/CB013168-WDOS-ABDULHAKEEM/Images/TITLE_ICON.png" type="image/x-icon">
+
+</head>
+<link rel="stylesheet" href="/CB013168-WDOS-ABDULHAKEEM/Css/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<script src="https://kit.fontawesome.com/bd921df3a8.js" crossorigin="anonymous"></script>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/alpinejs" defer></script>
+</head>
+
+<body class="w-full bg-teal-50 min-h-screen flex items-center justify-center">
+    <body class="">
+        <div  class="relative bg-white p-8 rounded-lg shadow-md w-full max-w-md transition-transform transform duration-300 ease-in-out">
+            <h2 class="text-3xl fontx-bold mb-6 text-center text-gray-800">Welcome Back!</h2>
+            <form>
+                <img src="/CB013168-WDOS-ABDULHAKEEM/Images/login_image.jpg" alt="" class="rounded-lg shadow-md">
+                <div class="mb-4">
+                    <label for="username" class="block text-sm font-medium text-gray-700">Username</label>
+                    <input type="text" id="username" name="username" class="mt-1 p-3 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500" required>
+                </div>
+                <div class="mb-6">
+                    <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+                    <input type="password" id="password" name="password" class="mt-1 p-3 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500" required>
+                </div>
+                <div class="mb-6 flex items-center justify-between">
+                    <button type="submit" class="w-full bg-indigo-500 text-white py-3 rounded-md hover:bg-indigo-600 focus:outline-none focus:bg-indigo-600 transition duration-300 ease-in-out">Sign in</button>
+                </div>
+                <div class="text-sm text-gray-600 text-center">
+                    <a href="#" class="hover:text-indigo-500">Forgot password?</a>
+                </div>
+            </form>
+        </div>
+        
+
+
+
+  <script>
+
+    var toTopButton = document.getElementById("to-top-button");
+
+    if (toTopButton) {
+
+
+      window.onscroll = function () {
+        if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+          toTopButton.classList.remove("hidden");
+        } else {
+          toTopButton.classList.add("hidden");
+        }
+      };
+
+      window.goToTop = function () {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      };
+    }
+  </script>
+  <script>
+    document.getElementById('mobile-menu-button').addEventListener('click', function () {
+      var mobileMenu = document.getElementById('mobile-menu');
+      mobileMenu.style.display = (mobileMenu.style.display === 'block') ? 'none' : 'block';
+    });
+  </script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script type="text/javascript" src="/CB013168-WDOS-ABDULHAKEEM/Js/app.js"></script>
+  <script type="text/javascript" src="/CB013168-WDOS-ABDULHAKEEM/Js/store/home.js"></script>
+
+  <script>
+    document.addEventListener('alpine:init', () => {
+      Alpine.data('_home', () => ({
+        videoUrl: '',
+        init() {
+          this.videoUrl = this.$store.common.imageSrc('/CB013168-WDOS-ABDULHAKEEM/Images/home_video.mp4');
+        }
+      }))
+    })
+  </script>
+</body>
+
+</html>
