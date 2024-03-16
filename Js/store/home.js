@@ -106,6 +106,16 @@ document.addEventListener('alpine:init', () => {
             image4:'/CB013168-WDOS-ABDULHAKEEM/Images/Exploring 5.jpg',
             image5:'/CB013168-WDOS-ABDULHAKEEM/Images/map.png',
             image6:'/CB013168-WDOS-ABDULHAKEEM/Images/Exploring 5.jpg'
+        },
+
+        toggleEditor(block_id){
+            this.is_editor_visible = block_id;
+        },
+        saveBlock(block_id){
+
+            
+
+            this.toggleEditor(true);
         }
     });
 });
