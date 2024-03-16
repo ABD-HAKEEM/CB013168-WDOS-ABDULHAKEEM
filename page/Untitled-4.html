@@ -1,26 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Wildlife</title>
-        <link rel="icon" href="/CB013168-WDOS-ABDULHAKEEM/Images/TITLE_ICON.png" type="image/x-icon">
-      </head>
-      <link rel="stylesheet" href="/CB013168-WDOS-ABDULHAKEEM/Css/style.css">
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-        integrity="sha512-xzLbZ8PQA5ZRHzPhDz+Z5qcDr2rZ9w6cMWpVsF+Zi1l5O5fRtRq3L0TW7J0EabYV6qv04xKJ2vPE/J9fR7gX/w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-      
-      <script src="https://kit.fontawesome.com/bd921df3a8.js" crossorigin="anonymous"></script>
-      <script src="//unpkg.com/alpinejs" defer></script>
-      <script src="https://cdn.tailwindcss.com"></script>
-      
-      </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpine.js Local Storage Example</title>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
+</head>
 <body>
-    <h1 class="font-sana">Hello World-font-sana</h1>
-    <h1 class="font-roboto">Hello World-font-roboto</h1>
-    <h1 class="font-mono">Hello World-font-mono</h1>
-    <h1 class="font-serif">Hello World-font-serif</h1>
+    <div x-data="{ myData: localStorage.getItem('myData') || '' }">
+        <input type="text" x-model="myData" @input="localStorage.setItem('myData', $event.target.value)">
+        <p x-text="myData"></p>
+    </div>
 </body>
 </html>

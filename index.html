@@ -78,13 +78,13 @@
       <section class="flex w-auto ">
         <div class="">
 
-          <template x-if="videoUrl">
+         <!-- <template x-if="videoUrl">
             <video autoplay loop muted>
               <source x-bind:src="videoUrl" type="video/mp4" class=" w-[100px] h-[100px] ">
               Your browser does not support the video tag.
             </video>
-          </template>
-
+          </template> -->
+          <video class="md:w-full object-cover" autoplay loop muted x-bind:src="$store.home.home_section_one.video"></video>
           <h1 x-text="$store.home.home_section_one.title"
             class="absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2  md:text-9xl text-5xl text-white ont-sana md:text-green-500 font-extrabold tracking-widest">
 
