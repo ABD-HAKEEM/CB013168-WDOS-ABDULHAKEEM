@@ -23,19 +23,19 @@
     logsubmit(){
       let user = this.$store.log.authenticate(this.username, this.password, this.email);
       if (user) {
-        alert('Welcome!' + user.username);
+        document.getElementById('welcome').innerText = 'Welcome ' + user.username + '!!';
         location.href = '/CB013168-WDOS-ABDULHAKEEM/index.html';
       } else {
-        alert('Please Login with Correct User Name, Password, and Email !!!');
+        document.getElementById('welcome').innerText = 'Please Login with Correct User Name, Password, and Email !!!';
       }
     }
   }">
 
     <div class="w-full max-w-md">
       <div class="relative bg-white p-8 rounded-lg shadow-md w-full max-w-md transition-transform transform duration-300 ease-in-out">
-        <h2 class="text-3xl fontx-bold mb-6 text-center text-gray-800">Welcome Back!</h2>
+        <h2 id="welcome"  class="text-3xl fontx-bold mb-6 text-center text-gray-800"></h2>
         <form x-on:submit.prevent="logsubmit">
-          <img src="/CB013168-WDOS-ABDULHAKEEM/Images/login_image.jpg" alt="" class="rounded-lg shadow-md">
+          <img src="/CB013168-WDOS-ABDULHAKEEM/Images/login_image.jpg" alt="" class="rounded-lg shadow-md ">
           <div class="mb-4">
             <label class="block text-sm font-medium text-gray-700">Username</label>
             <input type="text" x-model="username" class="mt-1 p-3 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
