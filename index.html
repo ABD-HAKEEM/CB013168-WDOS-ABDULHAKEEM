@@ -504,6 +504,7 @@
 
       </section>
 
+      <template x-if="$store.auth.user">
       <div x-on:click="$store.home.toggleEditor(5)" class="flex hidden md:block">
         <button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded mb-5 mt-5 ml-5" x-on:click="open = !open">Edit</button>
    
@@ -574,7 +575,7 @@
           </div>
         </section>
       </div>
-
+      </template>
 
       <section class="container mx-auto flex flex-col items-center md:flex-row">
         <div class="text-center m-auto mb-6 md:mb-0 md:mr-6">

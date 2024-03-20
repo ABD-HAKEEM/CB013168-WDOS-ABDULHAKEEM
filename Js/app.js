@@ -27,10 +27,10 @@ document.addEventListener('alpine:init', () => {
 
           const user = await response.json();
 
-          if (user) {
-              localStorage.setItem('user', JSON.stringify(user));
-              this.user = user;
-              return user;
+          if (users) {
+              localStorage.setItem('user', JSON.stringify(users));
+              this.users = users;
+              return users;
           }
           return false;
       },
