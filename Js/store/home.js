@@ -115,7 +115,7 @@ document.addEventListener('alpine:init', () => {
 
             
 
-            this.toggleEditor(true);
+            this.toggleEditor(false);
         }
     });
 });

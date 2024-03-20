@@ -74,10 +74,41 @@
     <main>
 
 
+     
+      <div x-on:click="$store.home.toggleEditor(1)" class="flex hidden md:block">
+        <button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded mb-5 mt-5 ml-5" x-on:click="open = !open">Edit</button>
+        
+        <section class="flex w-auto w-full justify-start ">
+            <div class="max-w-xl mx-auto" x-show="$store.home.is_editor_visible == 1">
+                <form action="" class="grid gap-6" x-on:submit.prevent="$store.home.saveBlock(1)">
+                    <div class="container mx-auto mt-20 mb-20 ">
+                       <div class="mb-4">
+                                <label for="video" class="block text-gray-600">Video</label>
+                                <input type="text" id="video" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md" x-model="$store.home.home_section_one.video">
+                            </div>
+    
+                            <div class="mb-4">
+                                <label class="block text-gray-600">Title</label>
+                                <input type="text" class="w-full p-2 border border-gray-300 rounded-md" x-model="$store.home.home_section_one.title">
+                            </div>
+    
+                            <div class="mb-4">
+                                <label  class="block text-gray-600">Body</label>
+                                <textarea type="text" rows="4" class="w-full p-2 border border-gray-300 rounded-md" x-model="$store.home.home_section_one.body"></textarea>
+                            </div>
+                       
+                        
+                        <button type="submit" class="bg-yellow-500 text-white py-2 px-4 rounded-md">Save</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+    
+      
 
-      <section class="flex w-auto ">
-        <div class="">
 
+        <section>
          <!-- <template x-if="videoUrl">
             <video autoplay loop muted>
               <source x-bind:src="videoUrl" type="video/mp4" class=" w-[100px] h-[100px] ">
@@ -94,9 +125,52 @@
 
           </p>
 
+      </section>
 
+      <div x-on:click="$store.home.toggleEditor(2)" class="flex hidden md:block">
+      <button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded mb-5 mt-5 ml-5" x-on:click="open = !open">Edit</button>
+ 
+      <section class="ml-10 mb-10"> 
+        <div class="" x-show="$store.home.is_editor_visible == 2">
+          <form action=""  x-on:submit.prevent="$store.home.saveBlock(2)">
+              <h5 class="text-center font-sans text-4xl font-extrabold text-[#151c2c]">Section 02</h5>
+              
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 justify-items-start">
+             
+                <div class="mb-4">
+                  <label class="block text-gray-600">Image1</label>
+                  <input type="text" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md" x-model="$store.home.home_section_two_image.image1" >
+                </div>
+
+              <div class="mb-4">
+                <label class="block text-gray-600">Image2</label>
+                <input type="text" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md" x-model="$store.home.home_section_two_image.image2" >
+              </div>
+            
+                <div class="mb-4">
+                  <label class="block text-gray-600">Title</label>
+                  <input type="text" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md" x-model="$store.home.home_section_two_card1.title" >
+                </div>
+                <div class="mb-4">
+                  <label class="block text-gray-600">Body</label>
+                  <textarea rows="4" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md" x-model="$store.home.home_section_two_card1.body" ></textarea>
+                </div>
+                <div class="mb-4">
+                  <label class="block text-gray-600">Title</label>
+                  <input type="text" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md" x-model="$store.home.home_section_two_card2.title" >
+                </div>
+                <div class="mb-4">
+                  <label class="block text-gray-600">Body</label>
+                  <textarea rows="4" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md" x-model="$store.home.home_section_two_card2.body"></textarea>
+                </div>
+              </div>
+              <button type="submit" class="bg-yellow-500 text-white p-2 rounded-md">Save</button>
+            
+          </form>
         </div>
       </section>
+    </div>
+      
 
       <section class="about-section ">
         <div class="flex-wrap ">
@@ -201,6 +275,72 @@
 
       </section> -->
 
+      <div x-on:click="$store.home.toggleEditor(3)" class="flex hidden md:block">
+        <button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded mb-5 mt-5 ml-5" x-on:click="open = !open">Edit</button>
+   
+        <section class="ml-10 mb-10"> 
+          <div class="" x-show="$store.home.is_editor_visible == 3">
+            <form action=""  x-on:submit.prevent="$store.home.saveBlock(3)">
+                <h5 class="text-center font-sans text-4xl font-extrabold text-[#151c2c]">Section 03</h5>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 justify-items-start">
+               <div>
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Image1</label>
+                    <input type="text" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md" x-model="$store.home.home_section_three_card1.image" >
+                  </div>
+  
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Title</label>
+                    <input type="text" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md" x-model="$store.home.home_section_three_card1.title" >
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Body</label>
+                    <textarea rows="4" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md" x-model="$store.home.home_section_three_card1.body" ></textarea>
+                  </div>
+                </div>
+                <div>
+                <div class="mb-4">
+                  <label class="block text-gray-600">Image2</label>
+                  <input type="text" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md" x-model="$store.home.home_section_three_card2.image" >
+                </div>
+              
+                  
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Title</label>
+                    <input type="text" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md" x-model="$store.home.home_section_three_card2.title" >
+                  </div>
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Body</label>
+                    <textarea rows="4" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md" x-model="$store.home.home_section_three_card2.body"></textarea>
+                  </div>
+                </div>
+
+                <div>
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Image3</label>
+                    <input type="text" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md" x-model="$store.home.home_section_three_card3.image" >
+                  </div>
+                <div class="mb-4">
+                      <label class="block text-gray-600">Title</label>
+                      <input type="text" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md" x-model="$store.home.home_section_three_card3.title" >
+                    </div>
+                    <div class="mb-4">
+                      <label class="block text-gray-600">Body</label>
+                      <textarea rows="4" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md" x-model="$store.home.home_section_three_card3.body"></textarea>
+                    </div>
+
+                  </div>
+
+                </div>
+                <button type="submit" class="bg-yellow-500 text-white p-2 rounded-md">Save</button>
+              
+            </form>
+          </div>
+        </section>
+      </div>
+
 
       <section class=" flex mt-20  py-5">
         <div class="container mx-auto">
@@ -267,6 +407,65 @@
         </div>
       </section>
 
+      <div x-on:click="$store.home.toggleEditor(4)" class="flex hidden md:block">
+        <button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded mb-5 mt-5 ml-5" x-on:click="open = !open">Edit</button>
+   
+        <section class="ml-10 mb-10"> 
+          <div class="" x-show="$store.home.is_editor_visible == 4">
+            <form action=""  x-on:submit.prevent="$store.home.saveBlock(4)">
+                <h5 class="text-center font-sans text-4xl font-extrabold text-[#151c2c]">Section 04</h5>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 justify-items-start">
+               <div>
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Sub Title</label>
+                    <input type="text" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md" x-model="$store.home.home_section_five.sub_title" >
+                  </div>
+  
+                <div class="mb-4">
+                  <label class="block text-gray-600">Title</label>
+                  <input type="text" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md" x-model="$store.home.home_section_five.title" >
+                </div>
+              
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Body</label>
+                    <textarea type="text" rows="10" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md" x-model="$store.home.home_section_five.body" ></textarea>
+                  </div>
+                </div>
+                <div>
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Image1</label>
+                    <input  class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md" x-model="$store.home.home_section_five.image1" >
+                  </div>
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Image2</label>
+                    <input type="text" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md" x-model="$store.home.home_section_five.image2" >
+                  </div>
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Image3</label>
+                    <input  class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md" x-model="$store.home.home_section_five.image3"></textarea>
+                  </div>
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Image4</label>
+                    <input  class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md" x-model="$store.home.home_section_five.image4"></textarea>
+                  </div>
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Image5</label>
+                    <input class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md" x-model="$store.home.home_section_five.image5"></textarea>
+                  </div>
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Image6</label>
+                    <input  class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md" x-model="$store.home.home_section_five.image6"></textarea>
+                  </div>
+                </div>
+                </div>
+                <button type="submit" class="bg-yellow-400 text-white p-2 rounded-md">Save</button>
+              
+            </form>
+          </div>
+        </section>
+      </div>
+
       <section class="mx-auto flex-col items-center md:flex-row mt-10">
         <div class="container mx-auto">
           <div class="flex flex-col md:flex-row">
@@ -304,6 +503,78 @@
 
 
       </section>
+
+      <div x-on:click="$store.home.toggleEditor(5)" class="flex hidden md:block">
+        <button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded mb-5 mt-5 ml-5" x-on:click="open = !open">Edit</button>
+   
+        <section class="ml-10 mb-10"> 
+          <div class="" x-show="$store.home.is_editor_visible == 5">
+            <form action=""  x-on:submit.prevent="$store.home.saveBlock(5)">
+                <h5 class="text-center font-sans text-4xl font-extrabold text-[#151c2c]">Section 05</h5>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 justify-items-start">
+               <div>
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Sub Title</label>
+                    <input type="text" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md" x-model="" >
+                  </div>
+  
+                <div class="mb-4">
+                  <label class="block text-gray-600">Title</label>
+                  <input type="text" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md" x-model="" >
+                </div>
+              
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Body</label>
+                    <textarea type="text" rows="10" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md" x-model="" ></textarea>
+                  </div>
+                </div>
+                <div>
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Title</label>
+                    <input  class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md" x-model="" >
+                  </div>
+                  <div class="mb-4">
+                    <label class="block text-gray-600">P1</label>
+                    <textarea type="text" rows="10" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md" x-model="" ></textarea>
+                  </div>
+                  </div>
+
+                  <div>
+                    <div class="mb-4">
+                      <label class="block text-gray-600">Title</label>
+                      <input  class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md" x-model="" >
+                    </div>
+                    <div class="mb-4">
+                      <label class="block text-gray-600">P2</label>
+                      <textarea type="text" rows="10" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md" x-model="" ></textarea>
+                    </div>
+                    </div>
+
+                  <div>
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Title</label>
+                    <input  class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md" x-model="" >
+                  </div>
+                  <div class="mb-4">
+                    <label class="block text-gray-600">P3</label>
+                    <textarea type="text" rows="10" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md" x-model="" ></textarea>
+                  </div>
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Image</label>
+                    <input  class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md" x-model=""></textarea>
+                  </div>
+                </div>
+              
+                <button type="submit" class="bg-yellow-400 text-white p-2 rounded-md">Save</button>
+              
+            </form>
+          </div>
+        </section>
+      </div>
+
 
       <section class="container mx-auto flex flex-col items-center md:flex-row">
         <div class="text-center m-auto mb-6 md:mb-0 md:mr-6">
