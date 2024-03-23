@@ -108,13 +108,12 @@ document.addEventListener('alpine:init', () => {
             image6:'/CB013168-WDOS-ABDULHAKEEM/Images/Exploring 5.jpg'
         },
 
+    
+
         toggleEditor(block_id){
             this.is_editor_visible = block_id;
         },
-        saveBlock(block_id){
-
-            
-
+        save(block_id){
             this.toggleEditor(false);
         }
     });

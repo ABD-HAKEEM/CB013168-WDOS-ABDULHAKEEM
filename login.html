@@ -21,15 +21,16 @@
     password:'',
     email:'',
     logsubmit(){
-      let user = this.$store.log.authenticate(this.username, this.password, this.email);
+      let user = this.$store.log.login(this.username, this.password, this.email);
       if (user) {
-        document.getElementById('welcome').innerText = 'Welcome ' + user.username + '!!';
+        document.getElementById('welcome').innerText = 'Welcome Back ' + user + '!!';
         location.href = '/CB013168-WDOS-ABDULHAKEEM/index.html';
       } else {
         document.getElementById('welcome').innerText = 'Please Login with Correct User Name, Password, and Email !!!';
       }
     }
   }">
+
 
     <div class="w-full max-w-md">
       <div class="relative bg-white p-8 rounded-lg shadow-md w-full max-w-md transition-transform transform duration-300 ease-in-out">
