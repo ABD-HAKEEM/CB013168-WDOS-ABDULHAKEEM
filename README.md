@@ -3,7 +3,7 @@
 Embark on a digital safari with my whimsical creation – the Sri Lanka's Wildlife Explorer! 🚀 In the heart of my first-year Software Engineering adventure, I birthed this vibrant wildlife website using HTML and dancing through the wild with Tailwind CSS.
 
 ## Project Symphony:
-- **Tech Harmony:** HTML, Tailwind CSS
+- **Tech Harmony:** HTML, Tailwind CSS, Alpine.js
 - **Mission:** Unleash the wild wonders and ignite a passion for conservation.
 - **Magical Elements:**
   - Interactive galleries that speak the language of the wild.
