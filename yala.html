@@ -73,6 +73,44 @@
     </header>
 
     <main>
+
+
+      <template x-if="$store.log.user">
+        <div x-on:click="$store.yala.toggleEditor(1)" class="flex hidden md:block">
+          <button
+            class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded mb-5 mt-5 ml-5"
+            x-on:click="open = !open">Edit</button>
+
+          <section class="flex w-auto w-full justify-start ">
+            <div class="max-w-xl mx-auto" x-show="$store.yala.is_editor_visible == 1">
+              <form action="" class="grid gap-6" x-on:submit.prevent="$store.yala.save(1)">
+                <div class="container mx-auto mt-20 mb-20 ">
+                  <div class="mb-4">
+                    <label  class="block text-gray-600">Image</label>
+                    <input type="text" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                      x-model="$store.yala.yala_section_one.image">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Title</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.yala.yala_section_one.title">
+                  </div>
+
+
+
+                  <button type="submit" class="bg-yellow-500 text-white py-2 px-4 rounded-md">Save</button>
+                </div>
+              </form>
+            </div>
+          </section>
+        </div>
+
+      </template>
+
+
+
+
       <section class="mx-auto flex flex-col items-center md:flex-row bg-gray-100 relative ">
         <div class=" w-full  overflow-hidden relative">
           <img x-bind:src="$store.yala.yala_section_one.image" alt="" class="md:w-full md:h-[480px] md:object-cover">
@@ -100,6 +138,39 @@
       </section>
 
 
+      <template x-if="$store.log.user">
+        <div x-on:click="$store.yala.toggleEditor(2)" class="flex hidden md:block">
+          <button
+            class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded mb-5 mt-5 ml-5"
+            x-on:click="open = !open">Edit</button>
+
+          <section class="flex w-auto w-full justify-start ">
+            <div class="max-w-xl mx-auto" x-show="$store.yala.is_editor_visible == 2">
+              <form action="" class="grid gap-6" x-on:submit.prevent="$store.yala.save(2)">
+                <div class="container mx-auto mt-20 mb-20 ">
+                
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Title</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.yala.yala_section_two.title">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Body</label>
+                    <textarea type="text" rows="8" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                      x-model="$store.yala.yala_section_two.body"></textarea>
+                  </div>
+
+                  <button type="submit" class="bg-yellow-500 text-white py-2 px-4 rounded-md">Save</button>
+                </div>
+              </form>
+            </div>
+          </section>
+        </div>
+
+      </template>
+
+
       <section class="container mx-auto flex flex-col items-center md:flex-row">
         <div class="text-center m-auto mb-6 md:mb-0 md:mr-6">
           <h4 x-text="$store.yala.yala_section_two.sub_title"  class="text-xl mt-10 font-sana text-yellow-900"></h4><b class="font-extrabold">Yala</b>
@@ -114,6 +185,47 @@
 
       </section>
 
+
+      <template x-if="$store.log.user">
+        <div x-on:click="$store.yala.toggleEditor(3)" class="flex hidden md:block">
+          <button
+            class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded mb-5 mt-5 ml-5"
+            x-on:click="open = !open">Edit</button>
+
+          <section class="flex w-auto w-full justify-start ">
+            <div class="max-w-xl mx-auto" x-show="$store.yala.is_editor_visible == 3">
+              <form action="" class="grid gap-6" x-on:submit.prevent="$store.yala.save(3)">
+                <div class="container mx-auto mt-20 mb-20 ">
+                
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Title</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.yala.yala_section_three.title">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Body</label>
+                    <textarea type="text" rows="8" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                      x-model="$store.yala.yala_section_three.body"></textarea>
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Image</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.yala.yala_section_three.image">
+                  </div>
+
+                  <button type="submit" class="bg-yellow-500 text-white py-2 px-4 rounded-md">Save</button>
+                </div>
+              </form>
+            </div>
+          </section>
+        </div>
+
+      </template>
+
+
+      
       <section class="mx-auto flex-cols item-cenetermd:flex-row mt-10">
         <div class="container mx-auto">
           <div class="flex flex-col md:flex-row">
@@ -130,6 +242,159 @@
         </div>
       </section>
 
+
+      <template x-if="$store.log.user">
+        <div x-on:click="$store.yala.toggleEditor(5)" class="flex hidden md:block">
+          <button
+            class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded mb-5 mt-5 ml-5"
+            x-on:click="open = !open">Card Row 1</button>
+
+          <section class="flex w-auto w-full justify-start ">
+            <div class="max-w-xl mx-auto" x-show="$store.yala.is_editor_visible == 5">
+              <form action="" class="grid gap-6" x-on:submit.prevent="$store.yala.save(5)">
+                <div class="container mx-auto mt-20 mb-20 ">
+                
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Title Card 1</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.yala.yala_section_four_card1.title">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Body Card 1</label>
+                    <textarea type="text" rows="8" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                      x-model="$store.yala.yala_section_four_card1.body"></textarea>
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Image Card 1</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.yala.yala_section_four_card1.image">
+                  </div>
+
+
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Title Card 2</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.yala.yala_section_four_card2.title">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Body Card 2</label>
+                    <textarea type="text" rows="8" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                      x-model="$store.yala.yala_section_four_card2.body"></textarea>
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Image Card 2</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.yala.yala_section_four_card2.image">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Title Card 3</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.yala.yala_section_four_card3.title">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Body Card 3</label>
+                    <textarea type="text" rows="8" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                      x-model="$store.yala.yala_section_four_card3.body"></textarea>
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Image Card 3</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.yala.yala_section_four_card3.image">
+                  </div>
+
+                  <button type="submit" class="bg-yellow-500 text-white py-2 px-4 rounded-md">Save</button>
+                </div>
+              </form>
+            </div>
+          </section>
+        </div>
+
+      </template>
+
+      <template x-if="$store.log.user">
+        <div x-on:click="$store.yala.toggleEditor(6)" class="flex hidden md:block">
+          <button
+            class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded mb-5 mt-5 ml-5"
+            x-on:click="open = !open">Card Row 2</button>
+
+          <section class="flex w-auto w-full justify-start ">
+            <div class="max-w-xl mx-auto" x-show="$store.yala.is_editor_visible == 6">
+              <form action="" class="grid gap-6" x-on:submit.prevent="$store.yala.save(6)">
+                <div class="container mx-auto mt-20 mb-20 ">
+                
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Title Card 4</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.yala.yala_section_four_card4.title">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Body Card 4</label>
+                    <textarea type="text" rows="8" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                      x-model="$store.yala.yala_section_four_card4.body"></textarea>
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Image Card 4</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.yala.yala_section_four_card4.image">
+                  </div>
+
+
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Title Card 5</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.yala.yala_section_four_card5.title">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Body Card 5</label>
+                    <textarea type="text" rows="8" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                      x-model="$store.yala.yala_section_four_card5.body"></textarea>
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Image Card 5</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.yala.yala_section_four_card5.image">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Title Card 6</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.yala.yala_section_four_card6.title">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Body Card 6</label>
+                    <textarea type="text" rows="8" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                      x-model="$store.yala.yala_section_four_card6.body"></textarea>
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Image Card 6</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.yala.yala_section_four_card6.image">
+                  </div>
+
+                  <button type="submit" class="bg-yellow-500 text-white py-2 px-4 rounded-md">Save</button>
+                </div>
+              </form>
+            </div>
+          </section>
+        </div>
+
+      </template>
+      
       <section class=" flex mt-20  py-5">
         <div class="container mx-auto">
           <div class="grid gap-x-8 gap-y-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
@@ -194,6 +459,108 @@
         </div>
       </section>
 
+
+
+      <template x-if="$store.log.user">
+        <div x-on:click="$store.yala.toggleEditor(7)" class="flex hidden md:block">
+          <button
+            class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded mb-5 mt-5 ml-5"
+            x-on:click="open = !open">Edit</button>
+
+          <section class="flex w-auto w-full justify-start ">
+            <div class="max-w-xl mx-auto" x-show="$store.yala.is_editor_visible == 7">
+              <form action="" class="grid gap-6" x-on:submit.prevent="$store.yala.save(7)">
+                <div class="container mx-auto mt-20 mb-20 w-[750px]">
+                
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Image 1</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.yala.yala_section_five_card1.image">
+                  </div>
+
+                  
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Title 1</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.yala.yala_section_five_card1.title">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Image 2</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.yala.yala_section_five_card2.image">
+                  </div>
+
+                  
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Title 2</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.yala.yala_section_five_card2.title">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Image 3</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.yala.yala_section_five_card3.image">
+                  </div>
+
+                  
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Title 3</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.yala.yala_section_five_card3.title">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Image 4</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.yala.yala_section_five_card4.image">
+                  </div>
+
+                  
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Title 4</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.yala.yala_section_five_card4.title">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Image 5</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.yala.yala_section_five_card5.image">
+                  </div>
+
+                  
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Title 5</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.yala.yala_section_five_card5.title">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Image 6</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.yala.yala_section_five_card6.image">
+                  </div>
+
+                  
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Title 6</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.yala.yala_section_five_card6.title">
+                  </div>
+
+
+                  <button type="submit" class="bg-yellow-500 text-white py-2 px-4 rounded-md">Save</button>
+                </div>
+              </form>
+            </div>
+          </section>
+        </div>
+
+      </template>
+
+      
       <section class="about-section-2">
         <div class="relative flex max-w-fit ml-auto mr-auto mt-10 mb-10">
 
@@ -279,6 +646,42 @@
           </div>
       </section>
 
+
+      <template x-if="$store.log.user">
+        <div x-on:click="$store.yala.toggleEditor(8)" class="flex hidden md:block">
+          <button
+            class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded mb-5 mt-5 ml-5"
+            x-on:click="open = !open">Edit</button>
+
+          <section class="flex w-auto w-full justify-start ">
+            <div class="max-w-xl mx-auto" x-show="$store.yala.is_editor_visible == 8">
+              <form action="" class="grid gap-6" x-on:submit.prevent="$store.yala.save(8)">
+                <div class="container mx-auto mt-20 mb-20 w-[750px]">
+                
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Image</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.yala.yala_section_six.image">
+                  </div>
+
+                  
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Title</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.yala.yala_section_six.title">
+                  </div>
+
+
+                  <button type="submit" class="bg-yellow-500 text-white py-2 px-4 rounded-md">Save</button>
+                </div>
+              </form>
+            </div>
+          </section>
+        </div>
+
+      </template>
+
+      
       <section class=" overflow-hidden relative mb-10 py-0 ml-10 mr-10">
         <div class="items-center ">
           <h4 x-text="$store.yala.yala_section_six.title"
@@ -290,6 +693,47 @@
 
         </div>
       </section>
+
+
+      <template x-if="$store.log.user">
+        <div x-on:click="$store.yala.toggleEditor(9)" class="flex hidden md:block">
+          <button
+            class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded mb-5 mt-5 ml-5"
+            x-on:click="open = !open">Edit</button>
+
+          <section class="flex w-auto w-full justify-start ">
+            <div class="max-w-xl mx-auto" x-show="$store.yala.is_editor_visible == 9">
+              <form action="" class="grid gap-6" x-on:submit.prevent="$store.yala.save(9)">
+                <div class="container mx-auto mt-20 mb-20 w-[750px]">
+                
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Bg Image</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.yala.yala_section_sev.image_bg">
+                  </div>
+                 
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Title</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.yala.yala_section_sev.title">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Link</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.yala.yala_section_sev.link">
+                  </div>
+
+
+                  <button type="submit" class="bg-yellow-500 text-white py-2 px-4 rounded-md">Save</button>
+                </div>
+              </form>
+            </div>
+          </section>
+        </div>
+
+      </template>
 
       <section class="w-full overflow-hidden relative mb-0 py-0 ">
         <div class="relative">

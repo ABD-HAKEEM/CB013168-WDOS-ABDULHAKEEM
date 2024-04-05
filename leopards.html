@@ -25,18 +25,21 @@
       <div class="container mx-auto py-4 h-16 p-4 hidden md:block">
         <nav class="main-nav flex justify-between items-center  mt-[-8px] ">
           <div class="flex items-center">
-            <a href="/CB013168-WDOS-ABDULHAKEEM/index.html" class="text-lg font-bold ml-[0px]"><i class="fa-solid fa-feather"></i>Wildlife</a>
+            <a href="/CB013168-WDOS-ABDULHAKEEM/index.html" class="text-lg font-bold ml-[0px]"><i
+                class="fa-solid fa-feather"></i>Wildlife</a>
           </div>
           <ul class="hidden lg:flex list_view space-x-4 ">
-            <li><a href="/CB013168-WDOS-ABDULHAKEEM/srilanka-wildlife-intro.html" class="hover:text-orange-600">Introduction</a></li>
+            <li><a href="/CB013168-WDOS-ABDULHAKEEM/srilanka-wildlife-intro.html"
+                class="hover:text-orange-600">Introduction</a></li>
             <li><a href="/CB013168-WDOS-ABDULHAKEEM/Dep-of-wildlife.html" class="hover:text-orange-600">Department of
                 Wildlife</a></li>
             <li><a href="/CB013168-WDOS-ABDULHAKEEM/animals.html" class="hover:text-orange-600">Animals in Sri
                 Lanka</a></li>
             <li><a href="/CB013168-WDOS-ABDULHAKEEM/leopards.html" class="hover:text-orange-600">Leopards</a></li>
             <li><a href="/CB013168-WDOS-ABDULHAKEEM/yala.html" class="hover:text-orange-600">Yala</a></li>
-            <li><a href="/CB013168-WDOS-ABDULHAKEEM/wilpattu.html" class="hover:text-orange-600">Wilpattu</a></li>
-            <li><a href="/CB013168-WDOS-ABDULHAKEEM/Horton Plains.html" class="hover:text-orange-600">Horton plains</a></li>
+            <li><a href="/CB013168-WDOS-ABDULHAKEEM/lep.html" class="hover:text-orange-600">lep</a></li>
+            <li><a href="/CB013168-WDOS-ABDULHAKEEM/Horton Plains.html" class="hover:text-orange-600">Horton plains</a>
+            </li>
             <li><a href="/CB013168-WDOS-ABDULHAKEEM/Contact.html" class="text-base hover:bg-[#1a1919]rounded-[10px]"><i
                   class="fa-solid fa-phone"></i></a></li>
           </ul>
@@ -48,22 +51,26 @@
         <div class="bg-gray-800 p-4 text-white">
 
           <div class="flex justify-between items-center">
-            <a href="/CB013168-WDOS-ABDULHAKEEM/index.html" class="text-lg font-bold  block py-2"><i class="fa-solid fa-feather"></i>Wildlife</a>
+            <a href="/CB013168-WDOS-ABDULHAKEEM/index.html" class="text-lg font-bold  block py-2"><i
+                class="fa-solid fa-feather"></i>Wildlife</a>
             <button id="mobile-menu-button" class="text-white focus:outline-none">
               <i class="fa-solid fa-bars"></i>
             </button>
           </div>
           <div id="mobile-menu" class="hidden mt-4">
-            <a href="/CB013168-WDOS-ABDULHAKEEM/srilanka-wildlife-intro.html" class="hover:text-orange-600  block py-2">Introduction</a>
-            <a href="/CB013168-WDOS-ABDULHAKEEM/Dep-of-wildlife.html" class="hover:text-orange-600  block py-2">Department of Wildlife</a>
+            <a href="/CB013168-WDOS-ABDULHAKEEM/srilanka-wildlife-intro.html"
+              class="hover:text-orange-600  block py-2">Introduction</a>
+            <a href="/CB013168-WDOS-ABDULHAKEEM/Dep-of-wildlife.html"
+              class="hover:text-orange-600  block py-2">Department of Wildlife</a>
             <a href="/CB013168-WDOS-ABDULHAKEEM/animals.html" class="hover:text-orange-600  block py-2">Animals in Sri
               Lanka</a>
             <a href="/CB013168-WDOS-ABDULHAKEEM/leopards.html" class="hover:text-orange-600  block py-2">Leopards</a>
             <a href="/CB013168-WDOS-ABDULHAKEEM/yala.html" class="hover:text-orange-600  block py-2">Yala</a>
-            <a href="/CB013168-WDOS-ABDULHAKEEM/wilpattu.html" class="hover:text-orange-600  block py-2">Wilpattu</a>
-            <a href="/CB013168-WDOS-ABDULHAKEEM/Horton Plains.html" class="hover:text-orange-600  block py-2">Horton plains</a>
-            <a href="/CB013168-WDOS-ABDULHAKEEM/Contact.html" class="text-base hover:bg-[#1a1919]rounded-[10px]  block py-2"><i
-                class="fa-solid fa-phone"></i></a>
+            <a href="/CB013168-WDOS-ABDULHAKEEM/lep.html" class="hover:text-orange-600  block py-2">lep</a>
+            <a href="/CB013168-WDOS-ABDULHAKEEM/Horton Plains.html" class="hover:text-orange-600  block py-2">Horton
+              plains</a>
+            <a href="/CB013168-WDOS-ABDULHAKEEM/Contact.html"
+              class="text-base hover:bg-[#1a1919]rounded-[10px]  block py-2"><i class="fa-solid fa-phone"></i></a>
           </div>
         </div>
       </div>
@@ -74,6 +81,40 @@
 
 
     <main>
+
+      <template x-if="$store.log.user">
+        <div x-on:click="$store.lep.toggleEditor(1)" class="flex hidden md:block">
+          <button
+            class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded mb-5 mt-5 ml-5"
+            x-on:click="open = !open">Edit</button>
+
+          <section class="flex w-auto w-full justify-start ">
+            <div class="max-w-xl mx-auto" x-show="$store.lep.is_editor_visible == 1">
+              <form action="" class="grid gap-6" x-on:submit.prevent="$store.lep.save(1)">
+                <div class="container mx-auto mt-20 mb-20 ">
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Image</label>
+                    <input type="text" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                      x-model="$store.lep.lep_section_one.image">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Title</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.lep.lep_section_one.title">
+                  </div>
+
+
+
+                  <button type="submit" class="bg-yellow-500 text-white py-2 px-4 rounded-md">Save</button>
+                </div>
+              </form>
+            </div>
+          </section>
+        </div>
+
+      </template>
+
       <section class="mx-auto flex flex-col items-center md:flex-row bg-gray-100 relative ">
         <div class=" w-full  overflow-hidden relative">
           <img x-bind:src="$store.lep.lep_section_one.image" alt="leopards" class=" md:h-[800px] md:w-full">
@@ -87,7 +128,8 @@
                       class="text-blue-50 hover:text-yellow-500 text-xl font-sana mr-[-20px]">Home</a>
                     <a href="" class="fa-solid fa-arrow-right mt-[8px] mr-[-20px]"></a>
 
-                    <a href="/CB013168-WDOS-ABDULHAKEEM/leopards.html" class="text-blue-600 hover:text-sky-50 text-xl font-sana ">Leopards</a>
+                    <a href="/CB013168-WDOS-ABDULHAKEEM/leopards.html"
+                      class="text-blue-600 hover:text-sky-50 text-xl font-sana ">Leopards</a>
 
                   </li>
                 </ul>
@@ -101,6 +143,42 @@
         </div>
       </section>
 
+      <template x-if="$store.log.user">
+        <div x-on:click="$store.lep.toggleEditor(2)" class="flex hidden md:block">
+          <button
+            class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded mb-5 mt-5 ml-5"
+            x-on:click="open = !open">Edit</button>
+
+          <section class="flex w-auto w-full justify-start ">
+            <div class="max-w-xl mx-auto" x-show="$store.lep.is_editor_visible == 2">
+              <form action="" class="grid gap-6" x-on:submit.prevent="$store.lep.save(2)">
+                <div class="container mx-auto mt-20 mb-20 ">
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Image</label>
+                    <input type="text" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                      x-model="$store.lep.lep_section_two.image">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Title</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.lep.lep_section_two.title">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Body</label>
+                    <textarea type="text" rows="13" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                      x-model="$store.lep.lep_section_two.body"></textarea>
+                  </div>
+
+                  <button type="submit" class="bg-yellow-500 text-white py-2 px-4 rounded-md">Save</button>
+                </div>
+              </form>
+            </div>
+          </section>
+        </div>
+
+      </template>
 
       <section class="mx-auto flex flex-col items-center md:flex-row mt-10">
         <div class="container mx-auto">
@@ -120,6 +198,44 @@
         </div>
 
       </section>
+
+      <template x-if="$store.log.user">
+        <div x-on:click="$store.lep.toggleEditor(3)" class="flex hidden md:block">
+          <button
+            class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded mb-5 mt-5 ml-5"
+            x-on:click="open = !open">Edit</button>
+
+          <section class="flex w-auto w-full justify-start ">
+            <div class="max-w-xl mx-auto" x-show="$store.lep.is_editor_visible == 3">
+              <form action="" class="grid gap-6" x-on:submit.prevent="$store.lep.save(3)">
+                <div class="container mx-auto mt-20 mb-20 ">
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Image</label>
+                    <input type="text" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                      x-model="$store.lep.leo_section_three.image">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Title</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.lep.leo_section_three.title">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Body</label>
+                    <textarea type="text" rows="13" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                      x-model="$store.lep.leo_section_three.body"></textarea>
+                  </div>
+
+                  <button type="submit" class="bg-yellow-500 text-white py-2 px-4 rounded-md">Save</button>
+                </div>
+              </form>
+            </div>
+          </section>
+        </div>
+
+      </template>
+
 
 
       <section class="mx-auto flex flex-col items-center md:flex-row mt-10">
@@ -142,6 +258,50 @@
       </section>
       <hr class="border-6 ml-10 mr-10">
 
+
+      <template x-if="$store.log.user">
+        <div x-on:click="$store.lep.toggleEditor(4)" class="flex hidden md:block">
+          <button
+            class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded mb-5 mt-5 ml-5"
+            x-on:click="open = !open">Edit</button>
+
+          <section class="flex w-auto w-full justify-start ">
+            <div class="max-w-xl mx-auto" x-show="$store.lep.is_editor_visible == 4">
+              <form action="" class="grid gap-6" x-on:submit.prevent="$store.lep.save(4)">
+                <div class="container mx-auto mt-20 mb-20 ">
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Bg Image</label>
+                    <input type="text" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                      x-model="$store.lep.leo_section_four.bg_image">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Title</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.lep.leo_section_four.title">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Body</label>
+                    <textarea type="text" rows="13" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                      x-model="$store.lep.leo_section_four.body"></textarea>
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Image</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.lep.leo_section_four.image">
+                  </div>
+
+
+                  <button type="submit" class="bg-yellow-500 text-white py-2 px-4 rounded-md">Save</button>
+                </div>
+              </form>
+            </div>
+          </section>
+        </div>
+
+      </template>
 
 
       <section class="bg-cover bg-center h-screen flex items-center justify-center mt-[-30px]">
@@ -172,6 +332,101 @@
 
 
       </section>
+
+      <template x-if="$store.log.user">
+        <div x-on:click="$store.lep.toggleEditor(4)" class="flex hidden md:block">
+          <button
+            class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded mb-5 mt-5 ml-5"
+            x-on:click="open = !open">Edit</button>
+
+          <section class="flex w-auto w-full justify-start ">
+            <div class="max-w-xl mx-auto" x-show="$store.lep.is_editor_visible == 4">
+              <form action="" class="grid gap-6" x-on:submit.prevent="$store.lep.save(4)">
+                <div class="container mx-auto mt-20 mb-20 ">
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Title</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.lep.leo_section_five.title">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Body</label>
+                    <textarea type="text" rows="13" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                      x-model="$store.lep.leo_section_five.body"></textarea>
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Title 2</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.lep.leo_section_five.title2">
+                  </div>
+
+
+                  <button type="submit" class="bg-yellow-500 text-white py-2 px-4 rounded-md">Save</button>
+                </div>
+              </form>
+            </div>
+          </section>
+        </div>
+
+      </template>
+
+      <template x-if="$store.log.user">
+        <div x-on:click="$store.lep.toggleEditor(5)" class="flex hidden md:block">
+          <button
+            class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded mb-5 mt-5 ml-5"
+            x-on:click="open = !open">Edit</button>
+
+          <section class="flex w-auto w-full justify-end ">
+            <div class="max-w-xl mx-auto" x-show="$store.lep.is_editor_visible == 5">
+              <form action="" class="grid gap-6" x-on:submit.prevent="$store.lep.save(5)">
+                <div class="container mx-auto mt-20 mb-20 ">
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Title</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.lep.leo_location.title">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Body</label>
+                    <textarea type="text" rows="13" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                      x-model="$store.lep.leo_location.body"></textarea>
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Title 2</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.lep.leo_location.title1">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Body</label>
+                    <textarea type="text" rows="13" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                      x-model="$store.lep.leo_location.body1"></textarea>
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Title 3</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.lep.leo_location.title2">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Body</label>
+                    <textarea type="text" rows="13" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                      x-model="$store.lep.leo_location.body2"></textarea>
+                  </div>
+
+                  <button type="submit" class="bg-yellow-500 text-white py-2 px-4 rounded-md">Save</button>
+                </div>
+              </form>
+            </div>
+          </section>
+        </div>
+
+      </template>
 
       <section class="container mx-auto flex flex-col items-center md:flex-row">
         <div class="text-center m-auto mb-6 md:mb-0 md:mr-6">
@@ -216,6 +471,187 @@
 
         </div>
       </section>
+      <!-- Card 1 -->
+      <template x-if="$store.log.user">
+        <div x-on:click="$store.lep.toggleEditor(4)" class="flex hidden md:block">
+          <button
+            class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded mb-5 mt-5 ml-5"
+            x-on:click="open = !open">Edit Card 1</button>
+
+          <section class="flex w-auto w-full justify-start ">
+            <div class="max-w-xl mx-auto" x-show="$store.lep.is_editor_visible == 4">
+              <form action="" class="grid gap-6" x-on:submit.prevent="$store.lep.save(4)">
+                <div class="container mx-auto mt-20 mb-20 ">
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Image</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.lep.leo_section_six.image">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Title</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.lep.leo_section_six.title">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Sub Title</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.lep.leo_section_six.sub_title">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Body</label>
+                    <textarea type="text" rows="6" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                      x-model="$store.lep.leo_section_six.body"></textarea>
+                  </div>
+
+
+
+
+                  <button type="submit" class="bg-yellow-500 text-white py-2 px-4 rounded-md">Save</button>
+                </div>
+              </form>
+            </div>
+          </section>
+        </div>
+
+      </template>
+      <!-- Card 2 -->
+      <template x-if="$store.log.user">
+        <div x-on:click="$store.lep.toggleEditor(5)" class="flex hidden md:block">
+          <button
+            class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded mb-5 mt-5 ml-5"
+            x-on:click="open = !open">Edit Card 2</button>
+
+          <section class="flex w-auto w-full justify-start ">
+            <div class="max-w-xl mx-auto" x-show="$store.lep.is_editor_visible == 5">
+              <form action="" class="grid gap-6" x-on:submit.prevent="$store.lep.save(5)">
+                <div class="container mx-auto mt-20 mb-20 ">
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Image</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.lep.lep_section_six_card.image">
+                  </div>
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Title</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.lep.lep_section_six_card.title">
+                  </div>
+
+                  <!-- List 1 -->
+
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Sub Title</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.lep.lep_section_six_card.sub_title1">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Body</label>
+                    <textarea type="text" rows="6" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                      x-model="$store.lep.lep_section_six_card.body1"></textarea>
+                  </div>
+
+                  <!-- List 2 -->
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Sub Title</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.lep.lep_section_six_card.sub_title2">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Body</label>
+                    <textarea type="text" rows="6" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                      x-model="$store.lep.lep_section_six_card.body2"></textarea>
+                  </div>
+
+                  <!-- List 3 -->
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Sub Title</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.lep.lep_section_six_card.sub_title3">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Body</label>
+                    <textarea type="text" rows="6" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                      x-model="$store.lep.lep_section_six_card.body3"></textarea>
+                  </div>
+                  <button type="submit" class="bg-yellow-500 text-white py-2 px-4 rounded-md">Save</button>
+                </div>
+              </form>
+            </div>
+          </section>
+        </div>
+
+      </template>
+      <!-- Card 3 -->
+      <template x-if="$store.log.user">
+        <div x-on:click="$store.lep.toggleEditor(6)" class="flex hidden md:block">
+          <button
+            class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded mb-5 mt-5 ml-5"
+            x-on:click="open = !open">Edit Card 2</button>
+
+          <section class="flex w-auto w-full justify-start ">
+            <div class="max-w-xl mx-auto" x-show="$store.lep.is_editor_visible == 6">
+              <form action="" class="grid gap-6" x-on:submit.prevent="$store.lep.save(6)">
+                <div class="container mx-auto mt-20 mb-20 ">
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Image</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.lep.lep_section_six_card2.image">
+                  </div>
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Title</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.lep.lep_section_six_card2.title">
+                  </div>
+
+                  <!-- List 1 -->
+
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Sub Title</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.lep.lep_section_six_card2.sub_title1">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Body</label>
+                    <textarea type="text" rows="6" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                      x-model="$store.lep.lep_section_six_card2.body1"></textarea>
+                  </div>
+
+                  <!-- List 2 -->
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Sub Title</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.lep.lep_section_six_card2.sub_title2">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Body</label>
+                    <textarea type="text" rows="6" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                      x-model="$store.lep.lep_section_six_card2.body2"></textarea>
+                  </div>
+
+               
+                  <button type="submit" class="bg-yellow-500 text-white py-2 px-4 rounded-md">Save</button>
+                </div>
+              </form>
+            </div>
+          </section>
+        </div>
+
+      </template>
+
 
       <section class="flex mt-10 mb-10 mr-10">
         <div class="container ">
@@ -252,6 +688,7 @@
 
               </div>
             </div>
+
             <div class="w-3/4">
               <div class="rounded-l overflow-hidden shadow-2xl ">
                 <img x-bind:src="$store.lep.lep_section_six_card2.image" class="w-full" alt="chaild leopards">
@@ -259,13 +696,14 @@
                   <div x-text="$store.lep.lep_section_six_card2.title" class="font-bold text-xl mb-2"></div>
                   <p class="text-gray-700 text-base">
                   <h6 x-text="$store.lep.lep_section_six_card2.sub_title1" class="font-bold text-sm "></h6>
-                  <a href="/Dep-of-wildlife.html" class="hover:text-sky-700 animate-pulse"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
-                    <p x-text="$store.lep.lep_section_six_card2.body1" class="text-md"></p>
+                  <a href="/Dep-of-wildlife.html" class="hover:text-sky-700 animate-pulse"><i
+                      class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
+                  <p x-text="$store.lep.lep_section_six_card2.body1" class="text-md"></p>
 
 
-                 
+
                   <h6 x-text="$store.lep.lep_section_six_card2.sub_title2" class="font-bold text-sm"></h6>
-                  <p x-text="$store.lep.lep_section_six_card2.body2" class="text-md" ></p>
+                  <p x-text="$store.lep.lep_section_six_card2.body2" class="text-md"></p>
                 </div>
 
 
@@ -281,15 +719,24 @@
 
         <swiper-container class="mySwiper h-1/4 w-full" space-between="50" history-key="slide" pagination="true"
           navigation="true">
-          <swiper-slide data-history=" Slide 1"><img src="/CB013168-WDOS-ABDULHAKEEM/Images/Leopard/Leopard 1.jpg" alt=""></swiper-slide>
-          <swiper-slide data-history="Slide 2"><img src="/CB013168-WDOS-ABDULHAKEEM/Images//Leopard/Leopard 2.jpg" alt=""></swiper-slide>
-          <swiper-slide data-history="3"><img src="/CB013168-WDOS-ABDULHAKEEM/Images/Leopard/Leopard 3.jpg" alt=""></swiper-slide>
-          <swiper-slide data-history="Slide 4"><img src="/CB013168-WDOS-ABDULHAKEEM/Images/Leopard/Leopard 4.jpg" alt=""></swiper-slide>
-          <swiper-slide data-history="5"><img src="/CB013168-WDOS-ABDULHAKEEM/Images/Leopard/Leopard 5.jpg" alt=""></swiper-slide>
-          <swiper-slide data-history="Slide 6"><img src="/CB013168-WDOS-ABDULHAKEEM/Images/Leopard/Leopard 6.jpg" alt=""></swiper-slide>
-          <swiper-slide data-history="7"><img src="/CB013168-WDOS-ABDULHAKEEM/Images/Leopard/Leopard 7.jpg" alt=""></swiper-slide>
-          <swiper-slide data-history="Slide 8"><img src="/CB013168-WDOS-ABDULHAKEEM/Images/Leopard/Leopard 8.jpg" alt=""></swiper-slide>
-          <swiper-slide data-history="9"><img src="/CB013168-WDOS-ABDULHAKEEM/Images/Leopard/Leopard 9.jpg" alt=""></swiper-slide>
+          <swiper-slide data-history=" Slide 1"><img src="/CB013168-WDOS-ABDULHAKEEM/Images/Leopard/Leopard 1.jpg"
+              alt=""></swiper-slide>
+          <swiper-slide data-history="Slide 2"><img src="/CB013168-WDOS-ABDULHAKEEM/Images//Leopard/Leopard 2.jpg"
+              alt=""></swiper-slide>
+          <swiper-slide data-history="3"><img src="/CB013168-WDOS-ABDULHAKEEM/Images/Leopard/Leopard 3.jpg"
+              alt=""></swiper-slide>
+          <swiper-slide data-history="Slide 4"><img src="/CB013168-WDOS-ABDULHAKEEM/Images/Leopard/Leopard 4.jpg"
+              alt=""></swiper-slide>
+          <swiper-slide data-history="5"><img src="/CB013168-WDOS-ABDULHAKEEM/Images/Leopard/Leopard 5.jpg"
+              alt=""></swiper-slide>
+          <swiper-slide data-history="Slide 6"><img src="/CB013168-WDOS-ABDULHAKEEM/Images/Leopard/Leopard 6.jpg"
+              alt=""></swiper-slide>
+          <swiper-slide data-history="7"><img src="/CB013168-WDOS-ABDULHAKEEM/Images/Leopard/Leopard 7.jpg"
+              alt=""></swiper-slide>
+          <swiper-slide data-history="Slide 8"><img src="/CB013168-WDOS-ABDULHAKEEM/Images/Leopard/Leopard 8.jpg"
+              alt=""></swiper-slide>
+          <swiper-slide data-history="9"><img src="/CB013168-WDOS-ABDULHAKEEM/Images/Leopard/Leopard 9.jpg"
+              alt=""></swiper-slide>
         </swiper-container>
 
 
@@ -376,8 +823,8 @@
               <h4>If you have any inquiries please Enter Your Email</h4>
               <p> </p>
               <form action="#" method="get" class="mt-3">
-                <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email"
-                  required="" class="w-64 mr-10">
+                <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email" required=""
+                  class="w-64 mr-10">
                 <button type="submit"><i class="fa fa-paper-plane-o"></i></button>
               </form>
             </div>
@@ -388,7 +835,8 @@
 
 
       <div class="text-center mt-4 md:mt-6">
-        <p class="text-gray-500">&copy; <a href="/CB013168-WDOS-ABDULHAKEEM/index.html" class="text-yellow-500">Department of Wildlife
+        <p class="text-gray-500">&copy; <a href="/CB013168-WDOS-ABDULHAKEEM/index.html"
+            class="text-yellow-500">Department of Wildlife
             Lanka</a>, All Right
           Reserved.</p>
         <p>Developed By <b>Abdul Hakeem</b></p>

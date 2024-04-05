@@ -94,6 +94,33 @@ document.addEventListener('alpine:init', () => {
         },
 
 
+        toggleEditor(block_id){
+            this.is_editor_visible = block_id;
+        },
+        save(block_id){
+            this.toggleEditor(false);
+        },
+        newsletterSubscription() {
 
+
+            if (new_email) {
+                localStorage.setItem('new_email', JSON.stringify(new_email));
+                this.new_email = new_email;
+                return true;
+                alert('Subscribed successfully!');
+              }
+              else {
+                alert('Please enter a valid email!');
+              }
+              return false;
+            },
+
+          init(){
+            let new_email = localStorage.getItem('new_email');
+    
+            if(new_email){
+                this.new_email = JSON.parse(new_email);
+            }
+        },
     });
 });

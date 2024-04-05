@@ -34,7 +34,7 @@
             <li><a href="/CB013168-WDOS-ABDULHAKEEM/animals.html" class="hover:text-orange-600">Animals in Sri
                 Lanka</a></li>
             <li><a href="/CB013168-WDOS-ABDULHAKEEM/leopards.html" class="hover:text-orange-600">Leopards</a></li>
-            <li><a href="/CB013168-WDOS-ABDULHAKEEM/yala.html" class="hover:text-orange-600">Yala</a></li>
+            <li><a href="/CB013168-WDOS-ABDULHAKEEM/wilpattu.html" class="hover:text-orange-600">wilpattu</a></li>
             <li><a href="/CB013168-WDOS-ABDULHAKEEM/wilpattu.html" class="hover:text-orange-600">Wilpattu</a></li>
             <li><a href="/CB013168-WDOS-ABDULHAKEEM/Horton Plains.html" class="hover:text-orange-600">Horton plains</a></li>
             <li><a href="/CB013168-WDOS-ABDULHAKEEM/Contact.html" class="text-base hover:bg-[#1a1919]rounded-[10px]"><i
@@ -59,7 +59,7 @@
             <a href="/CB013168-WDOS-ABDULHAKEEM/animals.html" class="hover:text-orange-600  block py-2">Animals in Sri
               Lanka</a>
             <a href="/CB013168-WDOS-ABDULHAKEEM/leopards.html" class="hover:text-orange-600  block py-2">Leopards</a>
-            <a href="/CB013168-WDOS-ABDULHAKEEM/yala.html" class="hover:text-orange-600  block py-2">Yala</a>
+            <a href="/CB013168-WDOS-ABDULHAKEEM/wilpattu.html" class="hover:text-orange-600  block py-2">wilpattu</a>
             <a href="/CB013168-WDOS-ABDULHAKEEM/wilpattu.html" class="hover:text-orange-600  block py-2">Wilpattu</a>
             <a href="/CB013168-WDOS-ABDULHAKEEM/Horton Plains.html" class="hover:text-orange-600  block py-2">Horton plains</a>
             <a href="/CB013168-WDOS-ABDULHAKEEM/Contact.html" class="text-base hover:bg-[#1a1919]rounded-[10px]  block py-2"><i
@@ -75,6 +75,41 @@
 
 
     <main>
+
+      <template x-if="$store.log.user">
+        <div x-on:click="$store.wilpattu.toggleEditor(1)" class="flex hidden md:block">
+          <button
+            class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded mb-5 mt-5 ml-5"
+            x-on:click="open = !open">Edit</button>
+
+          <section class="flex w-auto w-full justify-start ">
+            <div class="max-w-xl mx-auto" x-show="$store.wilpattu.is_editor_visible == 1">
+              <form action="" class="grid gap-6" x-on:submit.prevent="$store.wilpattu.save(1)">
+                <div class="container mx-auto mt-20 mb-20 ">
+                  <div class="mb-4">
+                    <label  class="block text-gray-600">Image</label>
+                    <input type="text" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                      x-model="$store.wilpattu.wilpattu_section_one.image">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Title</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.wilpattu.wilpattu_section_one.title">
+                  </div>
+
+
+
+                  <button type="submit" class="bg-yellow-500 text-white py-2 px-4 rounded-md">Save</button>
+                </div>
+              </form>
+            </div>
+          </section>
+        </div>
+
+      </template>
+
+
       <section class="mx-auto flex flex-col items-center md:flex-row bg-gray-100 relative ">
         <div class=" w-full  overflow-hidden relative">
           <img x-bind:src="$store.wilpattu.wilpattu_section_one.image" alt="" class="md:w-full h-[480px] object-cover">
@@ -101,6 +136,38 @@
         </div>
       </section>
 
+ <template x-if="$store.log.user">
+        <div x-on:click="$store.wilpattu.toggleEditor(2)" class="flex hidden md:block">
+          <button
+            class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded mb-5 mt-5 ml-5"
+            x-on:click="open = !open">Edit</button>
+
+          <section class="flex w-auto w-full justify-start ">
+            <div class="max-w-xl mx-auto" x-show="$store.wilpattu.is_editor_visible == 2">
+              <form action="" class="grid gap-6" x-on:submit.prevent="$store.wilpattu.save(2)">
+                <div class="container mx-auto mt-20 mb-20 ">
+                
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Title</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.wilpattu.wilpattu_section_two.title">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Body</label>
+                    <textarea type="text" rows="8" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                      x-model="$store.wilpattu.wilpattu_section_two.body"></textarea>
+                  </div>
+
+                  <button type="submit" class="bg-yellow-500 text-white py-2 px-4 rounded-md">Save</button>
+                </div>
+              </form>
+            </div>
+          </section>
+        </div>
+
+      </template>
+
 
       <section class="container mx-auto flex flex-col items-center md:flex-row">
         <div class="text-center m-auto mb-6 md:mb-0 md:mr-6">
@@ -115,6 +182,46 @@
         </div>
 
       </section>
+
+
+      <template x-if="$store.log.user">
+        <div x-on:click="$store.wilpattu.toggleEditor(3)" class="flex hidden md:block">
+          <button
+            class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded mb-5 mt-5 ml-5"
+            x-on:click="open = !open">Edit</button>
+
+          <section class="flex w-auto w-full justify-start ">
+            <div class="max-w-xl mx-auto" x-show="$store.wilpattu.is_editor_visible == 3">
+              <form action="" class="grid gap-6" x-on:submit.prevent="$store.wilpattu.save(3)">
+                <div class="container mx-auto mt-20 mb-20 ">
+                
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Title</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.wilpattu.wilpattu_section_three.title">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Body</label>
+                    <textarea type="text" rows="8" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                      x-model="$store.wilpattu.wilpattu_section_three.body"></textarea>
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Image</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.wilpattu.wilpattu_section_three.image">
+                  </div>
+
+                  <button type="submit" class="bg-yellow-500 text-white py-2 px-4 rounded-md">Save</button>
+                </div>
+              </form>
+            </div>
+          </section>
+        </div>
+
+      </template>
+
 
       <section class="mx-auto flex-cols item-cenetermd:flex-row mt-10">
         <div class="container mx-auto">
@@ -137,6 +244,54 @@
         </div>
       </section>
 
+
+      <template x-if="$store.log.user">
+        <div x-on:click="$store.wilpattu.toggleEditor(4)" class="flex hidden md:block">
+          <button
+            class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded mb-5 mt-5 ml-5"
+            x-on:click="open = !open">Edit</button>
+
+          <section class="flex w-auto w-full justify-start ">
+            <div class="max-w-xl mx-auto" x-show="$store.wilpattu.is_editor_visible == 4">
+              <form action="" class="grid gap-6" x-on:submit.prevent="$store.wilpattu.save(4)">
+                <div class="container mx-auto mt-20 mb-20 ">
+                
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Title</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.wilpattu.wilpattu_section_four.title">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Body</label>
+                    <textarea type="text" rows="8" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                      x-model="$store.wilpattu.wilpattu_section_four.body"></textarea>
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Image</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.wilpattu.wilpattu_section_four.image">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Image 2</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.wilpattu.wilpattu_section_four.image_2">
+                  </div>
+
+
+                  <button type="submit" class="bg-yellow-500 text-white py-2 px-4 rounded-md">Save</button>
+                </div>
+              </form>
+            </div>
+          </section>
+        </div>
+
+      </template>
+  
+
+
       <section class="mx-auto flex flex-col items-center md:flex-row mt-10">
         <div class="container mx-auto ">
           <div class="flex flex-col md:flex-row ">
@@ -151,6 +306,160 @@
           </div>
         </div>
       </section>
+
+
+
+      <template x-if="$store.log.user">
+        <div x-on:click="$store.wilpattu.toggleEditor(5)" class="flex hidden md:block">
+          <button
+            class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded mb-5 mt-5 ml-5"
+            x-on:click="open = !open">Card Row 1</button>
+
+          <section class="flex w-auto w-full justify-start ">
+            <div class="max-w-xl mx-auto" x-show="$store.wilpattu.is_editor_visible == 5">
+              <form action="" class="grid gap-6" x-on:submit.prevent="$store.wilpattu.save(5)">
+                <div class="container mx-auto mt-20 mb-20 ">
+                
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Title Card 1</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.wilpattu.wilpattu_section_four_card1.title">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Body Card 1</label>
+                    <textarea type="text" rows="8" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                      x-model="$store.wilpattu.wilpattu_section_four_card1.body"></textarea>
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Image Card 1</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.wilpattu.wilpattu_section_four_card1.image">
+                  </div>
+
+
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Title Card 2</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.wilpattu.wilpattu_section_four_card2.title">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Body Card 2</label>
+                    <textarea type="text" rows="8" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                      x-model="$store.wilpattu.wilpattu_section_four_card2.body"></textarea>
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Image Card 2</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.wilpattu.wilpattu_section_four_card2.image">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Title Card 3</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.wilpattu.wilpattu_section_four_card3.title">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Body Card 3</label>
+                    <textarea type="text" rows="8" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                      x-model="$store.wilpattu.wilpattu_section_four_card3.body"></textarea>
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Image Card 3</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.wilpattu.wilpattu_section_four_card3.image">
+                  </div>
+
+                  <button type="submit" class="bg-yellow-500 text-white py-2 px-4 rounded-md">Save</button>
+                </div>
+              </form>
+            </div>
+          </section>
+        </div>
+
+      </template>
+
+      <template x-if="$store.log.user">
+        <div x-on:click="$store.wilpattu.toggleEditor(6)" class="flex hidden md:block">
+          <button
+            class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded mb-5 mt-5 ml-5"
+            x-on:click="open = !open">Card Row 2</button>
+
+          <section class="flex w-auto w-full justify-start ">
+            <div class="max-w-xl mx-auto" x-show="$store.wilpattu.is_editor_visible == 6">
+              <form action="" class="grid gap-6" x-on:submit.prevent="$store.wilpattu.save(6)">
+                <div class="container mx-auto mt-20 mb-20 ">
+                
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Title Card 4</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.wilpattu.wilpattu_section_four_card4.title">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Body Card 4</label>
+                    <textarea type="text" rows="8" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                      x-model="$store.wilpattu.wilpattu_section_four_card4.body"></textarea>
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Image Card 4</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.wilpattu.wilpattu_section_four_card4.image">
+                  </div>
+
+
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Title Card 5</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.wilpattu.wilpattu_section_four_card5.title">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Body Card 5</label>
+                    <textarea type="text" rows="8" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                      x-model="$store.wilpattu.wilpattu_section_four_card5.body"></textarea>
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Image Card 5</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.wilpattu.wilpattu_section_four_card5.image">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Title Card 6</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.wilpattu.wilpattu_section_four_card6.title">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Body Card 6</label>
+                    <textarea type="text" rows="8" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                      x-model="$store.wilpattu.wilpattu_section_four_card6.body"></textarea>
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Image Card 6</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.wilpattu.wilpattu_section_four_card6.image">
+                  </div>
+
+                  <button type="submit" class="bg-yellow-500 text-white py-2 px-4 rounded-md">Save</button>
+                </div>
+              </form>
+            </div>
+          </section>
+        </div>
+
+      </template>
 
       <section class=" flex mt-20  py-5">
         <div class="container mx-auto">
@@ -219,6 +528,109 @@
             </div>
           </div>
       </section>
+
+
+
+      <template x-if="$store.log.user">
+        <div x-on:click="$store.wilpattu.toggleEditor(7)" class="flex hidden md:block">
+          <button
+            class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded mb-5 mt-5 ml-5"
+            x-on:click="open = !open">Edit</button>
+
+          <section class="flex w-auto w-full justify-start ">
+            <div class="max-w-xl mx-auto" x-show="$store.wilpattu.is_editor_visible == 7">
+              <form action="" class="grid gap-6" x-on:submit.prevent="$store.wilpattu.save(7)">
+                <div class="container mx-auto mt-20 mb-20 w-[750px]">
+                
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Image 1</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.wilpattu.wilpattu_section_five_card1.image">
+                  </div>
+
+                  
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Title 1</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.wilpattu.wilpattu_section_five_card1.title">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Image 2</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.wilpattu.wilpattu_section_five_card2.image">
+                  </div>
+
+                  
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Title 2</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.wilpattu.wilpattu_section_five_card2.title">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Image 3</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.wilpattu.wilpattu_section_five_card3.image">
+                  </div>
+
+                  
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Title 3</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.wilpattu.wilpattu_section_five_card3.title">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Image 4</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.wilpattu.wilpattu_section_five_card4.image">
+                  </div>
+
+                  
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Title 4</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.wilpattu.wilpattu_section_five_card4.title">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Image 5</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.wilpattu.wilpattu_section_five_card5.image">
+                  </div>
+
+                  
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Title 5</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.wilpattu.wilpattu_section_five_card5.title">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Image 6</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.wilpattu.wilpattu_section_five_card6.image">
+                  </div>
+
+                  
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Title 6</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.wilpattu.wilpattu_section_five_card6.title">
+                  </div>
+
+
+                  <button type="submit" class="bg-yellow-500 text-white py-2 px-4 rounded-md">Save</button>
+                </div>
+              </form>
+            </div>
+          </section>
+        </div>
+
+      </template>
+
+
       <section class="about-section-2">
         <div class="relative flex max-w-fit ml-auto mr-auto mt-10 mb-10">
 
@@ -298,6 +710,40 @@
           </div>
       </section>
 
+      <template x-if="$store.log.user">
+        <div x-on:click="$store.wilpattu.toggleEditor(8)" class="flex hidden md:block">
+          <button
+            class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded mb-5 mt-5 ml-5"
+            x-on:click="open = !open">Edit</button>
+
+          <section class="flex w-auto w-full justify-start ">
+            <div class="max-w-xl mx-auto" x-show="$store.wilpattu.is_editor_visible == 8">
+              <form action="" class="grid gap-6" x-on:submit.prevent="$store.wilpattu.save(8)">
+                <div class="container mx-auto mt-20 mb-20 w-[750px]">
+                
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Image</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.wilpattu.wilpattu_section_six.image">
+                  </div>
+
+                  
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Title</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.wilpattu.wilpattu_section_six.title">
+                  </div>
+
+
+                  <button type="submit" class="bg-yellow-500 text-white py-2 px-4 rounded-md">Save</button>
+                </div>
+              </form>
+            </div>
+          </section>
+        </div>
+
+      </template>
+
       <section class=" overflow-hidden relative mb-10 py-0 ml-10 mr-10">
         <div class="items-center ">
           <h4 x-text="$store.wilpattu.wilpattu_section_six.title"
@@ -311,6 +757,51 @@
         </div>
       </section>
 
+      <template x-if="$store.log.user">
+        <div x-on:click="$store.wilpattu.toggleEditor(9)" class="flex hidden md:block">
+          <button
+            class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded mb-5 mt-5 ml-5"
+            x-on:click="open = !open">Edit</button>
+
+          <section class="flex w-auto w-full justify-start ">
+            <div class="max-w-xl mx-auto" x-show="$store.wilpattu.is_editor_visible == 9">
+              <form action="" class="grid gap-6" x-on:submit.prevent="$store.wilpattu.save(9)">
+                <div class="container mx-auto mt-20 mb-20 w-[750px]">
+                
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Bg Image</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.wilpattu.wilpattu_section_sev.image_bg">
+                  </div>
+                 
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Title</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.wilpattu.wilpattu_section_sev.title">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Link</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.wilpattu.wilpattu_section_sev.link">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Image</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.wilpattu.wilpattu_section_sev.image">
+                  </div>
+                 
+
+                  <button type="submit" class="bg-yellow-500 text-white py-2 px-4 rounded-md">Save</button>
+                </div>
+              </form>
+            </div>
+          </section>
+        </div>
+
+      </template>
 
       <section class="w-full overflow-hidden relative mb-0 py-0 ">
         <div class="relative">
