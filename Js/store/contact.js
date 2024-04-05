@@ -32,6 +32,33 @@ document.addEventListener('alpine:init', () => {
             link:'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253209.673324728!2d80.47691478326612!3d7.420779452177956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae49b2bfc1e7439%3A0xd537c2dbda8bcd49!2sDepartment%20of%20wildlife%20conservation!5e0!3m2!1sen!2slk!4v1705307858441!5m2!1sen!2slk',
 
         },
+        toggleEditor(block_id){
+            this.is_editor_visible = block_id;
+        },
+        save(block_id){
+            this.toggleEditor(false);
+        },
+        newsletterSubscription() {
 
+
+            if (new_email) {
+                localStorage.setItem('new_email', JSON.stringify(new_email));
+                this.new_email = new_email;
+                return true;
+                alert('Subscribed successfully!');
+              }
+              else {
+                alert('Please enter a valid email!');
+              }
+              return false;
+            },
+
+          init(){
+            let new_email = localStorage.getItem('new_email');
+    
+            if(new_email){
+                this.new_email = JSON.parse(new_email);
+            }
+        },
     });
 });

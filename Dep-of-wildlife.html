@@ -72,6 +72,43 @@
 
     </header>
     <main>
+
+
+      <template x-if="$store.log.user">
+        <div x-on:click="$store.dow.toggleEditor(1)" class="flex hidden md:block">
+          <button
+            class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded mb-5 mt-5 ml-5"
+            x-on:click="open = !open">Edit</button>
+
+          <section class="flex w-auto w-full justify-start ">
+            <div class="max-w-xl mx-auto" x-show="$store.dow.is_editor_visible == 1">
+              <form action="" class="grid gap-6" x-on:submit.prevent="$store.dow.save(1)">
+                <div class="container mx-auto mt-20 mb-20 ">
+                  <div class="mb-4">
+                    <label  class="block text-gray-600">Image</label>
+                    <input type="text" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                      x-model="$store.dow.dow_section_one.image">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Title</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.dow.dow_section_one.title">
+                  </div>
+
+
+
+                  <button type="submit" class="bg-yellow-500 text-white py-2 px-4 rounded-md">Save</button>
+                </div>
+              </form>
+            </div>
+          </section>
+        </div>
+
+      </template>
+
+
+
       <section class="mx-auto flex flex-col items-center md:flex-row bg-gray-100 relative ">
         <div class=" w-full  overflow-hidden relative">
           <img x-bind:src="$store.dow.dow_section_one.image" alt="elephants bathing" class="w-full h-[500px] object-cover">
@@ -99,6 +136,56 @@
         </div>
       </section>
 
+
+      <template x-if="$store.log.user">
+        <div x-on:click="$store.dow.toggleEditor(2)" class="flex hidden md:block">
+          <button
+            class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded mb-5 mt-5 ml-5"
+            x-on:click="open = !open">Edit</button>
+
+          <section class="flex w-auto w-full justify-start ">
+            <div class="max-w-xl mx-auto" x-show="$store.dow.is_editor_visible == 2">
+              <form action="" class="grid gap-6" x-on:submit.prevent="$store.dow.save(2)">
+                <div class="container mx-auto mt-20 mb-20 ">
+                  <div class="mb-4">
+                    <label for="video" class="block text-gray-600">Video</label>
+                    <input type="text" id="video" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                      x-model="$store.dow.dow_section_two.video">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Title</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.dow.dow_section_two.title">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Body</label>
+                    <textarea type="text" rows="5" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                      x-model="$store.dow.dow_section_two.body"></textarea>
+                  </div>
+
+
+                  <div class="mb-4">
+                    <label  class="block text-gray-600">image</label>
+                    <input type="text" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                      x-model="$store.dow.dow_section_two.image">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Title</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.dow.dow_section_two.sub_title">
+                  </div>
+
+                  <button type="submit" class="bg-yellow-500 text-white py-2 px-4 rounded-md">Save</button>
+                </div>
+              </form>
+            </div>
+          </section>
+        </div>
+
+      </template>
 
       <section class="mx-auto items-center mt-10">
         <h5 x-text="$store.dow.dow_section_two.title" class="text-center text-3xl font-bold font-sana mb-10"></h5>
@@ -136,6 +223,44 @@
       <hr class="border-6 ml-10 mr-10">
 
 
+      <template x-if="$store.log.user">
+        <div x-on:click="$store.dow.toggleEditor(3)" class="flex hidden md:block">
+          <button
+            class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded mb-5 mt-5 ml-5"
+            x-on:click="open = !open">Edit</button>
+
+          <section class="flex w-auto w-full justify-start ">
+            <div class="max-w-xl mx-auto" x-show="$store.dow.is_editor_visible == 3">
+              <form action="" class="grid gap-6" x-on:submit.prevent="$store.dow.save(3)">
+                <div class="container mx-auto mt-20 mb-20 ">
+                  <div class="mb-4">
+                    <label  class="block text-gray-600">Image</label>
+                    <input type="text"  class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                      x-model="$store.dow.dow_section_three.image">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Title</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.dow.dow_section_three.title">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Body</label>
+                    <textarea type="text" rows="5" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                      x-model="$store.dow.dow_section_three.body"></textarea>
+                  </div>
+
+
+                  <button type="submit" class="bg-yellow-500 text-white py-2 px-4 rounded-md">Save</button>
+                </div>
+              </form>
+            </div>
+          </section>
+        </div>
+
+      </template>
+
 
 
       <section class="mx-auto flex-col items-center md:flex-row mt-10">
@@ -155,6 +280,44 @@
 
       </section>
       
+       <template x-if="$store.log.user">
+        <div x-on:click="$store.dow.toggleEditor(4)" class="flex hidden md:block">
+          <button
+            class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded mb-5 mt-5 ml-5"
+            x-on:click="open = !open">Edit</button>
+
+          <section class="flex w-auto w-full justify-start ">
+            <div class="max-w-xl mx-auto" x-show="$store.dow.is_editor_visible == 4">
+              <form action="" class="grid gap-6" x-on:submit.prevent="$store.dow.save(4)">
+                <div class="container mx-auto mt-20 mb-20 ">
+                  <div class="mb-4">
+                    <label  class="block text-gray-600">Title</label>
+                    <input type="text"  class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                      x-model="$store.dow.dow_section_four.title">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Title</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.dow.dow_section_four.title1">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Title</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.dow.dow_section_four.sub_title">
+                  </div>
+
+
+                  <button type="submit" class="bg-yellow-500 text-white py-2 px-4 rounded-md">Save</button>
+                </div>
+              </form>
+            </div>
+          </section>
+        </div>
+
+      </template>
+
       <section class="mx-auto flex-col items-center md:flex-row mt-10  ">
         <h3 x-text="$store.dow.dow_section_four.title" class="text-center font-bold font-sana text-4xl mb-10 text-orange-800 subpixel-antialiased shadow-lg">
           <em x-text="$store.dow.dow_section_four.title1" ></em></h3>
@@ -237,6 +400,172 @@
         </div>
 
       </section>
+
+
+      <template x-if="$store.log.user">
+        <div x-on:click="$store.dow.toggleEditor(5)" class="flex hidden md:block">
+          <button
+            class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded mb-5 mt-5 ml-5"
+            x-on:click="open = !open">Edit</button>
+
+          <section class="flex w-auto w-full justify-start ">
+            <div class="max-w-xl mx-auto" x-show="$store.dow.is_editor_visible == 5">
+              <form action="" class="grid gap-6" x-on:submit.prevent="$store.dow.save(5)">
+                <div class="container mx-auto mt-20 mb-20 ">
+                  <div class="mb-4">
+                    <label  class="block text-gray-600">Title 1</label>
+                    <input type="text"  class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                      x-model="$store.dow.dow_section_five.title">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">List 1</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.dow.dow_section_five.list1_1">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">List 2</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.dow.dow_section_five.list1_2">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">List 3</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.dow.dow_section_five.list1_3">
+                  </div>
+
+
+                  <button type="submit" class="bg-yellow-500 text-white py-2 px-4 rounded-md">Save</button>
+                </div>
+              </form>
+            </div>
+          </section>
+        </div>
+
+      </template>
+
+      <template x-if="$store.log.user">
+        <div x-on:click="$store.dow.toggleEditor(6)" class="flex hidden md:block">
+          <button
+            class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded mb-5 mt-5 ml-5"
+            x-on:click="open = !open">Edit</button>
+
+          <section class="flex w-auto w-full justify-start ">
+            <div class="max-w-xl mx-auto" x-show="$store.dow.is_editor_visible == 6">
+              <form action="" class="grid gap-6" x-on:submit.prevent="$store.dow.save(6)">
+                <div class="container mx-auto mt-20 mb-20 ">
+                  <div class="mb-4">
+                    <label  class="block text-gray-600">Title 1</label>
+                    <input type="text"  class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                      x-model="$store.dow.dow_section_five.title_2">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">List 1</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.dow.dow_section_five.list2_1">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">List 2</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.dow.dow_section_five.list2_2">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">List 3</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.dow.dow_section_five.list2_3">
+                  </div>
+
+
+                  <button type="submit" class="bg-yellow-500 text-white py-2 px-4 rounded-md">Save</button>
+                </div>
+              </form>
+            </div>
+          </section>
+        </div>
+
+      </template>
+
+
+      <template x-if="$store.log.user">
+        <div x-on:click="$store.dow.toggleEditor(7)" class="flex hidden md:block">
+          <button
+            class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded mb-5 mt-5 ml-5"
+            x-on:click="open = !open">Edit</button>
+
+          <section class="flex w-auto w-full justify-start ">
+            <div class="max-w-xl mx-auto" x-show="$store.dow.is_editor_visible == 7">
+              <form action="" class="grid gap-6" x-on:submit.prevent="$store.dow.save(7)">
+                <div class="container mx-auto mt-20 mb-20 ">
+                  <div class="mb-4">
+                    <label  class="block text-gray-600">Title 1</label>
+                    <input type="text"  class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                      x-model="$store.dow.dow_section_five.title_3">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">List 1</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.dow.dow_section_five.list3_1">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">List 2</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.dow.dow_section_five.list3_2">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">List 3</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.dow.dow_section_five.list3_3">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">List 1</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.dow.dow_section_five.list3_4">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">List 2</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.dow.dow_section_five.list3_5">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">List 3</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.dow.dow_section_five.list3_6">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">List 2</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.dow.dow_section_five.list3_7">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">List 3</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.dow.dow_section_five.list3_8">
+                  </div>
+
+
+                  <button type="submit" class="bg-yellow-500 text-white py-2 px-4 rounded-md">Save</button>
+                </div>
+              </form>
+            </div>
+          </section>
+        </div>
+
+      </template>
+
+
       <section class="mx-auto flex-col items-center md:flex-row mt-10">
         <div class="container mx-auto">
           <div class="flex flex-col md:flex-row ">

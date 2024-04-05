@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,10 +24,12 @@
       <div class="container mx-auto py-4 h-16 p-4 hidden md:block">
         <nav class="main-nav flex justify-between items-center  mt-[-8px] ">
           <div class="flex items-center">
-            <a href="/CB013168-WDOS-ABDULHAKEEM/index.html" class="text-lg font-bold ml-[0px]"><i class="fa-solid fa-feather"></i>Wildlife</a>
+            <a href="/CB013168-WDOS-ABDULHAKEEM/index.html" class="text-lg font-bold ml-[0px]"><i
+                class="fa-solid fa-feather"></i>Wildlife</a>
           </div>
           <ul class="hidden lg:flex list_view space-x-4 ">
-            <li><a href="/CB013168-WDOS-ABDULHAKEEM/srilanka-wildlife-intro.html" class="hover:text-orange-600">Introduction</a></li>
+            <li><a href="/CB013168-WDOS-ABDULHAKEEM/srilanka-wildlife-intro.html"
+                class="hover:text-orange-600">Introduction</a></li>
             <li><a href="/CB013168-WDOS-ABDULHAKEEM/Dep-of-wildlife.html" class="hover:text-orange-600">Department of
                 Wildlife</a></li>
             <li><a href="/CB013168-WDOS-ABDULHAKEEM/animals.html" class="hover:text-orange-600">Animals in Sri
@@ -36,7 +37,8 @@
             <li><a href="/CB013168-WDOS-ABDULHAKEEM/leopards.html" class="hover:text-orange-600">Leopards</a></li>
             <li><a href="/CB013168-WDOS-ABDULHAKEEM/yala.html" class="hover:text-orange-600">Yala</a></li>
             <li><a href="/CB013168-WDOS-ABDULHAKEEM/wilpattu.html" class="hover:text-orange-600">Wilpattu</a></li>
-            <li><a href="/CB013168-WDOS-ABDULHAKEEM/Horton Plains.html" class="hover:text-orange-600">Horton plains</a></li>
+            <li><a href="/CB013168-WDOS-ABDULHAKEEM/Horton Plains.html" class="hover:text-orange-600">Horton plains</a>
+            </li>
             <li><a href="/CB013168-WDOS-ABDULHAKEEM/Contact.html" class="text-base hover:bg-[#1a1919]rounded-[10px]"><i
                   class="fa-solid fa-phone"></i></a></li>
           </ul>
@@ -48,22 +50,26 @@
         <div class="bg-gray-800 p-4 text-white">
 
           <div class="flex justify-between items-center">
-            <a href="/CB013168-WDOS-ABDULHAKEEM/index.html" class="text-lg font-bold  block py-2"><i class="fa-solid fa-feather"></i>Wildlife</a>
+            <a href="/CB013168-WDOS-ABDULHAKEEM/index.html" class="text-lg font-bold  block py-2"><i
+                class="fa-solid fa-feather"></i>Wildlife</a>
             <button id="mobile-menu-button" class="text-white focus:outline-none">
               <i class="fa-solid fa-bars"></i>
             </button>
           </div>
           <div id="mobile-menu" class="hidden mt-4">
-            <a href="/CB013168-WDOS-ABDULHAKEEM/srilanka-wildlife-intro.html" class="hover:text-orange-600  block py-2">Introduction</a>
-            <a href="/CB013168-WDOS-ABDULHAKEEM/Dep-of-wildlife.html" class="hover:text-orange-600  block py-2">Department of Wildlife</a>
+            <a href="/CB013168-WDOS-ABDULHAKEEM/srilanka-wildlife-intro.html"
+              class="hover:text-orange-600  block py-2">Introduction</a>
+            <a href="/CB013168-WDOS-ABDULHAKEEM/Dep-of-wildlife.html"
+              class="hover:text-orange-600  block py-2">Department of Wildlife</a>
             <a href="/CB013168-WDOS-ABDULHAKEEM/animals.html" class="hover:text-orange-600  block py-2">Animals in Sri
               Lanka</a>
             <a href="/CB013168-WDOS-ABDULHAKEEM/leopards.html" class="hover:text-orange-600  block py-2">Leopards</a>
             <a href="/CB013168-WDOS-ABDULHAKEEM/yala.html" class="hover:text-orange-600  block py-2">Yala</a>
             <a href="/CB013168-WDOS-ABDULHAKEEM/wilpattu.html" class="hover:text-orange-600  block py-2">Wilpattu</a>
-            <a href="/CB013168-WDOS-ABDULHAKEEM/Horton Plains.html" class="hover:text-orange-600  block py-2">Horton plains</a>
-            <a href="/CB013168-WDOS-ABDULHAKEEM/Contact.html" class="text-base hover:bg-[#1a1919]rounded-[10px]  block py-2"><i
-                class="fa-solid fa-phone"></i></a>
+            <a href="/CB013168-WDOS-ABDULHAKEEM/Horton Plains.html" class="hover:text-orange-600  block py-2">Horton
+              plains</a>
+            <a href="/CB013168-WDOS-ABDULHAKEEM/Contact.html"
+              class="text-base hover:bg-[#1a1919]rounded-[10px]  block py-2"><i class="fa-solid fa-phone"></i></a>
           </div>
         </div>
       </div>
@@ -72,259 +78,558 @@
 
     </header>
     <main>
-<section class="mt-20">
-  <h2 x-text="$store.gallery.gallery_section_one.title" class="text-center font-sans text-6xl font-extrabold text-yellow-300 mb-6"></h2>
 
-  <div class="relative flex max-w-fit ml-6 mr-6 mt-10 mb-10">
+      <template x-if="$store.log.user">
+        <div x-on:click="$store.gallery.toggleEditor(1)" class="flex hidden md:block">
+          <button
+            class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded mb-5 mt-5 ml-5"
+            x-on:click="open = !open">Edit</button>
 
-    <div class="grid gap-4 grid-cols-1 md:grid-cols-6  ">
-      <!-- <template x-for="images in $store.home.gallery">
+          <section class="flex w-auto w-full justify-start ">
+            <div class="max-w-xl mx-auto" x-show="$store.gallery.is_editor_visible == 1">
+              <form action="" class="grid gap-6" x-on:submit.prevent="$store.gallery.save(1)">
+                <div class="container mx-auto mt-20 mb-20 ">
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Title</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.gallery.gallery_section_one.title">
+                  </div>
+
+
+
+                  <button type="submit" class="bg-yellow-500 text-white py-2 px-4 rounded-md">Save</button>
+                </div>
+              </form>
+            </div>
+          </section>
+        </div>
+
+      </template>
+
+      <!-- Image Edit 1 -->
+      <template x-if="$store.log.user">
+        <div x-on:click="$store.gallery.toggleEditor(2)" class="flex hidden md:block">
+          <button
+            class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded mb-5 mt-5 ml-5"
+            x-on:click="open = !open">Image Edit 1</button>
+
+          <section class="flex w-auto w-full justify-start ">
+            <div class="max-w-xl mx-auto" x-show="$store.gallery.is_editor_visible == 2">
+              <form action="" class="grid gap-6" x-on:submit.prevent="$store.gallery.save(2)">
+                <div class="container mx-auto mt-20 mb-20 ">
+
+                  <!-- image1 -->
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Image 1</label>
+                    <input type="text" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                      x-model="$store.gallery.gallery_section_two.image_1">
+                  </div>
+
+                  <!-- image2 -->
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Image 2</label>
+                    <input type="text" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                      x-model="$store.gallery.gallery_section_two.image_2">
+                  </div>
+
+                  <!-- image3 -->
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Image 3</label>
+                    <input type="text" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                      x-model="$store.gallery.gallery_section_two.image_3">
+                  </div>
+
+
+                  <!-- image4 -->
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Image 4</label>
+                    <input type="text" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                      x-model="$store.gallery.gallery_section_two.image_4">
+                  </div>
+
+                  <!-- image5 -->
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Image 5</label>
+                    <input type="text" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                      x-model="$store.gallery.gallery_section_two.image_5">
+                  </div>
+
+                  <!-- image6 -->
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Image 6</label>
+                    <input type="text" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                      x-model="$store.gallery.gallery_section_two.image_6">
+                  </div>
+
+
+                  <button type="submit" class="bg-yellow-500 text-white py-2 px-4 rounded-md">Save</button>
+                </div>
+              </form>
+            </div>
+          </section>
+        </div>
+
+      </template>
+
+      <!-- Image Edit 2 -->
+      <template x-if="$store.log.user">
+        <div x-on:click="$store.gallery.toggleEditor(3)" class="flex hidden md:block">
+          <button
+            class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded mb-5 mt-5 ml-5"
+            x-on:click="open = !open">Image Edit 2</button>
+
+          <section class="flex w-auto w-full justify-start ">
+            <div class="max-w-xl mx-auto" x-show="$store.gallery.is_editor_visible == 3">
+              <form action="" class="grid gap-6" x-on:submit.prevent="$store.gallery.save(3)">
+                <div class="container mx-auto mt-20 mb-20 ">
+
+                  <!-- image7 -->
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Image 1</label>
+                    <input type="text" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                      x-model="$store.gallery.gallery_section_two.image_7">
+                  </div>
+
+                  <!-- image8 -->
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Image 8</label>
+                    <input type="text" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                      x-model="$store.gallery.gallery_section_two.image_8">
+                  </div>
+
+                  <!-- image9 -->
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Image 9</label>
+                    <input type="text" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                      x-model="$store.gallery.gallery_section_two.image_9">
+                  </div>
+
+
+                  <!-- image10 -->
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Image 10</label>
+                    <input type="text" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                      x-model="$store.gallery.gallery_section_two.image_10">
+                  </div>
+
+                  <!-- image11 -->
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Image 11</label>
+                    <input type="text" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                      x-model="$store.gallery.gallery_section_two.image_11">
+                  </div>
+
+                  <!-- image12 -->
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Image 12</label>
+                    <input type="text" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                      x-model="$store.gallery.gallery_section_two.image_12">
+                  </div>
+
+
+                  <button type="submit" class="bg-yellow-500 text-white py-2 px-4 rounded-md">Save</button>
+                </div>
+              </form>
+            </div>
+          </section>
+        </div>
+
+      </template>
+
+      <!-- Image Edit 3 -->
+      <template x-if="$store.log.user">
+        <div x-on:click="$store.gallery.toggleEditor(4)" class="flex hidden md:block">
+          <button
+            class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded mb-5 mt-5 ml-5"
+            x-on:click="open = !open">Image Edit 3</button>
+
+          <section class="flex w-auto w-full justify-start ">
+            <div class="max-w-xl mx-auto" x-show="$store.gallery.is_editor_visible == 4">
+              <form action="" class="grid gap-6" x-on:submit.prevent="$store.gallery.save(4)">
+                <div class="container mx-auto mt-20 mb-20 ">
+
+                  <!-- image13 -->
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Image 13</label>
+                    <input type="text" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                      x-model="$store.gallery.gallery_section_two.image_13">
+                  </div>
+
+                  <!-- image14 -->
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Image 14</label>
+                    <input type="text" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                      x-model="$store.gallery.gallery_section_two.image_14">
+                  </div>
+
+                  <!-- image15 -->
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Image 15</label>
+                    <input type="text" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                      x-model="$store.gallery.gallery_section_two.image_15">
+                  </div>
+
+
+                  <!-- image16 -->
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Image 16</label>
+                    <input type="text" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                      x-model="$store.gallery.gallery_section_two.image_16">
+                  </div>
+
+                  <!-- image17 -->
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Image 17</label>
+                    <input type="text" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                      x-model="$store.gallery.gallery_section_two.image_17">
+                  </div>
+
+                  <!-- image18 -->
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Image 18</label>
+                    <input type="text" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                      x-model="$store.gallery.gallery_section_two.image_18">
+                  </div>
+
+
+                  <button type="submit" class="bg-yellow-500 text-white py-2 px-4 rounded-md">Save</button>
+                </div>
+              </form>
+            </div>
+          </section>
+        </div>
+
+      </template>
+
+
+      <!-- Image Edit 4 -->
+      <template x-if="$store.log.user">
+        <div x-on:click="$store.gallery.toggleEditor(5)" class="flex hidden md:block">
+          <button
+            class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded mb-5 mt-5 ml-5"
+            x-on:click="open = !open">Image Edit 4</button>
+
+          <section class="flex w-auto w-full justify-start ">
+            <div class="max-w-xl mx-auto" x-show="$store.gallery.is_editor_visible == 5">
+              <form action="" class="grid gap-6" x-on:submit.prevent="$store.gallery.save(5)">
+                <div class="container mx-auto mt-20 mb-20 ">
+
+                  <!-- image19 -->
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Image 19</label>
+                    <input type="text" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                      x-model="$store.gallery.gallery_section_two.image_19">
+                  </div>
+
+                  <!-- image20 -->
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Image 20</label>
+                    <input type="text" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                      x-model="$store.gallery.gallery_section_two.image_20">
+                  </div>
+
+                  <!-- image21 -->
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Image 21</label>
+                    <input type="text" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                      x-model="$store.gallery.gallery_section_two.image_21">
+                  </div>
+
+
+                  <!-- image22 -->
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Image 22</label>
+                    <input type="text" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                      x-model="$store.gallery.gallery_section_two.image_22">
+                  </div>
+
+                  <!-- image23 -->
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Image 23</label>
+                    <input type="text" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                      x-model="$store.gallery.gallery_section_two.image_23">
+                  </div>
+
+                  <!-- image24 -->
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Image 24</label>
+                    <input type="text" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                      x-model="$store.gallery.gallery_section_two.image_24">
+                  </div>
+
+
+                  <button type="submit" class="bg-yellow-500 text-white py-2 px-4 rounded-md">Save</button>
+                </div>
+              </form>
+            </div>
+          </section>
+        </div>
+
+      </template>
+
+      <section class="mt-20">
+        <h2 x-text="$store.gallery.gallery_section_one.title"
+          class="text-center font-sans text-6xl font-extrabold text-yellow-300 mb-6"></h2>
+
+        <div class="relative flex max-w-fit ml-6 mr-6 mt-10 mb-10">
+
+          <div class="grid gap-4 grid-cols-1 md:grid-cols-6  ">
+            <!-- <template x-for="images in $store.home.gallery">
         <div>
             <img x-bind:src="images.image" 
                  class="w-60 h-60 mb-6 rounded-xl shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">
            
         </div>
     </template> -->
-      
-   
-    
-    <div>
-        <img x-bind:src="$store.gallery.gallery_section_two.image_1" 
-          class="w-60 h-60 mb-6 rounded-xl shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">
-      </div>
-      <div>
-        <img x-bind:src="$store.gallery.gallery_section_two.image_2" 
-          class="w-60 h-60 mb-6 rounded-xl shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">
-      </div>
-      <div>
-        <img x-bind:src="$store.gallery.gallery_section_two.image_3" 
-          class="w-60 h-60 mb-6 rounded-xl shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">
-      </div>
-      <div>
-        <img x-bind:src="$store.gallery.gallery_section_two.image_4" 
-          class="w-60 h-60 mb-6 rounded-xl shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">
-      </div>
-      <div>
-        <img x-bind:src="$store.gallery.gallery_section_two.image_5" 
-          class="w-60 h-60 mb-6 rounded-xl shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">
-      </div>
-      <div>
-        <img x-bind:src="$store.gallery.gallery_section_two.image_6" 
-          class="w-60 h-60 mb-6 rounded-xl shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">
-      </div>
-      <div>
-        <img x-bind:src="$store.gallery.gallery_section_two.image_7" 
-          class="w-60 h-60 mb-6 rounded-xl shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">
-      </div>
-      <div>
-        <img x-bind:src="$store.gallery.gallery_section_two.image_8" 
-          class="w-60 h-60 mb-6 rounded-xl shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">
-      </div>
-      <div>
-        <img x-bind:src="$store.gallery.gallery_section_two.image_9" 
-          class="w-60 h-60 mb-6 rounded-xl shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">
-      </div>
-      <div>
-        <img x-bind:src="$store.gallery.gallery_section_two.image_10" 
-          class="w-60 h-60 mb-6 rounded-xl shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">
-      </div>
-      <div>
-        <img x-bind:src="$store.gallery.gallery_section_two.image_11" 
-          class="w-60 h-60 mb-6 rounded-xl shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">
-      </div>
-      <div>
-        <img x-bind:src="$store.gallery.gallery_section_two.image_12" 
-          class="w-60 h-60 mb-6 rounded-xl shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">
-      </div>
-      <div>
-        <img x-bind:src="$store.gallery.gallery_section_two.image_13" 
-          class="w-60 h-60 mb-6 rounded-xl shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">
-      </div>
-      <div>
-        <img x-bind:src="$store.gallery.gallery_section_two.image_14" 
-          class="w-60 h-60 mb-6 rounded-xl shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">
-      </div>
-      <div>
-        <img x-bind:src="$store.gallery.gallery_section_two.image_15" 
-          class="w-60 h-60 mb-6 rounded-xl shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">
-      </div>
-      <div>
-        <img x-bind:src="$store.gallery.gallery_section_two.image_16" 
-          class="w-60 h-60 mb-6 rounded-xl shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">
-      </div>
-      <div>
-        <img x-bind:src="$store.gallery.gallery_section_two.image_17" 
-          class="w-60 h-60 mb-6 rounded-xl shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">
-      </div>
-      <div>
-        <img x-bind:src="$store.gallery.gallery_section_two.image_18" 
-          class="w-60 h-60 mb-6 rounded-xl shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">
-      </div>
-      <div>
-        <img x-bind:src="$store.gallery.gallery_section_two.image_19" 
-          class="w-60 h-60 mb-6 rounded-xl shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">
-      </div>
-      <div>
-        <img x-bind:src="$store.gallery.gallery_section_two.image_20" 
-          class="w-60 h-60 mb-6 rounded-xl shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">
-      </div>
-      <div>
-        <img x-bind:src="$store.gallery.gallery_section_two.image_21" 
-          class="w-60 h-60 mb-6 rounded-xl shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">
-      </div>
-      <div>
-        <img x-bind:src="$store.gallery.gallery_section_two.image_22" 
-          class="w-60 h-60 mb-6 rounded-xl shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">
-      </div>
-      <div>
-        <img x-bind:src="$store.gallery.gallery_section_two.image_23" 
-          class="w-60 h-60 mb-6 rounded-xl shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">
-      </div>
-      <div>
-        <img x-bind:src="$store.gallery.gallery_section_two.image_24" 
-          class="w-60 h-60 mb-6 rounded-xl shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">
-      </div>
-
-      
-    </div>
-  </div>
-
-</section>
-</main>
-
-<footer class="site-footer mt-6 bg-gray-900 text-gray-500 py-5">
-  <div class="container mx-auto">
-    <div class="grid gap-x-8 gap-y-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-      <div class="mb-5">
-        <a href="" class=" flex mt-1 mb-6">
-          <img src="/CB013168-WDOS-ABDULHAKEEM/Images/the LOGO.png" class="h-8 me-3" alt="Logo" />
-          <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">WILDLIFE</span>
-        </a>
-        <h3 class="text-white text-lg font-bold mb-4">About The Wildlife</h3>
-        <p class="text-justify">Sri Lanka, a gem in the Indian Ocean, captivates visitors with its rich culture,
-          stunning beaches, and diverse wildlife. Land attractions include elephants, monkeys, leopards, and sloth
-          bears, while offshore, whales and dolphins offer a mesmerizing spectacle.</p>
-        <ul class="flex space-x-2 mt-16 ">
-          <li><a href="#" class="p-2 text-yellow-500 hover:bg-fuchsia-600 rounded-xl"><span
-                class="fab fa-twitter"></span></a>
-          </li>
-          <li><a href="#" class="p-2 text-yellow-500 hover:bg-fuchsia-600 rounded-xl"><span
-                class="fab fa-facebook"></span></a>
-          </li>
-          <li><a href="#" class="p-2 text-yellow-500 hover:bg-fuchsia-600 rounded-xl"><span
-                class="fab fa-linkedin"></span></a>
-          </li>
-          <li><a href="#" class="p-2 text-yellow-500 hover:bg-fuchsia-600 rounded-xl"><span
-                class="fab fa-instagram"></span></a>
-          </li>
-          <li><a href="https://github.com/ABD-HAKEEM@ABD-HAKEEM"
-              class="p-2 text-yellow-500 hover:bg-fuchsia-600 rounded-xl"><span class="fab fa-github"></span></a>
-          </li>
-        </ul>
-      </div>
-
-
-      <div class="mb-5">
-        <h3 class="text-white text-lg font-bold mb-4">Contact Info</h3>
-        <ul class="list-none">
-          <li class="mb-2">
-            <span class="block text-white">Address:</span>
-            <span class="text-gray-400">Department of Wildlife Conservation,
-              811A, Jayanthipura,
-              Battaramulla, Sri Lanka.</span>
-          </li>
-          <li class="mb-2">
-            <span class="block text-white">Telephone:</span>
-            <span class="text-gray-400">+94 761122226</span>
-          </li>
-          <li>
-            <span class="block text-white">Email:</span>
-            <span class="text-gray-400">dg@dwc.gov.lk</span>
-          </li>
-        </ul>
-      </div>
 
 
 
-      <div class="mb-5">
-        <h3 class="text-white text-lg font-bold mb-4">Quick Links</h3>
-        <ul class="flex m-auto">
-          <li><a href="/CB013168-WDOS-ABDULHAKEEM/srilanka-wildlife-intro.html" class="hover:text-red-100 ">About</a>
-          </li>
-          <li><a href="/CB013168-WDOS-ABDULHAKEEM/gallery.html" class="hover:text-red-100">Gallery</a></li>
 
-          <li><a href="/CB013168-WDOS-ABDULHAKEEM/Contact.html" class="hover:text-red-100">Contact</a>
-          </li>
 
-        </ul>
-        <div class="col-lg-3 mt-6">
-          <div class="subscribe-newsletters footer-item">
-            <h4>If you have any inquiries please Enter Your Email</h4>
-            <p> </p>
-            <form action="#" method="get" class="mt-3">
-              <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email"
-                required="" class="w-64 mr-10">
-              <button type="submit"><i class="fa fa-paper-plane-o"></i></button>
-            </form>
+
+
+            <div>
+              <img x-bind:src="$store.gallery.gallery_section_two.image_1"
+                class="w-60 h-60 mb-6 rounded-xl shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">
+            </div>
+            <div>
+              <img x-bind:src="$store.gallery.gallery_section_two.image_2"
+                class="w-60 h-60 mb-6 rounded-xl shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">
+            </div>
+            <div>
+              <img x-bind:src="$store.gallery.gallery_section_two.image_3"
+                class="w-60 h-60 mb-6 rounded-xl shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">
+            </div>
+            <div>
+              <img x-bind:src="$store.gallery.gallery_section_two.image_4"
+                class="w-60 h-60 mb-6 rounded-xl shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">
+            </div>
+            <div>
+              <img x-bind:src="$store.gallery.gallery_section_two.image_5"
+                class="w-60 h-60 mb-6 rounded-xl shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">
+            </div>
+            <div>
+              <img x-bind:src="$store.gallery.gallery_section_two.image_6"
+                class="w-60 h-60 mb-6 rounded-xl shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">
+            </div>
+            <div>
+              <img x-bind:src="$store.gallery.gallery_section_two.image_7"
+                class="w-60 h-60 mb-6 rounded-xl shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">
+            </div>
+            <div>
+              <img x-bind:src="$store.gallery.gallery_section_two.image_8"
+                class="w-60 h-60 mb-6 rounded-xl shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">
+            </div>
+            <div>
+              <img x-bind:src="$store.gallery.gallery_section_two.image_9"
+                class="w-60 h-60 mb-6 rounded-xl shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">
+            </div>
+            <div>
+              <img x-bind:src="$store.gallery.gallery_section_two.image_10"
+                class="w-60 h-60 mb-6 rounded-xl shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">
+            </div>
+            <div>
+              <img x-bind:src="$store.gallery.gallery_section_two.image_11"
+                class="w-60 h-60 mb-6 rounded-xl shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">
+            </div>
+            <div>
+              <img x-bind:src="$store.gallery.gallery_section_two.image_12"
+                class="w-60 h-60 mb-6 rounded-xl shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">
+            </div>
+            <div>
+              <img x-bind:src="$store.gallery.gallery_section_two.image_13"
+                class="w-60 h-60 mb-6 rounded-xl shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">
+            </div>
+            <div>
+              <img x-bind:src="$store.gallery.gallery_section_two.image_14"
+                class="w-60 h-60 mb-6 rounded-xl shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">
+            </div>
+            <div>
+              <img x-bind:src="$store.gallery.gallery_section_two.image_15"
+                class="w-60 h-60 mb-6 rounded-xl shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">
+            </div>
+            <div>
+              <img x-bind:src="$store.gallery.gallery_section_two.image_16"
+                class="w-60 h-60 mb-6 rounded-xl shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">
+            </div>
+            <div>
+              <img x-bind:src="$store.gallery.gallery_section_two.image_17"
+                class="w-60 h-60 mb-6 rounded-xl shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">
+            </div>
+            <div>
+              <img x-bind:src="$store.gallery.gallery_section_two.image_18"
+                class="w-60 h-60 mb-6 rounded-xl shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">
+            </div>
+            <div>
+              <img x-bind:src="$store.gallery.gallery_section_two.image_19"
+                class="w-60 h-60 mb-6 rounded-xl shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">
+            </div>
+            <div>
+              <img x-bind:src="$store.gallery.gallery_section_two.image_20"
+                class="w-60 h-60 mb-6 rounded-xl shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">
+            </div>
+            <div>
+              <img x-bind:src="$store.gallery.gallery_section_two.image_21"
+                class="w-60 h-60 mb-6 rounded-xl shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">
+            </div>
+            <div>
+              <img x-bind:src="$store.gallery.gallery_section_two.image_22"
+                class="w-60 h-60 mb-6 rounded-xl shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">
+            </div>
+            <div>
+              <img x-bind:src="$store.gallery.gallery_section_two.image_23"
+                class="w-60 h-60 mb-6 rounded-xl shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">
+            </div>
+            <div>
+              <img x-bind:src="$store.gallery.gallery_section_two.image_24"
+                class="w-60 h-60 mb-6 rounded-xl shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">
+            </div>
+
+
           </div>
         </div>
+
+      </section>
+    </main>
+
+    <footer class="site-footer mt-6 bg-gray-900 text-gray-500 py-5">
+      <div class="container mx-auto">
+        <div class="grid gap-x-8 gap-y-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          <div class="mb-5">
+            <a href="" class=" flex mt-1 mb-6">
+              <img src="/CB013168-WDOS-ABDULHAKEEM/Images/the LOGO.png" class="h-8 me-3" alt="Logo" />
+              <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">WILDLIFE</span>
+            </a>
+            <h3 class="text-white text-lg font-bold mb-4">About The Wildlife</h3>
+            <p class="text-justify">Sri Lanka, a gem in the Indian Ocean, captivates visitors with its rich culture,
+              stunning beaches, and diverse wildlife. Land attractions include elephants, monkeys, leopards, and sloth
+              bears, while offshore, whales and dolphins offer a mesmerizing spectacle.</p>
+            <ul class="flex space-x-2 mt-16 ">
+              <li><a href="#" class="p-2 text-yellow-500 hover:bg-fuchsia-600 rounded-xl"><span
+                    class="fab fa-twitter"></span></a>
+              </li>
+              <li><a href="#" class="p-2 text-yellow-500 hover:bg-fuchsia-600 rounded-xl"><span
+                    class="fab fa-facebook"></span></a>
+              </li>
+              <li><a href="#" class="p-2 text-yellow-500 hover:bg-fuchsia-600 rounded-xl"><span
+                    class="fab fa-linkedin"></span></a>
+              </li>
+              <li><a href="#" class="p-2 text-yellow-500 hover:bg-fuchsia-600 rounded-xl"><span
+                    class="fab fa-instagram"></span></a>
+              </li>
+              <li><a href="https://github.com/ABD-HAKEEM@ABD-HAKEEM"
+                  class="p-2 text-yellow-500 hover:bg-fuchsia-600 rounded-xl"><span class="fab fa-github"></span></a>
+              </li>
+            </ul>
+          </div>
+
+
+          <div class="mb-5">
+            <h3 class="text-white text-lg font-bold mb-4">Contact Info</h3>
+            <ul class="list-none">
+              <li class="mb-2">
+                <span class="block text-white">Address:</span>
+                <span class="text-gray-400">Department of Wildlife Conservation,
+                  811A, Jayanthipura,
+                  Battaramulla, Sri Lanka.</span>
+              </li>
+              <li class="mb-2">
+                <span class="block text-white">Telephone:</span>
+                <span class="text-gray-400">+94 761122226</span>
+              </li>
+              <li>
+                <span class="block text-white">Email:</span>
+                <span class="text-gray-400">dg@dwc.gov.lk</span>
+              </li>
+            </ul>
+          </div>
+
+
+
+          <div class="mb-5">
+            <h3 class="text-white text-lg font-bold mb-4">Quick Links</h3>
+            <ul class="flex m-auto">
+              <li><a href="/CB013168-WDOS-ABDULHAKEEM/srilanka-wildlife-intro.html"
+                  class="hover:text-red-100 ">About</a>
+              </li>
+              <li><a href="/CB013168-WDOS-ABDULHAKEEM/gallery.html" class="hover:text-red-100">Gallery</a></li>
+
+              <li><a href="/CB013168-WDOS-ABDULHAKEEM/Contact.html" class="hover:text-red-100">Contact</a>
+              </li>
+
+            </ul>
+            <div class="col-lg-3 mt-6">
+              <div class="subscribe-newsletters footer-item">
+                <h4>If you have any inquiries please Enter Your Email</h4>
+                <p> </p>
+                <form action="#" method="get" class="mt-3">
+                  <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email"
+                    required="" class="w-64 mr-10">
+                  <button type="submit"><i class="fa fa-paper-plane-o"></i></button>
+                </form>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="text-center mt-4 md:mt-6">
+          <p class="text-gray-500">&copy; <a href="/CB013168-WDOS-ABDULHAKEEM/index.html"
+              class="text-yellow-500">Department of Wildlife
+              Lanka</a>, All Right
+            Reserved.</p>
+          <p>Developed By <b>Abdul Hakeem</b></p>
+        </div>
       </div>
+    </footer>
 
-    </div>
 
-
-    <div class="text-center mt-4 md:mt-6">
-      <p class="text-gray-500">&copy; <a href="/CB013168-WDOS-ABDULHAKEEM/index.html" class="text-yellow-500">Department of Wildlife
-          Lanka</a>, All Right
-        Reserved.</p>
-      <p>Developed By <b>Abdul Hakeem</b></p>
-    </div>
   </div>
-</footer>
+  <button id="to-top-button" onclick="goToTop()" title="top"
+    class="hidden fixed z-50 bottom-10 right-10 p-4 border-0 w-14 h-14 rounded-xl shadow-md bg-yellow-500 hover:bg-fuchsia-100 text-white text-lg font-semibold transition-colors duration-300">
 
-
-</div>
-<button id="to-top-button" onclick="goToTop()" title="top"
-class="hidden fixed z-50 bottom-10 right-10 p-4 border-0 w-14 h-14 rounded-xl shadow-md bg-yellow-500 hover:bg-fuchsia-100 text-white text-lg font-semibold transition-colors duration-300">
-
-<span> <img src="/CB013168-WDOS-ABDULHAKEEM/Images/icons8-snake-48.png" alt=""></span>
-</button>
+    <span> <img src="/CB013168-WDOS-ABDULHAKEEM/Images/icons8-snake-48.png" alt=""></span>
+  </button>
 
 
 
-<script>
+  <script>
 
-var toTopButton = document.getElementById("to-top-button");
+    var toTopButton = document.getElementById("to-top-button");
 
-if (toTopButton) {
+    if (toTopButton) {
 
 
-  window.onscroll = function () {
-    if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
-      toTopButton.classList.remove("hidden");
-    } else {
-      toTopButton.classList.add("hidden");
+      window.onscroll = function () {
+        if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+          toTopButton.classList.remove("hidden");
+        } else {
+          toTopButton.classList.add("hidden");
+        }
+      };
+
+      window.goToTop = function () {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      };
     }
-  };
-
-  window.goToTop = function () {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
+  </script>
+  <script>
+    document.getElementById('mobile-menu-button').addEventListener('click', function () {
+      var mobileMenu = document.getElementById('mobile-menu');
+      mobileMenu.style.display = (mobileMenu.style.display === 'block') ? 'none' : 'block';
     });
-  };
-}
-</script>
-<script>
-document.getElementById('mobile-menu-button').addEventListener('click', function () {
-  var mobileMenu = document.getElementById('mobile-menu');
-  mobileMenu.style.display = (mobileMenu.style.display === 'block') ? 'none' : 'block';
-});
-</script>
+  </script>
 
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script type="text/javascript" src="/CB013168-WDOS-ABDULHAKEEM/Js/app.js"></script>
-<script type="text/javascript" src="/CB013168-WDOS-ABDULHAKEEM/Js/store/gallery.js"></script>
-</body></html>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script type="text/javascript" src="/CB013168-WDOS-ABDULHAKEEM/Js/app.js"></script>
+  <script type="text/javascript" src="/CB013168-WDOS-ABDULHAKEEM/Js/store/gallery.js"></script>
+</body>
+
+</html>
