@@ -22,7 +22,7 @@ document.addEventListener('alpine:init', () => {
             title: "Discover the Priceless Treasure of Nature",
             body: "Nature's priceless treasure unfolds in the delicate dance of sun-kissed leaves, the symphony of birdsong, and the tranquil embrace of untouched landscapes, revealing a wealth of beauty that transcends any material measure. In its boundless wonders, one finds a treasure trove of serenity and inspiration beyond compare."
         },
-        
+
         slideshow: [
             {
                 Image: '/CB013168-WDOS-ABDULHAKEEM/Images/Slide img 1.jpg',
@@ -96,47 +96,31 @@ document.addEventListener('alpine:init', () => {
         },
         home_section_five:
         {
-            sub_title:'A Safari Adventure through Yala and Wilpattu National Parks',
-            title:'Discover the Enchanting Wildlife of Sri Lanka',
-            body:"Exploring the wildlife of Sri Lanka is a captivating journey into a tropical paradise teeming with biodiversity. Nestled in the heart of the Indian Ocean, this island nation boasts a rich tapestry of ecosystems, from lush rainforests to arid plains. One of the highlights of Sri Lanka's wildlife is its diverse array of fauna, including elephants, leopards, and a myriad of bird species. Yala National Park, renowned for its leopard population, offers an exhilarating safari experience where visitors can witness these elusive big cats in their natural habitat. Wilpattu National Park, with its serene lakes and ancient ruins, is another gem, providing a habitat for a variety of wildlife, including the majestic Sri Lankan elephant. With its unique blend of nature and culture, exploring Sri Lanka's wildlife is a journey that promises awe-inspiring encounters and unforgettable memories.",
-            image:'/CB013168-WDOS-ABDULHAKEEM/Images/Exploring 1.jpg',
-            image1:'/CB013168-WDOS-ABDULHAKEEM/Images/Exploring2.jpg',
-            image2:'/CB013168-WDOS-ABDULHAKEEM/Images/Exploring3.jpg',
-            image3:'/CB013168-WDOS-ABDULHAKEEM/Images/Exploring4.jpg',
-            image4:'/CB013168-WDOS-ABDULHAKEEM/Images/Exploring 5.jpg',
-            image5:'/CB013168-WDOS-ABDULHAKEEM/Images/map.png',
-            image6:'/CB013168-WDOS-ABDULHAKEEM/Images/Exploring 5.jpg'
+            sub_title: 'A Safari Adventure through Yala and Wilpattu National Parks',
+            title: 'Discover the Enchanting Wildlife of Sri Lanka',
+            body: "Exploring the wildlife of Sri Lanka is a captivating journey into a tropical paradise teeming with biodiversity. Nestled in the heart of the Indian Ocean, this island nation boasts a rich tapestry of ecosystems, from lush rainforests to arid plains. One of the highlights of Sri Lanka's wildlife is its diverse array of fauna, including elephants, leopards, and a myriad of bird species. Yala National Park, renowned for its leopard population, offers an exhilarating safari experience where visitors can witness these elusive big cats in their natural habitat. Wilpattu National Park, with its serene lakes and ancient ruins, is another gem, providing a habitat for a variety of wildlife, including the majestic Sri Lankan elephant. With its unique blend of nature and culture, exploring Sri Lanka's wildlife is a journey that promises awe-inspiring encounters and unforgettable memories.",
+            image: '/CB013168-WDOS-ABDULHAKEEM/Images/Exploring 1.jpg',
+            image1: '/CB013168-WDOS-ABDULHAKEEM/Images/Exploring2.jpg',
+            image2: '/CB013168-WDOS-ABDULHAKEEM/Images/Exploring3.jpg',
+            image3: '/CB013168-WDOS-ABDULHAKEEM/Images/Exploring4.jpg',
+            image4: '/CB013168-WDOS-ABDULHAKEEM/Images/Exploring 5.jpg',
+            image5: '/CB013168-WDOS-ABDULHAKEEM/Images/map.png',
+            image6: '/CB013168-WDOS-ABDULHAKEEM/Images/Exploring 5.jpg'
         },
 
-    
 
-        toggleEditor(block_id){
+
+        toggleEditor(block_id) {
             this.is_editor_visible = block_id;
         },
-        save(block_id){
+        save(block_id) {
             this.toggleEditor(false);
         },
-        newsletterSubscription() {
+        iconContainer() {
+
+            this.is_sett_visible = true;
 
 
-            if (new_email) {
-                localStorage.setItem('new_email', JSON.stringify(new_email));
-                this.new_email = new_email;
-                return true;
-                alert('Subscribed successfully!');
-              }
-              else {
-                alert('Please enter a valid email!');
-              }
-              return false;
-            },
-
-          init(){
-            let new_email = localStorage.getItem('new_email');
-    
-            if(new_email){
-                this.new_email = JSON.parse(new_email);
-            }
         },
     });
 });
