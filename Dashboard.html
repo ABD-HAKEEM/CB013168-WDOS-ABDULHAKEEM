@@ -74,7 +74,7 @@
   <main>
     <section class="w-full " >
       <div  x-on:click="$store.log.logout"  class="flex justify-end mr-[71px] mt-8  border-gray-300 rounded-md">
-        <button type="submit" class="rounded-lg p-6 bg-white ring-1 ring-slate-900/5 shadow-lg space-y-3 hover:bg-sky-500 hover:ring-sky-500  ">LogOut</button>
+        <button x-on:click="msg()" type="submit" class="rounded-lg p-6 bg-white ring-1 ring-slate-900/5 shadow-lg space-y-3 hover:bg-sky-500 hover:ring-sky-500  ">LogOut</button>
       </div>
     </section>
 
@@ -208,7 +208,12 @@
       mobileMenu.style.display = (mobileMenu.style.display === 'block') ? 'none' : 'block';
     });
   </script>
-
+<script >
+  function msg() {
+    alert("You have successfully logged out");
+    window.location.href = "/CB013168-WDOS-ABDULHAKEEM/index.html";
+  }
+</script>
 
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

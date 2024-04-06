@@ -117,10 +117,8 @@ document.addEventListener('alpine:init', () => {
             this.toggleEditor(false);
         },
         iconContainer() {
-
             this.is_sett_visible = true;
-
-
+           
         },
     });
 });
