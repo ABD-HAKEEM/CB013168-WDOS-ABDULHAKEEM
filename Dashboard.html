@@ -72,13 +72,30 @@
 
     </header>
   <main>
+    <section x-data="log" class="bg-gray-100 p-4 rounded-lg mt-10">
+      <ul class="border border-gray-300 rounded-lg p-2">
+          <template x-for="user in users" >
+              <li class="text-gray-800 mb-2" x-text="username"></li>
+              <li class="text-gray-800 mb-2" x-text="username"></li>
+              <li class="text-gray-800 mb-2" x-text="username"></li>
+          </template>
+      </ul>
+  </section>
+
     <section class="w-full " >
       <div  x-on:click="$store.log.logout"  class="flex justify-end mr-[71px] mt-8  border-gray-300 rounded-md">
         <button x-on:click="msg()" type="submit" class="rounded-lg p-6 bg-white ring-1 ring-slate-900/5 shadow-lg space-y-3 hover:bg-sky-500 hover:ring-sky-500  ">LogOut</button>
       </div>
     </section>
 
-    
+    <section x-data="submit" class="bg-gray-100 p-4 rounded-lg mt-10">
+      <ul class="border border-gray-300 rounded-lg p-2">
+          <template x-for="email in emails" :key="email">
+              <li class="text-gray-800 mb-2" x-text="email"></li>
+          </template>
+      </ul>
+  </section>
+  
   </main>
 
 
@@ -219,6 +236,8 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script type="text/javascript" src="/CB013168-WDOS-ABDULHAKEEM/Js/app.js"></script>
   <script type="text/javascript" src="/CB013168-WDOS-ABDULHAKEEM/Js/store/contact.js"></script>
+  <script type="text/javascript" src="/CB013168-WDOS-ABDULHAKEEM/Js/newsletter.js"></script>
+  
 </body>
 
 </html>

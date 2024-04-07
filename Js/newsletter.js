@@ -1,23 +1,24 @@
 document.addEventListener('alpine:init', () => {
-  Alpine.data('submit', () => ({
-      email: '',
-      new_email: '',
-      submitForm() {
-          if (this.email) {
-              localStorage.setItem('new_email', JSON.stringify(this.email));
-              this.new_email = this.email;
-              alert('Subscribed successfully!');
-              return true;
-          } else {
-              alert('Please enter a valid email!');
-              return false;
-          }
-      },
-      init() {
-          let new_email = localStorage.getItem('new_email');
-          if (new_email) {
-              this.new_email = JSON.parse(new_email);
-          }
-      },
-  }));
+    Alpine.data('submit', () => ({
+        new_email: '',
+        emails: [],
+
+        submitForm() {
+            if (this.new_email) {
+                this.emails.push(this.new_email); 
+                localStorage.setItem('emails', JSON.stringify(this.emails)); 
+                alert('Subscribed successfully!');
+                this.new_email = ''; 
+            } else {
+                alert('Please enter a valid email!');
+            }
+        },
+
+        init() {
+            let storedEmails = localStorage.getItem('emails');
+            if (storedEmails) {
+                this.emails = JSON.parse(storedEmails);
+            }
+        },
+    }));
 });
