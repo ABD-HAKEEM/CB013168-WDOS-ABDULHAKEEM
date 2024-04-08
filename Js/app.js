@@ -7,13 +7,13 @@ document.addEventListener('alpine:init', () => {
           username: 'admin',
           password: 'admin',
           role: 'admin',
-          email: 'admin@apiit.com',
+          email: 'admin@admin.com',
         },
         {
-          username: 'abdul',
-          password: 'Abdul',
-          role: 'admin',
-          email: 'abdul@apiit.com',
+          username: 'user',
+          password: 'user',
+          role: 'site_user',
+          email: 'user@user.com',
         }
       ],
   

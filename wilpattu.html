@@ -25,10 +25,12 @@
       <div class="container mx-auto py-4 h-16 p-4 hidden md:block">
         <nav class="main-nav flex justify-between items-center  mt-[-8px] ">
           <div class="flex items-center">
-            <a href="/CB013168-WDOS-ABDULHAKEEM/index.html" class="text-lg font-bold ml-[0px]"><i class="fa-solid fa-feather"></i>Wildlife</a>
+            <a href="/CB013168-WDOS-ABDULHAKEEM/index.html" class="text-lg font-bold ml-[0px]"><i
+                class="fa-solid fa-feather"></i>Wildlife</a>
           </div>
           <ul class="hidden lg:flex list_view space-x-4 ">
-            <li><a href="/CB013168-WDOS-ABDULHAKEEM/srilanka-wildlife-intro.html" class="hover:text-orange-600">Introduction</a></li>
+            <li><a href="/CB013168-WDOS-ABDULHAKEEM/srilanka-wildlife-intro.html"
+                class="hover:text-orange-600">Introduction</a></li>
             <li><a href="/CB013168-WDOS-ABDULHAKEEM/Dep-of-wildlife.html" class="hover:text-orange-600">Department of
                 Wildlife</a></li>
             <li><a href="/CB013168-WDOS-ABDULHAKEEM/animals.html" class="hover:text-orange-600">Animals in Sri
@@ -36,9 +38,19 @@
             <li><a href="/CB013168-WDOS-ABDULHAKEEM/leopards.html" class="hover:text-orange-600">Leopards</a></li>
             <li><a href="/CB013168-WDOS-ABDULHAKEEM/wilpattu.html" class="hover:text-orange-600">wilpattu</a></li>
             <li><a href="/CB013168-WDOS-ABDULHAKEEM/wilpattu.html" class="hover:text-orange-600">Wilpattu</a></li>
-            <li><a href="/CB013168-WDOS-ABDULHAKEEM/Horton Plains.html" class="hover:text-orange-600">Horton plains</a></li>
+            <li><a href="/CB013168-WDOS-ABDULHAKEEM/Horton Plains.html" class="hover:text-orange-600">Horton plains</a>
+            </li>
             <li><a href="/CB013168-WDOS-ABDULHAKEEM/Contact.html" class="text-base hover:bg-[#1a1919]rounded-[10px]"><i
                   class="fa-solid fa-phone"></i></a></li>
+
+            <template x-if="$store.log.user">
+              <li x-on:click="$store.home.is_sett_visible" class="flex hidden md:block">
+                <a href="/CB013168-WDOS-ABDULHAKEEM/Dashboard.html" class="text-base hover:bg-[#1a1919] rounded-[10px]">
+                  <i class="fa-solid fa-gear"></i>
+                </a>
+              </li>
+            </template>
+
           </ul>
         </nav>
 
@@ -48,22 +60,26 @@
         <div class="bg-gray-800 p-4 text-white">
 
           <div class="flex justify-between items-center">
-            <a href="/CB013168-WDOS-ABDULHAKEEM/index.html" class="text-lg font-bold  block py-2"><i class="fa-solid fa-feather"></i>Wildlife</a>
+            <a href="/CB013168-WDOS-ABDULHAKEEM/index.html" class="text-lg font-bold  block py-2"><i
+                class="fa-solid fa-feather"></i>Wildlife</a>
             <button id="mobile-menu-button" class="text-white focus:outline-none">
               <i class="fa-solid fa-bars"></i>
             </button>
           </div>
           <div id="mobile-menu" class="hidden mt-4">
-            <a href="/CB013168-WDOS-ABDULHAKEEM/srilanka-wildlife-intro.html" class="hover:text-orange-600  block py-2">Introduction</a>
-            <a href="/CB013168-WDOS-ABDULHAKEEM/Dep-of-wildlife.html" class="hover:text-orange-600  block py-2">Department of Wildlife</a>
+            <a href="/CB013168-WDOS-ABDULHAKEEM/srilanka-wildlife-intro.html"
+              class="hover:text-orange-600  block py-2">Introduction</a>
+            <a href="/CB013168-WDOS-ABDULHAKEEM/Dep-of-wildlife.html"
+              class="hover:text-orange-600  block py-2">Department of Wildlife</a>
             <a href="/CB013168-WDOS-ABDULHAKEEM/animals.html" class="hover:text-orange-600  block py-2">Animals in Sri
               Lanka</a>
             <a href="/CB013168-WDOS-ABDULHAKEEM/leopards.html" class="hover:text-orange-600  block py-2">Leopards</a>
             <a href="/CB013168-WDOS-ABDULHAKEEM/wilpattu.html" class="hover:text-orange-600  block py-2">wilpattu</a>
             <a href="/CB013168-WDOS-ABDULHAKEEM/wilpattu.html" class="hover:text-orange-600  block py-2">Wilpattu</a>
-            <a href="/CB013168-WDOS-ABDULHAKEEM/Horton Plains.html" class="hover:text-orange-600  block py-2">Horton plains</a>
-            <a href="/CB013168-WDOS-ABDULHAKEEM/Contact.html" class="text-base hover:bg-[#1a1919]rounded-[10px]  block py-2"><i
-                class="fa-solid fa-phone"></i></a>
+            <a href="/CB013168-WDOS-ABDULHAKEEM/Horton Plains.html" class="hover:text-orange-600  block py-2">Horton
+              plains</a>
+            <a href="/CB013168-WDOS-ABDULHAKEEM/Contact.html"
+              class="text-base hover:bg-[#1a1919]rounded-[10px]  block py-2"><i class="fa-solid fa-phone"></i></a>
           </div>
         </div>
       </div>
@@ -87,7 +103,7 @@
               <form action="" class="grid gap-6" x-on:submit.prevent="$store.wilpattu.save(1)">
                 <div class="container mx-auto mt-20 mb-20 ">
                   <div class="mb-4">
-                    <label  class="block text-gray-600">Image</label>
+                    <label class="block text-gray-600">Image</label>
                     <input type="text" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
                       x-model="$store.wilpattu.wilpattu_section_one.image">
                   </div>
@@ -123,12 +139,14 @@
                       class="text-blue-50 hover:text-yellow-500 text-xl font-sana mr-[-20px]">Home</a>
                     <a href="" class="fa-solid fa-arrow-right mt-[8px] mr-[-20px]"></a>
 
-                    <a href="/CB013168-WDOS-ABDULHAKEEM/wilpattu.html" class="text-blue-900 hover:text-sky-50 text-xl font-sana ">Wilpattu</a>
+                    <a href="/CB013168-WDOS-ABDULHAKEEM/wilpattu.html"
+                      class="text-blue-900 hover:text-sky-50 text-xl font-sana ">Wilpattu</a>
 
                   </li>
                 </ul>
                 <div class="title mt-4 md:mt-8 ">
-                  <h1 x-text="$store.wilpattu.wilpattu_section_one.title" class="text-4xl md:text-8xl font-bold font-Roboto "></h1>
+                  <h1 x-text="$store.wilpattu.wilpattu_section_one.title"
+                    class="text-4xl md:text-8xl font-bold font-Roboto "></h1>
                 </div>
               </div>
             </div>
@@ -136,7 +154,7 @@
         </div>
       </section>
 
- <template x-if="$store.log.user">
+      <template x-if="$store.log.user">
         <div x-on:click="$store.wilpattu.toggleEditor(2)" class="flex hidden md:block">
           <button
             class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded mb-5 mt-5 ml-5"
@@ -146,7 +164,7 @@
             <div class="max-w-xl mx-auto" x-show="$store.wilpattu.is_editor_visible == 2">
               <form action="" class="grid gap-6" x-on:submit.prevent="$store.wilpattu.save(2)">
                 <div class="container mx-auto mt-20 mb-20 ">
-                
+
                   <div class="mb-4">
                     <label class="block text-gray-600">Title</label>
                     <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
@@ -172,11 +190,12 @@
       <section class="container mx-auto flex flex-col items-center md:flex-row">
         <div class="text-center m-auto mb-6 md:mb-0 md:mr-6">
           <h4 class="text-xl mt-10  font-sana text-yellow-900 ">Explore<b class="font-extrabold">Wilpattu</b></h4>
-          <h3 x-text="$store.wilpattu.wilpattu_section_two.title" class="text-3xl md:text-6xl mt-4 md:text-3xl font-Roboto "></h3>
+          <h3 x-text="$store.wilpattu.wilpattu_section_two.title"
+            class="text-3xl md:text-6xl mt-4 md:text-3xl font-Roboto "></h3>
 
           <p x-text="$store.wilpattu.wilpattu_section_two.body"
             class=" justify-items-center md:ml-[200px] ml-[60px]   w-4/6 text-gray-600 text-justify text-wrap text-opacity-75 md:text-opacity-50  mt-6 font-sans hover:font-Roboto">
-            
+
           </p>
 
         </div>
@@ -194,7 +213,7 @@
             <div class="max-w-xl mx-auto" x-show="$store.wilpattu.is_editor_visible == 3">
               <form action="" class="grid gap-6" x-on:submit.prevent="$store.wilpattu.save(3)">
                 <div class="container mx-auto mt-20 mb-20 ">
-                
+
                   <div class="mb-4">
                     <label class="block text-gray-600">Title</label>
                     <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
@@ -227,14 +246,15 @@
         <div class="container mx-auto">
           <div class="flex flex-col md:flex-row">
             <div class="list-disc text-left md:ml-20">
-              <h5 x-text="$store.wilpattu.wilpattu_section_three.title" class="text-3xl font-bold font-sana  mb-10 text-yellow-500"></h5>
+              <h5 x-text="$store.wilpattu.wilpattu_section_three.title"
+                class="text-3xl font-bold font-sana  mb-10 text-yellow-500"></h5>
 
               <p x-text="$store.wilpattu.wilpattu_section_three.body" class="font-Roboto tex-m"></p>
               <!-- <a x-bind:href="$store.wilpattu_wilpattu_section_three.link" target="_blank"><i
                   class="fa-solid fa-map-location-dot fa-beat"></i></a> -->
-                
-                  <a href="https://maps.app.goo.gl/rJ91Ne49EEhsXvse9" target="_blank"><i
-                    class="fa-solid fa-map-location-dot fa-beat"></i></a>
+
+              <a href="https://maps.app.goo.gl/rJ91Ne49EEhsXvse9" target="_blank"><i
+                  class="fa-solid fa-map-location-dot fa-beat"></i></a>
 
 
             </div>
@@ -255,7 +275,7 @@
             <div class="max-w-xl mx-auto" x-show="$store.wilpattu.is_editor_visible == 4">
               <form action="" class="grid gap-6" x-on:submit.prevent="$store.wilpattu.save(4)">
                 <div class="container mx-auto mt-20 mb-20 ">
-                
+
                   <div class="mb-4">
                     <label class="block text-gray-600">Title</label>
                     <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
@@ -289,7 +309,7 @@
         </div>
 
       </template>
-  
+
 
 
       <section class="mx-auto flex flex-col items-center md:flex-row mt-10">
@@ -319,7 +339,7 @@
             <div class="max-w-xl mx-auto" x-show="$store.wilpattu.is_editor_visible == 5">
               <form action="" class="grid gap-6" x-on:submit.prevent="$store.wilpattu.save(5)">
                 <div class="container mx-auto mt-20 mb-20 ">
-                
+
                   <div class="mb-4">
                     <label class="block text-gray-600">Title Card 1</label>
                     <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
@@ -395,7 +415,7 @@
             <div class="max-w-xl mx-auto" x-show="$store.wilpattu.is_editor_visible == 6">
               <form action="" class="grid gap-6" x-on:submit.prevent="$store.wilpattu.save(6)">
                 <div class="container mx-auto mt-20 mb-20 ">
-                
+
                   <div class="mb-4">
                     <label class="block text-gray-600">Title Card 4</label>
                     <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
@@ -467,7 +487,7 @@
 
             <div class=" max-w-sm rounded overflow-hidden  ml-6 mt-6 mr-6  w-[1000px] w-full">
               <div class="rounded-l overflow-hidden shadow-lg">
-                <img x-bind:src="$store.wilpattu.wilpattu_section_four_card1.image" class="w-full h-60"  alt="">
+                <img x-bind:src="$store.wilpattu.wilpattu_section_four_card1.image" class="w-full h-60" alt="">
                 <div class="px-6 py-4">
                   <div x-text="$store.wilpattu.wilpattu_section_four_card1.title" class="font-bold text-xl mb-2"></div>
                   <p x-text="$store.wilpattu.wilpattu_section_four_card1.body" class="text-gray-700 text-base"></p>
@@ -477,7 +497,7 @@
 
             <div class=" max-w-sm rounded overflow-hidden  ml-6 mt-6 mr-6  w-[1000px] w-full">
               <div class="rounded-l overflow-hidden shadow-lg">
-                <img x-bind:src="$store.wilpattu.wilpattu_section_four_card2.image" class="w-full h-60"  alt="leaopard">
+                <img x-bind:src="$store.wilpattu.wilpattu_section_four_card2.image" class="w-full h-60" alt="leaopard">
                 <div class="px-6 py-4">
                   <div x-text="$store.wilpattu.wilpattu_section_four_card2.title" class="font-bold text-xl mb-2"></div>
                   <p x-text="$store.wilpattu.wilpattu_section_four_card2.body" class="text-gray-700 text-base"></p>
@@ -486,7 +506,7 @@
             </div>
             <div class=" max-w-sm rounded overflow-hidden  ml-6 mt-6 mr-6  w-[1000px] w-full">
               <div class="rounded-l overflow-hidden shadow-lg">
-                <img x-bind:src="$store.wilpattu.wilpattu_section_four_card3.image" class="w-full h-60"  alt="">
+                <img x-bind:src="$store.wilpattu.wilpattu_section_four_card3.image" class="w-full h-60" alt="">
                 <div class="px-6 py-4">
                   <div x-text="$store.wilpattu.wilpattu_section_four_card3.title" class="font-bold text-xl mb-2"></div>
                   <p x-text="$store.wilpattu.wilpattu_section_four_card3.body" class="text-gray-700 text-base"></p>
@@ -495,17 +515,18 @@
             </div>
             <div class=" max-w-sm rounded overflow-hidden  ml-6 mt-6 mr-6  w-[1000px] w-full">
               <div class="rounded-l overflow-hidden shadow-lg">
-                <img x-bind:src="$store.wilpattu.wilpattu_section_four_card4.image" class="w-full h-60"  alt="thewhiskerchronicles">
+                <img x-bind:src="$store.wilpattu.wilpattu_section_four_card4.image" class="w-full h-60"
+                  alt="thewhiskerchronicles">
                 <div class="px-6 py-4">
                   <div x-text="$store.wilpattu.wilpattu_section_four_card4.title" class="font-bold text-xl mb-2"></div>
                   <p x-text="$store.wilpattu.wilpattu_section_four_card4.body" class="text-gray-700 text-base"></p>
                 </div>
               </div>
             </div>
-           
+
             <div class=" max-w-sm rounded overflow-hidden  ml-6 mt-6 mr-6  w-[1000px] w-full">
               <div class="rounded-l overflow-hidden shadow-lg">
-                <img x-bind:src="$store.wilpattu.wilpattu_section_four_card5.image" class="w-full h-60"  alt="Baobab">
+                <img x-bind:src="$store.wilpattu.wilpattu_section_four_card5.image" class="w-full h-60" alt="Baobab">
                 <div class="px-6 py-4">
                   <div x-text="$store.wilpattu.wilpattu_section_four_card5.title" class="font-bold text-xl mb-2"></div>
                   <p x-text="$store.wilpattu.wilpattu_section_four_card5.body" class="text-gray-700 text-base"></p>
@@ -513,10 +534,10 @@
               </div>
             </div>
 
-            
+
             <div class=" max-w-sm rounded overflow-hidden  ml-6 mt-6 mr-6  w-[1000px] w-full">
               <div class="rounded-l overflow-hidden shadow-lg">
-                <img x-bind:src="$store.wilpattu.wilpattu_section_four_card6.image" class="w-full h-60"  alt="Baobab">
+                <img x-bind:src="$store.wilpattu.wilpattu_section_four_card6.image" class="w-full h-60" alt="Baobab">
                 <div class="px-6 py-4">
                   <div x-text="$store.wilpattu.wilpattu_section_four_card6.title" class="font-bold text-xl mb-2"></div>
                   <p x-text="$store.wilpattu.wilpattu_section_four_card6.body" class="text-gray-700 text-base"></p>
@@ -525,8 +546,8 @@
             </div>
 
 
-            </div>
           </div>
+        </div>
       </section>
 
 
@@ -541,14 +562,14 @@
             <div class="max-w-xl mx-auto" x-show="$store.wilpattu.is_editor_visible == 7">
               <form action="" class="grid gap-6" x-on:submit.prevent="$store.wilpattu.save(7)">
                 <div class="container mx-auto mt-20 mb-20 w-[750px]">
-                
+
                   <div class="mb-4">
                     <label class="block text-gray-600">Image 1</label>
                     <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
                       x-model="$store.wilpattu.wilpattu_section_five_card1.image">
                   </div>
 
-                  
+
                   <div class="mb-4">
                     <label class="block text-gray-600">Title 1</label>
                     <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
@@ -561,7 +582,7 @@
                       x-model="$store.wilpattu.wilpattu_section_five_card2.image">
                   </div>
 
-                  
+
                   <div class="mb-4">
                     <label class="block text-gray-600">Title 2</label>
                     <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
@@ -574,7 +595,7 @@
                       x-model="$store.wilpattu.wilpattu_section_five_card3.image">
                   </div>
 
-                  
+
                   <div class="mb-4">
                     <label class="block text-gray-600">Title 3</label>
                     <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
@@ -587,7 +608,7 @@
                       x-model="$store.wilpattu.wilpattu_section_five_card4.image">
                   </div>
 
-                  
+
                   <div class="mb-4">
                     <label class="block text-gray-600">Title 4</label>
                     <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
@@ -600,7 +621,7 @@
                       x-model="$store.wilpattu.wilpattu_section_five_card5.image">
                   </div>
 
-                  
+
                   <div class="mb-4">
                     <label class="block text-gray-600">Title 5</label>
                     <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
@@ -613,7 +634,7 @@
                       x-model="$store.wilpattu.wilpattu_section_five_card6.image">
                   </div>
 
-                  
+
                   <div class="mb-4">
                     <label class="block text-gray-600">Title 6</label>
                     <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
@@ -635,15 +656,17 @@
         <div class="relative flex max-w-fit ml-auto mr-auto mt-10 mb-10">
 
           <div class="grid gap-x-4 gap-y-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
-            
+
             <div class="relative group w-80 h-80 overflow-hidden ">
               <img x-bind:src="$store.wilpattu.wilpattu_section_five_card1.image" alt="Iguana"
                 class="rounded-3xl w-80 h-80 transition-transform duration-300 transform hover:scale-110 ">
 
               <div
                 class="absolute bottom-0 left-0 bg-white rounded-tr-3xl rounded-bl-3xl py-2 pb-6 pl-12 pr-4 border-dashed border-2 border-amber-500 ">
-                <div x-text="$store.wilpattu.wilpattu_section_five_card1.title" class="absolute font-roboto ml-[-20px] mt-5 text-red-400"></div>
-                <span x-text="$store.wilpattu.wilpattu_section_five_card1.body" class="ml-[-40px] text-orange-400"></span>
+                <div x-text="$store.wilpattu.wilpattu_section_five_card1.title"
+                  class="absolute font-roboto ml-[-20px] mt-5 text-red-400"></div>
+                <span x-text="$store.wilpattu.wilpattu_section_five_card1.body"
+                  class="ml-[-40px] text-orange-400"></span>
               </div>
 
             </div>
@@ -656,8 +679,10 @@
 
               <div
                 class="absolute bottom-0 left-0 bg-white rounded-tr-3xl rounded-bl-3xl py-2 pb-6 pl-12 pr-4 border-dashed border-2 border-amber-500 ">
-                <div x-text="$store.wilpattu.wilpattu_section_five_card2.title" class="absolute font-roboto ml-[-20px] mt-5 text-red-400"></div>
-                <span x-text="$store.wilpattu.wilpattu_section_five_card2.body" class="ml-[-40px] text-orange-400"></span>
+                <div x-text="$store.wilpattu.wilpattu_section_five_card2.title"
+                  class="absolute font-roboto ml-[-20px] mt-5 text-red-400"></div>
+                <span x-text="$store.wilpattu.wilpattu_section_five_card2.body"
+                  class="ml-[-40px] text-orange-400"></span>
               </div>
 
             </div>
@@ -667,8 +692,10 @@
 
               <div
                 class="absolute bottom-0 left-0 bg-white rounded-tr-3xl rounded-bl-3xl py-2 pb-6 pl-12 pr-4 border-dashed border-2 border-amber-500 ">
-                <div x-text="$store.wilpattu.wilpattu_section_five_card3.title" class="absolute font-roboto ml-[-20px] mt-5 text-red-400"></div>
-                <span x-text="$store.wilpattu.wilpattu_section_five_card3.body" class="ml-[-40px] text-orange-400"></span>
+                <div x-text="$store.wilpattu.wilpattu_section_five_card3.title"
+                  class="absolute font-roboto ml-[-20px] mt-5 text-red-400"></div>
+                <span x-text="$store.wilpattu.wilpattu_section_five_card3.body"
+                  class="ml-[-40px] text-orange-400"></span>
               </div>
 
             </div>
@@ -678,8 +705,10 @@
 
               <div
                 class="absolute bottom-0 left-0 bg-white rounded-tr-3xl rounded-bl-3xl py-2 pb-6 pl-12 pr-4 border-dashed border-2 border-amber-500 ">
-                <div x-text="$store.wilpattu.wilpattu_section_five_card4.title" class="absolute font-roboto ml-[-20px] mt-5 text-red-400"></div>
-                <span x-text="$store.wilpattu.wilpattu_section_five_card4.body" class="ml-[-40px] text-orange-400"></span>
+                <div x-text="$store.wilpattu.wilpattu_section_five_card4.title"
+                  class="absolute font-roboto ml-[-20px] mt-5 text-red-400"></div>
+                <span x-text="$store.wilpattu.wilpattu_section_five_card4.body"
+                  class="ml-[-40px] text-orange-400"></span>
               </div>
 
             </div>
@@ -690,8 +719,10 @@
 
               <div
                 class="absolute bottom-0 left-0 bg-white rounded-tr-3xl rounded-bl-3xl py-2 pb-6 pl-12 pr-4 border-dashed border-2 border-amber-500 ">
-                <div x-text="$store.wilpattu.wilpattu_section_five_card5.title" class="absolute font-roboto ml-[-20px] mt-5 text-red-400"></div>
-                <span x-text="$store.wilpattu.wilpattu_section_five_card5.body" class="ml-[-40px] text-orange-400"></span>
+                <div x-text="$store.wilpattu.wilpattu_section_five_card5.title"
+                  class="absolute font-roboto ml-[-20px] mt-5 text-red-400"></div>
+                <span x-text="$store.wilpattu.wilpattu_section_five_card5.body"
+                  class="ml-[-40px] text-orange-400"></span>
               </div>
 
             </div>
@@ -701,8 +732,10 @@
 
               <div
                 class="absolute bottom-0 left-0 bg-white rounded-tr-3xl rounded-bl-3xl py-2 pb-6 pl-12 pr-4 border-dashed border-2 border-amber-500 ">
-                <div x-text="$store.wilpattu.wilpattu_section_five_card6.title" class="absolute font-roboto ml-[-20px] mt-5 text-red-400"></div>
-                <span x-text="$store.wilpattu.wilpattu_section_five_card6.body" class="ml-[-40px] text-orange-400"></span>
+                <div x-text="$store.wilpattu.wilpattu_section_five_card6.title"
+                  class="absolute font-roboto ml-[-20px] mt-5 text-red-400"></div>
+                <span x-text="$store.wilpattu.wilpattu_section_five_card6.body"
+                  class="ml-[-40px] text-orange-400"></span>
               </div>
 
             </div>
@@ -720,14 +753,14 @@
             <div class="max-w-xl mx-auto" x-show="$store.wilpattu.is_editor_visible == 8">
               <form action="" class="grid gap-6" x-on:submit.prevent="$store.wilpattu.save(8)">
                 <div class="container mx-auto mt-20 mb-20 w-[750px]">
-                
+
                   <div class="mb-4">
                     <label class="block text-gray-600">Image</label>
                     <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
                       x-model="$store.wilpattu.wilpattu_section_six.image">
                   </div>
 
-                  
+
                   <div class="mb-4">
                     <label class="block text-gray-600">Title</label>
                     <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
@@ -748,10 +781,11 @@
         <div class="items-center ">
           <h4 x-text="$store.wilpattu.wilpattu_section_six.title"
             class="font-roboto mb-6 text-center text-3xl font-bold text-orange-400  border-solid border-2 border-sky-500">
-            </h4>
+          </h4>
         </div>
         <div class="relative">
-          <img x-bind:src="$store.wilpattu.wilpattu_section_six.image" alt="Wilpattu map" class="md:h-[800px] md:w-full ">
+          <img x-bind:src="$store.wilpattu.wilpattu_section_six.image" alt="Wilpattu map"
+            class="md:h-[800px] md:w-full ">
 
 
         </div>
@@ -767,13 +801,13 @@
             <div class="max-w-xl mx-auto" x-show="$store.wilpattu.is_editor_visible == 9">
               <form action="" class="grid gap-6" x-on:submit.prevent="$store.wilpattu.save(9)">
                 <div class="container mx-auto mt-20 mb-20 w-[750px]">
-                
+
                   <div class="mb-4">
                     <label class="block text-gray-600">Bg Image</label>
                     <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
                       x-model="$store.wilpattu.wilpattu_section_sev.image_bg">
                   </div>
-                 
+
 
                   <div class="mb-4">
                     <label class="block text-gray-600">Title</label>
@@ -792,7 +826,7 @@
                     <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
                       x-model="$store.wilpattu.wilpattu_section_sev.image">
                   </div>
-                 
+
 
                   <button type="submit" class="bg-yellow-500 text-white py-2 px-4 rounded-md">Save</button>
                 </div>
@@ -809,16 +843,16 @@
 
           <div class="flex md:absolute md:top-[10%]  ml-10 w-full h-full">
             <div>
-              <h5 x-text="$store.wilpattu.wilpattu_section_sev.title" class="ml-[40px] text-2xl text-white font-Roboto"></h5>
+              <h5 x-text="$store.wilpattu.wilpattu_section_sev.title" class="ml-[40px] text-2xl text-white font-Roboto">
+              </h5>
               <iframe class="animate-bounce  mt-10 mb-10 rounded-2xl h-10 hover:h-[450px]"
-                x-bind:src="$store.wilpattu.wilpattu_section_sev.link"
-                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade">
+                x-bind:src="$store.wilpattu.wilpattu_section_sev.link" width="600" height="450" style="border:0;"
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
 
               </iframe>
             </div>
             <div class="md:left-3/4">
-              <img x-bind:src="$store.wilpattu.wilpattu_section_sev.image"  alt="" class="ml-[450px] rounded-tl-3xl ">
+              <img x-bind:src="$store.wilpattu.wilpattu_section_sev.image" alt="" class="ml-[450px] rounded-tl-3xl ">
             </div>
           </div>
         </div>
@@ -890,7 +924,8 @@
           <div class="mb-5">
             <h3 class="text-white text-lg font-bold mb-4">Quick Links</h3>
             <ul class="flex m-auto">
-              <li><a href="/CB013168-WDOS-ABDULHAKEEM/srilanka-wildlife-intro.html" class="hover:text-red-100 ">About</a>
+              <li><a href="/CB013168-WDOS-ABDULHAKEEM/srilanka-wildlife-intro.html"
+                  class="hover:text-red-100 ">About</a>
               </li>
               <li><a href="/CB013168-WDOS-ABDULHAKEEM/gallery.html" class="hover:text-red-100">Gallery</a></li>
 
@@ -898,24 +933,23 @@
               </li>
 
             </ul>
-            <div class="col-lg-3 mt-6">
-              <div class="subscribe-newsletters footer-item">
-                <h4>If you have any inquiries please Enter Your Email</h4>
-                <p> </p>
-                <form action="#" method="get" class="mt-3">
-                  <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email"
-                    required="" class="w-64 mr-10">
-                  <button type="submit"><i class="fa fa-paper-plane-o"></i></button>
-                </form>
-              </div>
+            <div class="subscribe-newsletters footer-item" x-data="submit()">
+              <h4>If you have any inquiries please Enter Your Email</h4>
+              <p></p>
+              <form x-on:submit.prevent="submitForm" class="mt-3">
+                <input x-model="new_email" id="new_email" required placeholder="Enter your email" class="w-64 mr-10">
+                <button type="submit"><i class="fa fa-paper-plane-o"></i></button>
+              </form>
             </div>
+
           </div>
 
         </div>
 
 
         <div class="text-center mt-4 md:mt-6">
-          <p class="text-gray-500">&copy; <a href="/CB013168-WDOS-ABDULHAKEEM/index.html" class="text-yellow-500">Department of Wildlife
+          <p class="text-gray-500">&copy; <a href="/CB013168-WDOS-ABDULHAKEEM/index.html"
+              class="text-yellow-500">Department of Wildlife
               Lanka</a>, All Right
             Reserved.</p>
           <p>Developed By <b>Abdul Hakeem</b></p>
@@ -966,6 +1000,8 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script type="text/javascript" src="/CB013168-WDOS-ABDULHAKEEM/Js/app.js"></script>
   <script type="text/javascript" src="/CB013168-WDOS-ABDULHAKEEM/Js/store/wilpattu.js"></script>
+  <script type="text/javascript" src="/CB013168-WDOS-ABDULHAKEEM/Js/newsletter.js"></script>
+
 </body>
 
 </html>

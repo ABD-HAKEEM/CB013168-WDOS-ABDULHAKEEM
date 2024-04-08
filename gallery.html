@@ -41,6 +41,14 @@
             </li>
             <li><a href="/CB013168-WDOS-ABDULHAKEEM/Contact.html" class="text-base hover:bg-[#1a1919]rounded-[10px]"><i
                   class="fa-solid fa-phone"></i></a></li>
+            <template x-if="$store.log.user">
+              <li x-on:click="$store.home.is_sett_visible" class="flex hidden md:block">
+                <a href="/CB013168-WDOS-ABDULHAKEEM/Dashboard.html" class="text-base hover:bg-[#1a1919] rounded-[10px]">
+                  <i class="fa-solid fa-gear"></i>
+                </a>
+              </li>
+            </template>
+
           </ul>
         </nav>
 
@@ -559,17 +567,15 @@
               </li>
 
             </ul>
-            <div class="col-lg-3 mt-6">
-              <div class="subscribe-newsletters footer-item">
-                <h4>If you have any inquiries please Enter Your Email</h4>
-                <p> </p>
-                <form action="#" method="get" class="mt-3">
-                  <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email"
-                    required="" class="w-64 mr-10">
-                  <button type="submit"><i class="fa fa-paper-plane-o"></i></button>
-                </form>
-              </div>
+            <div class="subscribe-newsletters footer-item" x-data="submit()">
+              <h4>If you have any inquiries please Enter Your Email</h4>
+              <p></p>
+              <form x-on:submit.prevent="submitForm" class="mt-3">
+                <input x-model="new_email" id="new_email" required placeholder="Enter your email" class="w-64 mr-10">
+                <button type="submit"><i class="fa fa-paper-plane-o"></i></button>
+              </form>
             </div>
+
           </div>
 
         </div>

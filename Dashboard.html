@@ -72,21 +72,60 @@
 
     </header>
   <main>
+
+    <div class="container mx-auto mt-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <!-- Card 1 -->
+          <div class="bg-white p-4 rounded-lg shadow-md">
+              <h2 class="text-lg font-semibold mb-4">Species</h2>
+              <p class="text-gray-600">Explore different species found in our wildlife sanctuary.</p>
+              <a href="/CB013168-WDOS-ABDULHAKEEM/gallery.html" class="block mt-4 text-blue-500 hover:underline">View Species</a>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="bg-white p-4 rounded-lg shadow-md">
+              <h2 class="text-lg font-semibold mb-4">Habitats</h2>
+              <p class="text-gray-600">Learn about various habitats and ecosystems.</p>
+              <a href="/CB013168-WDOS-ABDULHAKEEM/animals.html" class="block mt-4 text-blue-500 hover:underline">View Habitats</a>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="bg-white p-4 rounded-lg shadow-md">
+              <h2 class="text-lg font-semibold mb-4">Conservation</h2>
+              <p class="text-gray-600">Discover our conservation efforts and initiatives.</p>
+              <a href="/CB013168-WDOS-ABDULHAKEEM/Dep-of-wildlife.html" class="block mt-4 text-blue-500 hover:underline">Learn More</a>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="bg-white p-4 rounded-lg shadow-md">
+              <h2 class="text-lg font-semibold mb-4">Home</h2>
+              <p class="text-gray-600">Join us in protecting and preserving wildlife.</p>
+              <a href="/CB013168-WDOS-ABDULHAKEEM/index.html" class="block mt-4 text-blue-500 hover:underline">Get Involved</a>
+          </div>
+      </div>
+  </div>
+
+
+
     <section x-data="log" class="bg-gray-100 p-4 rounded-lg mt-10">
       <ul class="border border-gray-300 rounded-lg p-2">
           <template x-for="user in users" >
               <li class="text-gray-800 mb-2" x-text="username"></li>
-              <li class="text-gray-800 mb-2" x-text="username"></li>
-              <li class="text-gray-800 mb-2" x-text="username"></li>
+              <li class="text-gray-800 mb-2" x-text="password"></li>
+              <li class="text-gray-800 mb-2" x-text="email"></li>
           </template>
       </ul>
   </section>
 
-    <section class="w-full " >
-      <div  x-on:click="$store.log.logout"  class="flex justify-end mr-[71px] mt-8  border-gray-300 rounded-md">
-        <button x-on:click="msg()" type="submit" class="rounded-lg p-6 bg-white ring-1 ring-slate-900/5 shadow-lg space-y-3 hover:bg-sky-500 hover:ring-sky-500  ">LogOut</button>
-      </div>
-    </section>
+  
+  <section class="grid grid-cols-2 gap-8 mt-10">
+    <div  class="flex justify-start border-gray-300 rounded-md">
+        <button x-on:click="msg2()" type="submit" class="rounded-lg p-6 bg-white ring-1 ring-slate-900/5 shadow-lg space-y-3 hover:bg-sky-500 hover:ring-sky-500">Edit Contants</button>
+    </div>
+    <div x-on:click="$store.log.logout" class="flex justify-end border-gray-300 rounded-md">
+        <button x-on:click="msg()" type="submit" class="rounded-lg p-6 bg-white ring-1 ring-slate-900/5 shadow-lg space-y-3 hover:bg-sky-500 hover:ring-sky-500">LogOut</button>
+    </div>
+</section>
 
     <section x-data="submit" class="bg-gray-100 p-4 rounded-lg mt-10">
       <ul class="border border-gray-300 rounded-lg p-2">
@@ -228,6 +267,13 @@
 <script >
   function msg() {
     alert("You have successfully logged out");
+    window.location.href = "/CB013168-WDOS-ABDULHAKEEM/index.html";
+  }
+</script>
+
+<script >
+  function msg2() {
+    alert("You Want to Edit Contants");
     window.location.href = "/CB013168-WDOS-ABDULHAKEEM/index.html";
   }
 </script>

@@ -43,6 +43,15 @@
             </li>
             <li><a href="/CB013168-WDOS-ABDULHAKEEM/Contact.html" class="text-base hover:bg-[#1a1919]rounded-[10px]"><i
                   class="fa-solid fa-phone"></i></a></li>
+
+            <template x-if="$store.log.user">
+              <li x-on:click="$store.home.is_sett_visible" class="flex hidden md:block">
+                <a href="/CB013168-WDOS-ABDULHAKEEM/Dashboard.html" class="text-base hover:bg-[#1a1919] rounded-[10px]">
+                  <i class="fa-solid fa-gear"></i>
+                </a>
+              </li>
+            </template>
+
           </ul>
         </nav>
 
@@ -94,8 +103,8 @@
               <form action="" class="grid gap-6" x-on:submit.prevent="$store.animals.save(1)">
                 <div class="container mx-auto mt-20 mb-20 ">
                   <div class="mb-4">
-                    <label  class="block text-gray-600">Image</label>
-                    <input type="text"  class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                    <label class="block text-gray-600">Image</label>
+                    <input type="text" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
                       x-model="$store.animals.animal_section_one.image">
                   </div>
 
@@ -157,8 +166,8 @@
               <form action="" class="grid gap-6" x-on:submit.prevent="$store.animals.save(2)">
                 <div class="container mx-auto mt-20 mb-20 ">
                   <div class="mb-4">
-                    <label  class="block text-gray-600">Image</label>
-                    <input type="text"  class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                    <label class="block text-gray-600">Image</label>
+                    <input type="text" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
                       x-model="$store.animals.animal_section_one.image">
                   </div>
 
@@ -217,8 +226,8 @@
 
                   <!-- image1 -->
                   <div class="mb-4">
-                    <label  class="block text-gray-600">Image</label>
-                    <input type="text"  class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                    <label class="block text-gray-600">Image</label>
+                    <input type="text" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
                       x-model="$store.animals.animal_section_three.image">
                   </div>
 
@@ -236,8 +245,8 @@
 
                   <!-- image2 -->
                   <div class="mb-4">
-                    <label  class="block text-gray-600">Image 1</label>
-                    <input type="text"  class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                    <label class="block text-gray-600">Image 1</label>
+                    <input type="text" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
                       x-model="$store.animals.animal_section_three.image1">
                   </div>
 
@@ -256,8 +265,8 @@
 
                   <!-- image3 -->
                   <div class="mb-4">
-                    <label  class="block text-gray-600">Image 2</label>
-                    <input type="text"  class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                    <label class="block text-gray-600">Image 2</label>
+                    <input type="text" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
                       x-model="$store.animals.animal_section_three.image2">
                   </div>
 
@@ -276,8 +285,8 @@
 
                   <!-- image4 -->
                   <div class="mb-4">
-                    <label  class="block text-gray-600">Image 3</label>
-                    <input type="text"  class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                    <label class="block text-gray-600">Image 3</label>
+                    <input type="text" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
                       x-model="$store.animals.animal_section_three.image3">
                   </div>
 
@@ -295,8 +304,8 @@
 
                   <!-- image5 -->
                   <div class="mb-4">
-                    <label  class="block text-gray-600">Image 4</label>
-                    <input type="text"  class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                    <label class="block text-gray-600">Image 4</label>
+                    <input type="text" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
                       x-model="$store.animals.animal_section_three.image4">
                   </div>
 
@@ -315,8 +324,8 @@
 
                   <!-- image6 -->
                   <div class="mb-4">
-                    <label  class="block text-gray-600">Image 5</label>
-                    <input type="text"  class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                    <label class="block text-gray-600">Image 5</label>
+                    <input type="text" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
                       x-model="$store.animals.animal_section_three.image5">
                   </div>
 
@@ -334,8 +343,8 @@
 
                   <!-- image7 -->
                   <div class="mb-4">
-                    <label  class="block text-gray-600">Image 6</label>
-                    <input type="text"  class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                    <label class="block text-gray-600">Image 6</label>
+                    <input type="text" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
                       x-model="$store.animals.animal_section_three.image6">
                   </div>
 
@@ -353,8 +362,8 @@
 
                   <!-- image8 -->
                   <div class="mb-4">
-                    <label  class="block text-gray-600">Image 7</label>
-                    <input type="text"  class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                    <label class="block text-gray-600">Image 7</label>
+                    <input type="text" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
                       x-model="$store.animals.animal_section_three.image7">
                   </div>
 
@@ -371,8 +380,8 @@
                   </div>
                   <!-- image9 -->
                   <div class="mb-4">
-                    <label  class="block text-gray-600">Image 8 </label>
-                    <input type="text"  class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                    <label class="block text-gray-600">Image 8 </label>
+                    <input type="text" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
                       x-model="$store.animals.animal_section_three.image8">
                   </div>
 
@@ -389,8 +398,8 @@
                   </div>
                   <!-- image10 -->
                   <div class="mb-4">
-                    <label  class="block text-gray-600">Image 9</label>
-                    <input type="text"  class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                    <label class="block text-gray-600">Image 9</label>
+                    <input type="text" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
                       x-model="$store.animals.animal_section_three.image9">
                   </div>
 
@@ -407,8 +416,8 @@
                   </div>
                   <!-- image11 -->
                   <div class="mb-4">
-                    <label  class="block text-gray-600">Image 10</label>
-                    <input type="text"  class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                    <label class="block text-gray-600">Image 10</label>
+                    <input type="text" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
                       x-model="$store.animals.animal_section_three.image10">
                   </div>
 
@@ -424,29 +433,29 @@
                       x-model="$store.animals.animal_section_three.body10"></textarea>
                   </div>
 
-                    <!-- image12 -->
-                    <div class="mb-4">
-                      <label  class="block text-gray-600">Image 11</label>
-                      <input type="text"  class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
-                        x-model="$store.animals.animal_section_three.image11">
-                    </div>
-  
-                    <div class="mb-4">
-                      <label class="block text-gray-600">Title 11</label>
-                      <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
-                        x-model="$store.animals.animal_section_three.title11">
-                    </div>
-  
-                    <div class="mb-4">
-                      <label class="block text-gray-600">Body 11</label>
-                      <textarea type="text" rows="5" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
-                        x-model="$store.animals.animal_section_three.body11"></textarea>
-                    </div>
-
-                      <!-- image13 -->
+                  <!-- image12 -->
                   <div class="mb-4">
-                    <label  class="block text-gray-600">Image 12</label>
-                    <input type="text"  class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                    <label class="block text-gray-600">Image 11</label>
+                    <input type="text" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                      x-model="$store.animals.animal_section_three.image11">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Title 11</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.animals.animal_section_three.title11">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Body 11</label>
+                    <textarea type="text" rows="5" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                      x-model="$store.animals.animal_section_three.body11"></textarea>
+                  </div>
+
+                  <!-- image13 -->
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Image 12</label>
+                    <input type="text" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
                       x-model="$store.animals.animal_section_three.image12">
                   </div>
 
@@ -462,29 +471,29 @@
                       x-model="$store.animals.animal_section_three.body12"></textarea>
                   </div>
 
-                    <!-- image14 -->
-                    <div class="mb-4">
-                      <label  class="block text-gray-600">Image 13</label>
-                      <input type="text"  class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
-                        x-model="$store.animals.animal_section_three.image13">
-                    </div>
-  
-                    <div class="mb-4">
-                      <label class="block text-gray-600">Title 13</label>
-                      <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
-                        x-model="$store.animals.animal_section_three.title13">
-                    </div>
-  
-                    <div class="mb-4">
-                      <label class="block text-gray-600">Body 13</label>
-                      <textarea type="text" rows="5" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
-                        x-model="$store.animals.animal_section_three.body13"></textarea>
-                    </div>
-
-                      <!-- image15 -->
+                  <!-- image14 -->
                   <div class="mb-4">
-                    <label  class="block text-gray-600">Image 14</label>
-                    <input type="text"  class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                    <label class="block text-gray-600">Image 13</label>
+                    <input type="text" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                      x-model="$store.animals.animal_section_three.image13">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Title 13</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.animals.animal_section_three.title13">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Body 13</label>
+                    <textarea type="text" rows="5" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                      x-model="$store.animals.animal_section_three.body13"></textarea>
+                  </div>
+
+                  <!-- image15 -->
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Image 14</label>
+                    <input type="text" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
                       x-model="$store.animals.animal_section_three.image14">
                   </div>
 
@@ -500,29 +509,29 @@
                       x-model="$store.animals.animal_section_three.body14"></textarea>
                   </div>
 
-                    <!-- image16 -->
-                    <div class="mb-4">
-                      <label  class="block text-gray-600">Image 15</label>
-                      <input type="text"  class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
-                        x-model="$store.animals.animal_section_three.image15">
-                    </div>
-  
-                    <div class="mb-4">
-                      <label class="block text-gray-600">Title 15</label>
-                      <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
-                        x-model="$store.animals.animal_section_three.title15">
-                    </div>
-  
-                    <div class="mb-4">
-                      <label class="block text-gray-600">Body 15</label>
-                      <textarea type="text" rows="5" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
-                        x-model="$store.animals.animal_section_three.body15"></textarea>
-                    </div>
-
-                      <!-- image17 -->
+                  <!-- image16 -->
                   <div class="mb-4">
-                    <label  class="block text-gray-600">Image 16</label>
-                    <input type="text"  class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                    <label class="block text-gray-600">Image 15</label>
+                    <input type="text" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                      x-model="$store.animals.animal_section_three.image15">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Title 15</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.animals.animal_section_three.title15">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Body 15</label>
+                    <textarea type="text" rows="5" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                      x-model="$store.animals.animal_section_three.body15"></textarea>
+                  </div>
+
+                  <!-- image17 -->
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Image 16</label>
+                    <input type="text" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
                       x-model="$store.animals.animal_section_three.image16">
                   </div>
 
@@ -538,29 +547,29 @@
                       x-model="$store.animals.animal_section_three.body16"></textarea>
                   </div>
 
-                    <!-- image18 -->
-                    <div class="mb-4">
-                      <label  class="block text-gray-600">Image 17</label>
-                      <input type="text"  class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
-                        x-model="$store.animals.animal_section_three.image17">
-                    </div>
-  
-                    <div class="mb-4">
-                      <label class="block text-gray-600">Title 17</label>
-                      <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
-                        x-model="$store.animals.animal_section_three.title17">
-                    </div>
-  
-                    <div class="mb-4">
-                      <label class="block text-gray-600">Body 17</label>
-                      <textarea type="text" rows="5" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
-                        x-model="$store.animals.animal_section_three.body17"></textarea>
-                    </div>
-
-                      <!-- image19 -->
+                  <!-- image18 -->
                   <div class="mb-4">
-                    <label  class="block text-gray-600">Image 18</label>
-                    <input type="text"  class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                    <label class="block text-gray-600">Image 17</label>
+                    <input type="text" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                      x-model="$store.animals.animal_section_three.image17">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Title 17</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.animals.animal_section_three.title17">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Body 17</label>
+                    <textarea type="text" rows="5" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                      x-model="$store.animals.animal_section_three.body17"></textarea>
+                  </div>
+
+                  <!-- image19 -->
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Image 18</label>
+                    <input type="text" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
                       x-model="$store.animals.animal_section_three.image18">
                   </div>
 
@@ -576,25 +585,25 @@
                       x-model="$store.animals.animal_section_three.body18"></textarea>
                   </div>
 
-                    <!-- image20 -->
-                    <div class="mb-4">
-                      <label  class="block text-gray-600">Image 19</label>
-                      <input type="text"  class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
-                        x-model="$store.animals.animal_section_three.image19">
-                    </div>
-  
-                    <div class="mb-4">
-                      <label class="block text-gray-600">Title 19</label>
-                      <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
-                        x-model="$store.animals.animal_section_three.title19">
-                    </div>
-  
-                    <div class="mb-4">
-                      <label class="block text-gray-600">Body 19</label>
-                      <textarea type="text" rows="5" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
-                        x-model="$store.animals.animal_section_three.body19"></textarea>
-                    </div>
-  
+                  <!-- image20 -->
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Image 19</label>
+                    <input type="text" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                      x-model="$store.animals.animal_section_three.image19">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Title 19</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-md"
+                      x-model="$store.animals.animal_section_three.title19">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-600">Body 19</label>
+                    <textarea type="text" rows="5" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                      x-model="$store.animals.animal_section_three.body19"></textarea>
+                  </div>
+
 
                   <button type="submit" class="bg-yellow-500 text-white py-2 px-4 rounded-md">Save</button>
                 </div>
@@ -881,8 +890,8 @@
               <form action="" class="grid gap-6" x-on:submit.prevent="$store.animals.save(4)">
                 <div class="container mx-auto mt-20 mb-20 ">
                   <div class="mb-4">
-                    <label  class="block text-gray-600">Image</label>
-                    <input type="text"  class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                    <label class="block text-gray-600">Image</label>
+                    <input type="text" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
                       x-model="$store.animals.animal_section_four.image">
                   </div>
 
@@ -893,8 +902,8 @@
                   </div>
 
                   <div class="mb-4">
-                    <label  class="block text-gray-600">Image 2</label>
-                    <input type="text"  class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
+                    <label class="block text-gray-600">Image 2</label>
+                    <input type="text" class="w-full lg:w-[708px] p-2 border border-gray-300 rounded-md"
                       x-model="$store.animals.animal_section_four.image2">
                   </div>
 
@@ -990,17 +999,15 @@
             </li>
 
           </ul>
-          <div class="col-lg-3 mt-6">
-            <div class="subscribe-newsletters footer-item">
-              <h4>If you have any inquiries please Enter Your Email</h4>
-              <p> </p>
-              <form action="#" method="get" class="mt-3">
-                <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email" required=""
-                  class="w-64 mr-10">
-                <button type="submit"><i class="fa fa-paper-plane-o"></i></button>
-              </form>
-            </div>
+          <div class="subscribe-newsletters footer-item" x-data="submit()">
+            <h4>If you have any inquiries please Enter Your Email</h4>
+            <p></p>
+            <form x-on:submit.prevent="submitForm" class="mt-3">
+              <input x-model="new_email" id="new_email" required placeholder="Enter your email" class="w-64 mr-10">
+              <button type="submit"><i class="fa fa-paper-plane-o"></i></button>
+            </form>
           </div>
+
         </div>
 
       </div>
@@ -1058,6 +1065,7 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script type="text/javascript" src="/CB013168-WDOS-ABDULHAKEEM/Js/app.js"></script>
   <script type="text/javascript" src="/CB013168-WDOS-ABDULHAKEEM/Js/store/animals.js"></script>
+  <script type="text/javascript" src="/CB013168-WDOS-ABDULHAKEEM/Js/newsletter.js"></script>
 </body>
 
 </html>
